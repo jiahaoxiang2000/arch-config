@@ -18,6 +18,7 @@
     "enable_experimental_live_diffs": true,
     "version": "2"
   },
+  "soft_wrap": "bounded",
   "vim_mode": true,
   "ui_font_size": 16,
   "buffer_font_size": 16,
@@ -25,5 +26,18 @@
     "mode": "system",
     "light": "Ayu Dark",
     "dark": "One Dark"
+  },
+  "lsp": {
+    "texlab": {
+      "settings": {
+        "texlab": {
+          "build": {
+            "forwardSearchAfter": true,
+            "executable": "latexmk",
+            "args": ["%f"]
+          }
+        }
+      }
+    }
   }
 }
