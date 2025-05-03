@@ -15,6 +15,7 @@
       "provider": "copilot_chat",
       "model": "gpt-4.1"
     },
+    "enable_experimental_live_diffs": true,
     "version": "2"
   },
   "vim_mode": true,
