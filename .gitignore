@@ -62,3 +62,6 @@ nextjs-nodejs/*
 pulse/*
 QtProject.conf
 pavucontrol.ini
+
+obs-studio/*
+github-copilot/*
