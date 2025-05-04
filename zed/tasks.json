@@ -46,5 +46,11 @@
     "shell": "system",
     // Represents the tags for inline runnable indicators, or spawning multiple tasks at once.
     "tags": []
+  },
+  {
+    "label": "Forward Search",
+    "command": "okular --unique $ZED_DIRNAME/$ZED_STEM.pdf#src:$ZED_ROW ",
+    "allow_concurrent_runs": false,
+    "reveal": "no_focus"
   }
 ]
