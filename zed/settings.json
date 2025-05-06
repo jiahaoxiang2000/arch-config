@@ -25,7 +25,7 @@
   "buffer_font_size": 18,
   "theme": {
     "mode": "system",
-    "light": "Ayu Dark",
+    "light": "Github Dark Tritanopia",
     "dark": "One Dark"
   },
   "lsp": {
