@@ -26,7 +26,7 @@
   "theme": {
     "mode": "system",
     "light": "Github Dark Tritanopia",
-    "dark": "One Dark"
+    "dark": "Catppuccin Macchiato - No Italics"
   },
   "lsp": {
     "texlab": {
