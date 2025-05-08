@@ -12,6 +12,24 @@ To use the 2024 USB-C version of the Magic Mouse 2, you can rely on [this commun
 
 Once the modules are installed, you can connect the Magic Mouse via Bluetooth. It will then work as a standard mouse on your system.
 
+### Configuration
+
+```bash
+filename:       /lib/modules/6.11.0-25-generic/updates/dkms/hid-magicmouse.ko.zst
+license:        GPL
+description:    Apple "Magic" Wireless Mouse driver
+parm:           emulate_3button:Emulate a middle button (bool)
+parm:           emulate_scroll_wheel:Emulate a scroll wheel (bool)
+parm:           scroll_speed:Scroll speed, value from 0 (slow) to 63 (fast)
+parm:           scroll_acceleration:Accelerate sequential scroll events (bool)
+parm:           report_undeciphered:Report undeciphered multi-touch state field using a MSC_RAW event (bool)
+
+```
+
+```text /etc/modprobe.d/hid-magicmouse.conf
+options hid-magicmouse emulate_3button=0 emulate_scroll_wheel=1 scroll_speed=32 scroll_acceleration=0 report_undeciphered=1
+```
+
 ---
 
 ## Magic Keyboard
@@ -33,4 +51,3 @@ You can further configure the Magic Keyboard by editing:
 This file lets you customize keyboard behavior to your liking.
 
 ---
-
