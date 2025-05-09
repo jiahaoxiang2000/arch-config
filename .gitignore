@@ -86,3 +86,8 @@ ubuntu-xdg-terminals.list
 xdg-terminals.list
 .gsd-keyboard.settings-ported
 monitors.xml
+ksystemlogrc
+.gitignore
+kglobalshortcutsrc
+kactivitymanagerdrc
+session/*
