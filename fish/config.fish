@@ -6,3 +6,8 @@ if status is-interactive
     set -x XMODIFIERS @im=ibus
 end
 
+# Custom date format function - formats date in YYYY-MM-DD HH:MM:SS TZ format (24-hour, no weekday)
+function mydate
+    date +"%Y-%m-%d %H:%M:%S %Z"
+end
+
