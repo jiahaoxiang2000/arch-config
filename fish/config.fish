@@ -13,6 +13,6 @@ end
 
 # Quick translation to Chinese function
 function tozh
-    trans -b :zh "$argv"
+    trans -x 127.0.0.1:7897 -b -4 :zh "$argv"
 end
 
