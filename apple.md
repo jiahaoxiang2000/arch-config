@@ -12,7 +12,7 @@ To use the 2024 USB-C version of the Magic Mouse 2, you can rely on [this commun
 
 Once the modules are installed, you can connect the Magic Mouse via Bluetooth. It will then work as a standard mouse on your system.
 
-### Configuration
+### Configuration for module loading
 
 ```bash
 filename:       /lib/modules/6.11.0-25-generic/updates/dkms/hid-magicmouse.ko.zst
@@ -27,7 +27,48 @@ parm:           report_undeciphered:Report undeciphered multi-touch state field 
 ```
 
 ```text /etc/modprobe.d/hid-magicmouse.conf
-options hid-magicmouse emulate_3button=0 emulate_scroll_wheel=1 scroll_speed=32 scroll_acceleration=0 report_undeciphered=1
+options hid-magicmouse emulate_3button=0 emulate_scroll_wheel=0 scroll_speed=32 scroll_acceleration=0 report_undeciphered=0
+```
+
+it can be recognized by the `evtest /dev/input/event26`, but not recognized by the `libinput` .
+
+```bash
+ Event type 3 (EV_ABS)
+    Event code 47 (ABS_MT_SLOT)
+      Value     10
+      Min        0
+      Max       15
+    Event code 48 (ABS_MT_TOUCH_MAJOR)
+      Value      0
+      Min        0
+      Max     1020
+      Fuzz       4
+    Event code 49 (ABS_MT_TOUCH_MINOR)
+      Value      0
+      Min        0
+      Max     1020
+      Fuzz       4
+    Event code 52 (ABS_MT_ORIENTATION)
+      Value      0
+      Min      -31
+      Max       32
+      Fuzz       1
+    Event code 53 (ABS_MT_POSITION_X)
+      Value      0
+      Min    -1100
+      Max     1258
+      Fuzz       4
+      Resolution      26
+    Event code 54 (ABS_MT_POSITION_Y)
+      Value      0
+      Min    -1589
+      Max     2047
+      Fuzz       4
+      Resolution      70
+    Event code 57 (ABS_MT_TRACKING_ID)
+      Value      0
+      Min        0
+      Max    65535
 ```
 
 ---
