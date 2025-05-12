@@ -11,3 +11,8 @@ function mydate
     date +"%Y-%m-%d %H:%M:%S %Z"
 end
 
+# Quick translation to Chinese function
+function tozh
+    trans -b :zh "$argv"
+end
+
