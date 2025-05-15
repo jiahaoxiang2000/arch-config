@@ -164,3 +164,34 @@ If fcitx5 is not working properly:
 2. Restart your desktop environment or window manager
 3. Ensure fcitx5 is running (`ps aux | grep fcitx5`)
 4. Check logs with `journalctl --user -xe | grep fcitx5`
+
+## TeX Live
+
+### Overview
+
+To use Chinese text in LaTeX documents and compile journal templates (such as IEEEtran) with bibliography support, you need to install several TeX Live packages, including XeTeX and BibTeX.
+
+### Required Packages
+
+- **texlive-basic**: Core TeX Live files
+- **texlive-bin**: TeX Live binaries
+- **texlive-langchinese**: Chinese language support (fonts, packages)
+- **texlive-fontsextra**: Additional fonts
+- **texlive-science**: Science-related LaTeX packages
+- **texlive-binextra**: Extra TeX Live binaries
+- **texlive-publishers**: Publisher/journal templates (e.g., IEEEtran)
+- **texlive-latexextra**: Additional LaTeX packages
+
+### Installation
+
+Install all required packages with:
+
+```bash
+sudo pacman -S texlive-basic texlive-bin texlive-langchinese texlive-fontsextra texlive-science texlive-binextra texlive-publishers texlive-latexextra
+```
+
+### Notes
+
+- **XeTeX** is included for Unicode and Chinese support.
+- **IEEEtran** and other journal templates are provided by `texlive-publishers`.
+- **BibTeX** is included for bibliography management.
