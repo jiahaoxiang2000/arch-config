@@ -151,7 +151,8 @@ For adding Chinese input methods:
 ### Using fcitx5
 
 - **Toggle input methods**: Ctrl+Space (default)
-- **Switch between Chinese and English**: `Ctrl Space` 
+- **Switch between Chinese and English**: `Ctrl Space`
+- **Use the Emoji**: "Super + `" then input :smile: get 😃, so funny
 - **Configure appearance**: Use fcitx5-configtool > Addons > Classic User Interface
 - **Adjust candidate list**: Configure through the fcitx5-configtool
 
