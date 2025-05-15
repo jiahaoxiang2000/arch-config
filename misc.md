@@ -114,47 +114,21 @@ sudo pacman -S fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-gtk fcitx5-
 
 Create environment variables configuration for fcitx5:
 
-```bash
-# Create environment variables configuration
-sudo mkdir -p /etc/environment.d
-sudo tee /etc/environment.d/fcitx5.conf << EOF
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SDL_IM_MODULE=fcitx
-GLFW_IM_MODULE=ibus
-EOF
+```conf hyprland.conf
+# tell X11/XWayland to go through Fcitx
+env = XMODIFIERS @im=fcitx
+# for GTK (if you hit issues, you can unset/adjust per https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland)
+env = GTK_IM_MODULE fcitx
+# for Qt apps under Hyprland
+env = QT_IM_MODULE fcitx
 ```
 
 ### Starting fcitx5
 
-Launch fcitx5 with:
+Launch fcitx5 with hyprland:
 
-```bash
-fcitx5 -d
-```
-
-Create an autostart entry to run fcitx5 at login:
-
-```bash
-mkdir -p ~/.config/autostart
-cat > ~/.config/autostart/fcitx5.desktop << EOF
-[Desktop Entry]
-Name=Fcitx5
-GenericName=Input Method
-Comment=Start Input Method
-Exec=fcitx5
-Icon=fcitx
-Terminal=false
-Type=Application
-Categories=System;Utility;
-StartupNotify=false
-X-GNOME-Autostart-Phase=Applications
-X-GNOME-AutoRestart=false
-X-GNOME-Autostart-Notify=false
-X-KDE-autostart-after=panel
-X-KDE-autostart-condition=fcitx5AutostartCondition.sh
-EOF
+```conf hyprland.conf
+exec-once = fcitx5 &
 ```
 
 ### Configuration
@@ -177,7 +151,7 @@ For adding Chinese input methods:
 ### Using fcitx5
 
 - **Toggle input methods**: Ctrl+Space (default)
-- **Switch between Chinese and English**: Shift key
+- **Switch between Chinese and English**: `Ctrl Space` 
 - **Configure appearance**: Use fcitx5-configtool > Addons > Classic User Interface
 - **Adjust candidate list**: Configure through the fcitx5-configtool
 
