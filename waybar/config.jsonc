@@ -7,54 +7,11 @@
   "spacing": 4, // Gaps between modules (4px)
   "output": "HDMI-A-1", // Output to display the bar
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": [
-    "mpd",
-    "idle_inhibitor",
-    "pulseaudio",
-    "power-profiles-daemon",
-    "backlight",
-    "keyboard-state",
-    "battery",
-    "battery#bat2",
-    "clock",
-    "tray"
-  ],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["pulseaudio", "tray"],
   "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " "
-    },
-    "repeat-icons": {
-      "on": " "
-    },
-    "single-icons": {
-      "on": "1 "
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": ""
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
   "tray": {
     // "icon-size": 21,
     "spacing": 10
@@ -64,40 +21,6 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%Y-%m-%d %H:%M:%S}",
     "format-alt": "{:%Y-%m-%d}"
-  },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
-  },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-full": "{capacity}% {icon}",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
-    // "format-good": "", // An empty format will hide the module
-    // "format-full": "",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "battery#bat2": {
-    "bat": "BAT2"
-  },
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "",
-      "balanced": "",
-      "power-saver": ""
-    }
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float
@@ -117,18 +40,6 @@
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
-  },
-  "custom/media": {
-    "format": "{icon} {text}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
-    },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
   },
   "hyprland/workspaces": {
     // Show workspace name and icon
