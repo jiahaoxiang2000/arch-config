@@ -195,3 +195,27 @@ sudo pacman -S texlive-basic texlive-bin texlive-langchinese texlive-fontsextra 
 - **XeTeX** is included for Unicode and Chinese support.
 - **IEEEtran** and other journal templates are provided by `texlive-publishers`.
 - **BibTeX** is included for bibliography management.
+
+## linux-zen Kernel
+
+### Overview
+
+The linux-zen kernel is a community-maintained Arch kernel variant, tuned for better responsiveness and interactivity on desktop systems. It includes additional patches and tweaks for improved desktop and workstation performance.
+
+### Installation
+
+To install the linux-zen kernel and its headers, run:
+
+```fish
+sudo pacman -S linux-zen linux-zen-headers
+```
+
+After installation, reboot your system and select the linux-zen kernel from your bootloader menu (systemd-boot, GRUB, etc).
+
+> **Tip:** With systemd-boot, use the arrow keys at boot to choose 'Arch Linux (linux-zen)' from the list. If you want linux-zen as the default, edit `/boot/loader/loader.conf` and set `default arch-*linux-zen*` (the exact entry name may vary, check `/boot/loader/entries/`).
+
+### Notes
+
+- The linux-zen kernel is compatible with most desktop hardware and drivers.
+- If you use DKMS modules (such as NVIDIA or custom drivers), the headers package is required.
+- You can always switch back to the standard Arch kernel from your boot menu if needed.
