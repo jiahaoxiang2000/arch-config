@@ -219,3 +219,76 @@ After installation, reboot your system and select the linux-zen kernel from your
 - The linux-zen kernel is compatible with most desktop hardware and drivers.
 - If you use DKMS modules (such as NVIDIA or custom drivers), the headers package is required.
 - You can always switch back to the standard Arch kernel from your boot menu if needed.
+
+## Maximizing Intel CPU Frequency on Linux
+
+### Overview
+
+To maximize the performance of your Intel(R) Core(TM) i7-7820X CPU on Linux, you can set the CPU frequency governor to 'performance' and ensure Intel Turbo Boost is enabled. This will allow your CPU to run at its highest possible frequency under load.
+
+### Steps
+
+1. **Install cpupower**
+
+   ```fish
+   sudo pacman -S cpupower
+   ```
+
+2. **Set the CPU governor to performance**
+
+   ```fish
+   sudo cpupower frequency-set -g performance
+   ```
+
+   This sets all CPU cores to use the 'performance' governor, maximizing frequency.
+
+3. **Check Turbo Boost status**
+
+   Turbo Boost should be enabled by default. To check:
+
+   ```fish
+   cat /sys/devices/system/cpu/intel_pstate/no_turbo
+   ```
+
+   - If the output is `0`, Turbo Boost is enabled.
+   - If the output is `1`, Turbo Boost is disabled (enable it in your BIOS/UEFI).
+
+4. **Verify current frequency and governor**
+
+   ```fish
+   cpupower frequency-info | head -20
+   ```
+
+   - Look for `current policy: frequency should be within ...` and `The governor "performance"`.
+   - Check `boost state support: Active: yes` for Turbo Boost.
+
+### Notes
+
+- For true overclocking (beyond Intel Turbo Boost), you must adjust settings in your motherboard's BIOS/UEFI.
+- Monitor CPU temperatures and system stability if you push frequencies higher.
+- The linux-zen kernel is optimized for desktop responsiveness and works well with these settings.
+- Use `cpupower frequency-info` to monitor CPU scaling at any time.
+
+## CPU Benchmarking
+
+### Overview
+
+To benchmark your CPU performance and compare with others, you can use Geekbench (for easy online comparison) or sysbench (open-source, CLI-based).
+
+### Geekbench (Recommended)
+
+1. Download Geekbench for Linux from: https://www.geekbench.com/download/linux/
+2. Extract and run:
+   ```fish
+   tar -xzf Geekbench-*-Linux.tar.gz
+   cd Geekbench-*-Linux
+   ./geekbench5
+   ```
+3. After the test, you'll get a link to your results online for easy comparison with other CPUs.
+
+### Sysbench (Open Source)
+
+1. Install sysbench:
+   ```fish
+   sudo pacman -S sysbench
+   ```
