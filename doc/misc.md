@@ -277,18 +277,25 @@ To benchmark your CPU performance and compare with others, you can use Geekbench
 
 ### Geekbench (Recommended)
 
-1. Download Geekbench for Linux from: https://www.geekbench.com/download/linux/
-2. Extract and run:
+1. Install Geekbench using yay:
    ```fish
-   tar -xzf Geekbench-*-Linux.tar.gz
-   cd Geekbench-*-Linux
-   ./geekbench5
+   yay -S geekbench
+   ```
+2. Run Geekbench:
+   ```fish
+   geekbench
    ```
 3. After the test, you'll get a link to your results online for easy comparison with other CPUs.
 
-### Sysbench (Open Source)
+we get the result on the [online](https://browser.geekbench.com/v6/cpu/11981510), 1451 Single-Core Score 7180 Multi-Core Score.
 
-1. Install sysbench:
-   ```fish
-   sudo pacman -S sysbench
-   ```
+#### Performance Comparison
+
+| CPU                                                                | Single-Core | Multi-Core |
+| ------------------------------------------------------------------ | ----------- | ---------- |
+| i7-7820X [yours](https://browser.geekbench.com/v6/cpu/11981510)    | 1451        | 7180       |
+| [AMD Ryzen 7 9700X](https://browser.geekbench.com/v6/cpu/11974922) | 3478        | 19177      |
+
+- The AMD Ryzen 7 9700X, which on May 2025 1300 Yuan, is about **2.2x faster** in single-core and **3x faster** in multi-core performance compared to your i7-7820X (based on Geekbench 6).
+- Your CPU is still strong for its generation, but modern high-end CPUs deliver much higher scores, especially in multi-threaded workloads.
+- For more comparisons, see the [Geekbench Browser](https://browser.geekbench.com/).
