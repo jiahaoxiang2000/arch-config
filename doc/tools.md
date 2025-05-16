@@ -5,6 +5,7 @@ here some production tools with our used on the linux ecosystem.
 ## diary
 
 - PDF Reader: [Okular](https://okular.kde.org/)
+- Screen Capture: [Hyprshot](https://github.com/Gustash/Hyprshot)
 
 ## proxy
 
