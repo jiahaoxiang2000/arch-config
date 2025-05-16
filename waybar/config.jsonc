@@ -42,16 +42,34 @@
     "on-click": "pavucontrol"
   },
   "hyprland/workspaces": {
-    // Show workspace name and icon
-    "format": "{icon} {name}",
+    // Show workspace name, icon, and window icons
+    "format": "{icon} {name} {windows}",
+    // Format icons object for workspace states
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": ""
+    },
+    // Window representation config
+    "window-rewrite-default": "😄",
+    "window-rewrite": {
+      "class<firefox>": "", // Windows whose classes are "firefox"
+      "class<firefox> title<.*Github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+      "code": ""
+    },
+    "format-window-separator": " ",
+    // Always show these workspaces, even when empty
+    "persistent-workspaces": {
+      "*": 4 // Show 5 workspaces by default on every monitor
+    },
     // Switch to workspace on click
     "on-click": "activate",
     // Scroll to switch workspaces
     "on-scroll-up": "activate-prev",
     "on-scroll-down": "activate-next",
-    // Show all workspaces from all outputs
-    "all-outputs": false,
-    // Sort by workspace number
-    "sort-by-number": true
+    // Sort workspaces by number
+    "sort-by": "number",
+    // Show special workspaces (like scratchpads)
+    "show-special": true
   }
 }
