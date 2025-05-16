@@ -6,6 +6,7 @@ here some production tools with our used on the linux ecosystem.
 
 - PDF Reader: [Okular](https://okular.kde.org/)
 - Screen Capture: [Hyprshot](https://github.com/Gustash/Hyprshot)
+- Obs Studio: [OBS Studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)
 
 ## proxy
 
