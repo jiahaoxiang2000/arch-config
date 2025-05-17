@@ -1,0 +1,39 @@
+/* Wofi Style */
+window {
+    margin: 5px;
+    border: 2px solid #33ccff;
+    background-color: rgba(40, 40, 40, 0.9);
+    border-radius: 10px;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: rgba(55, 55, 55, 0.9);
+    border-radius: 5px;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+}
+
+#scroll {
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    color: white;
+}
+
+#entry:selected {
+    background-color: rgba(51, 204, 255, 0.5);
+    border-radius: 5px;
+}
+
+#text:selected {
+    color: white;
+}

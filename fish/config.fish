@@ -3,7 +3,7 @@
 set -x GTK_IM_MODULE fcitx
 set -x QT_IM_MODULE fcitx
 set -x XMODIFIERS @im=fcitx
-
+set -x QT_FONT_DPI 192
 # Custom date format function - formats date in YYYY-MM-DD HH:MM:SS TZ format (24-hour, no weekday)
 function mydate
     date +"%Y-%m-%d %H:%M:%S %Z"

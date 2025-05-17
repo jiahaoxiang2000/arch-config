@@ -8,6 +8,7 @@ here some production tools with our used on the linux ecosystem.
 - Screen Capture: [Hyprshot](https://github.com/Gustash/Hyprshot)
 - Obs Studio: [OBS Studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)
 - Key show: [wshowkeys](https://github.com/DreamMaoMao/wshowkeys)
+- wps office: [WPS Office 365](https://aur.archlinux.org/packages/wps-office-365)
 
 ### Message Social
 
