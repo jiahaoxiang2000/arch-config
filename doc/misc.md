@@ -302,7 +302,6 @@ we get the result on the [online](https://browser.geekbench.com/v6/cpu/11981510)
 
 ## Wechat
 
-
 ### Fcitx5 Input Method Not Working in Wechat
 
 If you find that the fcitx5 input method does not work in Wechat (even though the fcitx5 process is running), the likely cause is missing environment variables in the Wechat desktop entry.
@@ -316,3 +315,8 @@ sudo sed -i 's|^Exec=.*|Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIE
 ```
 
 This command ensures that Wechat is started with the correct environment for fcitx5 to function properly.
+
+## ISSUE
+
+- When launching applications via `.desktop` files (for example, using `wofi`), environment variables set in your shell (like fish) or in `hyprland.conf` are **not** passed to those applications.
+- As a result, input methods (such as fcitx5) or other environment-dependent features may not work as expected in apps started this way.
