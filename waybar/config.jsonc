@@ -8,9 +8,9 @@
   "output": "HDMI-A-1", // Output to display the bar
   // Choose the order of the modules
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "tray"],
-  "margin": 1, // Margin around the bar
+  "modules-center": [],
+  "modules-right": ["clock", "pulseaudio", "tray"],
+  // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
   "tray": {
     // "icon-size": 21,
@@ -19,7 +19,7 @@
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%Y-%m-%d %H:%M:%S}",
+    "format": "{:%H:%M %m-%d}",
     "format-alt": "{:%Y-%m-%d}"
   },
   "pulseaudio": {

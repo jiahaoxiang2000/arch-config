@@ -7,6 +7,7 @@
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+    border-radius: 12px;
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -56,6 +57,7 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
+    border-radius: 8px;
     color: #ffffff;
 }
 
@@ -103,6 +105,7 @@ button:hover {
 #power-profiles-daemon,
 #mpd {
     padding: 0 10px;
+    border-radius: 8px;
     color: #ffffff;
 }
 
