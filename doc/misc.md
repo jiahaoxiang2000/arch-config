@@ -299,3 +299,20 @@ we get the result on the [online](https://browser.geekbench.com/v6/cpu/11981510)
 - The AMD Ryzen 7 9700X, which on May 2025 1300 Yuan, is about **2.2x faster** in single-core and **3x faster** in multi-core performance compared to your i7-7820X (based on Geekbench 6).
 - Your CPU is still strong for its generation, but modern high-end CPUs deliver much higher scores, especially in multi-threaded workloads.
 - For more comparisons, see the [Geekbench Browser](https://browser.geekbench.com/).
+
+## Wechat
+
+
+### Fcitx5 Input Method Not Working in Wechat
+
+If you find that the fcitx5 input method does not work in Wechat (even though the fcitx5 process is running), the likely cause is missing environment variables in the Wechat desktop entry.
+
+#### Solution
+
+Update the Wechat desktop file to set the required environment variables for input method support:
+
+```bash
+sudo sed -i 's|^Exec=.*|Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx /opt/wechat/wechat %U|' /usr/share/applications/wechat.desktop
+```
+
+This command ensures that Wechat is started with the correct environment for fcitx5 to function properly.
