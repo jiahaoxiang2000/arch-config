@@ -9,6 +9,12 @@ here some production tools with our used on the linux ecosystem.
 - Obs Studio: [OBS Studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)
 - Key show: [wshowkeys](https://github.com/DreamMaoMao/wshowkeys)
 
+### Message Social
+
+- [WeChat](https://aur.archlinux.org/packages/wechat-bin), need to fix [fcitx5](misc.md#fcitx5-input-method-not-working-in-wechat)
+- [QQ](https://aur.archlinux.org/packages/linuxqq)
+- [Thunderbird](https://archlinux.org/packages/extra/x86_64/thunderbird/) for email
+
 ## proxy
 
 - [daed](https://github.com/daeuniverse/daed) based on the **dae**, which is an open-source, Linux high-performance transparent proxy solution, fueled by the revolutionary Kernel technology eBPF.
