@@ -294,6 +294,7 @@ we get the result on the [online](https://browser.geekbench.com/v6/cpu/11981510)
 | CPU                                                                | Single-Core | Multi-Core |
 | ------------------------------------------------------------------ | ----------- | ---------- |
 | i7-7820X [yours](https://browser.geekbench.com/v6/cpu/11981510)    | 1451        | 7180       |
+| i7-7820X [Auto OC](https://browser.geekbench.com/v6/cpu/12025481)  | 1528        | 7541       |
 | [AMD Ryzen 7 9700X](https://browser.geekbench.com/v6/cpu/11974922) | 3478        | 19177      |
 
 - The AMD Ryzen 7 9700X, which on May 2025 1300 Yuan, is about **2.2x faster** in single-core and **3x faster** in multi-core performance compared to your i7-7820X (based on Geekbench 6).
