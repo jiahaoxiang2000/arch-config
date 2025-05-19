@@ -4,11 +4,12 @@ here some production tools with our used on the linux ecosystem.
 
 ## diary
 
-- PDF Reader: [Okular](https://okular.kde.org/)
-- Screen Capture: [Hyprshot](https://github.com/Gustash/Hyprshot)
-- Obs Studio: [OBS Studio](https://archlinux.org/packages/extra/x86_64/obs-studio/)
-- Key show: [wshowkeys](https://github.com/DreamMaoMao/wshowkeys)
-- wps office: [WPS Office 365](https://aur.archlinux.org/packages/wps-office-365)
+- PDF Reader: [Okular](https://okular.kde.org/) for PDF reader
+- Screen Capture: [Hyprshot](https://github.com/Gustash/Hyprshot) for screen capture
+- Obs Studio: [OBS Studio](https://archlinux.org/packages/extra/x86_64/obs-studio/) for screen record
+- Key show: [wshowkeys](https://github.com/DreamMaoMao/wshowkeys) for show the key event
+- wps office: [WPS Office 365](https://aur.archlinux.org/packages/wps-office-365) for office
+- [Kdenlive](https://archlinux.org/packages/extra/x86_64/kdenlive/) for video editing
 
 ### Message Social
 
