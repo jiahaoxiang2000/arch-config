@@ -320,4 +320,5 @@ This command ensures that Wechat is started with the correct environment for fci
 ## ISSUE
 
 - When launching applications via `.desktop` files (for example, using `wofi`), environment variables set in your shell (like fish) or in `hyprland.conf` are **not** passed to those applications.
+  - Here we to change the `~/.bashrc` and `~/.profile` to set the environment variables, then it works, here not the know what the file to work.
 - As a result, input methods (such as fcitx5) or other environment-dependent features may not work as expected in apps started this way.
