@@ -57,9 +57,48 @@ To also set the npm registry mirror for China, add:
 set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 ```
 
-## China Software Development Mirrors
+## python
 
-This document collects mirror configurations for common development tools to improve download speed and reliability in China.
+### Using uv (Fast Python Environment Manager)
+
+[uv](https://github.com/astral-sh/uv) is a fast, modern Python package and virtual environment manager, serving as a drop-in replacement for pip and venv.
+
+#### Install uv on Arch Linux
+
+```sh
+yay -S uv
+```
+
+#### Usage
+
+```sh
+# Create a new virtual environment in the current directory
+uv venv .venv
+
+# Activate the environment (Fish shell)
+source .venv/bin/activate.fish
+
+# Install packages
+uv pip install requests
+
+# List installed packages
+uv pip list
+
+# Upgrade packages
+uv pip install --upgrade <package>
+
+# Deactivate the environment
+deactivate
+```
+
+#### China Mirrors for uv
+
+To speed up package downloads in China, set the pip index mirror in your environment or in `~/.pip/pip.conf`:
+
+```fish
+set -x PIP_INDEX_URL https://pypi.tuna.tsinghua.edu.cn/simple
+set -x PIP_TRUSTED_HOST pypi.tuna.tsinghua.edu.cn
+```
 
 ### pip (Python)
 
