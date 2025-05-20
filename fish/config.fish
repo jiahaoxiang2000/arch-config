@@ -14,3 +14,11 @@ function tozh
     trans -x 127.0.0.1:7897 -4 :zh "$argv"
 end
 
+# node version manager
+fnm env | source
+# mirror for node and npm
+set -x FNM_NODE_DIST_MIRROR https://npmmirror.com/mirrors/node
+set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
+
+# source the ~/.profile file, some key is on the ~/.profile
+source ~/.profile
