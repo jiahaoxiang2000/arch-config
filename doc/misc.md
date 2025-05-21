@@ -320,6 +320,7 @@ This command ensures that Wechat is started with the correct environment for fci
 ## OBS Streaming to Bilibili Live
 
 > **Background:** Starting from 2025-05-26, Bilibili will restrict third-party streaming software for users with fewer than 5000 fans. On Linux, OBS is commonly used for streaming, so a workaround is needed to continue streaming.
+> here we find the [bilibili API collection](https://github.com/SocialSisterYi/bilibili-API-collect) on the v1 API for the live stream, so we will try it, when the limited rolled.
 
 ### Workaround: Use Windows Client to Start Stream, Then Push from Linux OBS
 
@@ -328,6 +329,7 @@ This method requires two computers: one running Windows and the other running Li
 Steps:
 
 1. **Start the Stream on Windows:**
+
    - Use the official Bilibili Live client on your Windows machine to start the stream.
    - After the stream is started, you can close the Bilibili Live application.
 
