@@ -317,6 +317,27 @@ sudo sed -i 's|^Exec=.*|Exec=env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIE
 
 This command ensures that Wechat is started with the correct environment for fcitx5 to function properly.
 
+## OBS Streaming to Bilibili Live
+
+> **Background:** Starting from 2025-05-26, Bilibili will restrict third-party streaming software for users with fewer than 5000 fans. On Linux, OBS is commonly used for streaming, so a workaround is needed to continue streaming.
+
+### Workaround: Use Windows Client to Start Stream, Then Push from Linux OBS
+
+This method requires two computers: one running Windows and the other running Linux.
+
+Steps:
+
+1. **Start the Stream on Windows:**
+   - Use the official Bilibili Live client on your Windows machine to start the stream.
+   - After the stream is started, you can close the Bilibili Live application.
+
+2. **Stream from Linux with OBS:**
+   - On your Linux machine, open OBS.
+   - Set the stream key and stream address in OBS. Note that the stream key does **not** auto-refresh, so you can obtain it from the Bilibili web interface before the third-party streaming restriction takes effect.
+   - Start streaming from OBS as usual.
+
+**Note:** This workaround was tested, but may not work if Bilibili enforces stricter policies in the future.
+
 ## ISSUE
 
 - When launching applications via `.desktop` files (for example, using `wofi`), environment variables set in your shell (like fish) or in `hyprland.conf` are **not** passed to those applications.
