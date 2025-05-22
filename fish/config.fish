@@ -15,10 +15,12 @@ function tozh
 end
 
 # node version manager
-fnm env | source
+if type -q fnm
+    fnm env | source
+end
 # mirror for node and npm
 set -x FNM_NODE_DIST_MIRROR https://npmmirror.com/mirrors/node
 set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 
 # source the ~/.profile file, some key is on the ~/.profile
-source ~/.profile
+# source ~/.profile
