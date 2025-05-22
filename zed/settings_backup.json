@@ -11,7 +11,7 @@
     "edit_prediction_provider": "copilot"
   },
   "relative_line_numbers": true,
-  "agent": {
+  "assistant": {
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4.1"
@@ -21,8 +21,8 @@
   },
   "soft_wrap": "bounded",
   "vim_mode": true,
-  "ui_font_size": 14,
-  "buffer_font_size": 16,
+  "ui_font_size": 16,
+  "buffer_font_size": 18,
   "theme": {
     "mode": "system",
     "light": "Github Dark Tritanopia",

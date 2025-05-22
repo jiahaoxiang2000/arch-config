@@ -18,6 +18,13 @@ end
 if type -q fnm
     fnm env | source
 end
+# Load Homebrew environment on macOS
+if test (uname) = "Darwin"
+    if test -f /opt/homebrew/bin/brew
+        eval (/opt/homebrew/bin/brew shellenv)
+    end
+end
+
 # mirror for node and npm
 set -x FNM_NODE_DIST_MIRROR https://npmmirror.com/mirrors/node
 set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
