@@ -1,1 +1,3 @@
-source "$HOME/.cargo/env.fish"
+if test (uname) = Darwin
+    source "$HOME/.cargo/env.fish"
+end
