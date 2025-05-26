@@ -11,7 +11,7 @@ end
 
 # Quick translation to Chinese function
 function tozh
-    trans -x 127.0.0.1:7897 -4 :zh "$argv"
+    trans -x localhost:12345 -4 :zh "$argv"
 end
 
 # node version manager
@@ -35,3 +35,6 @@ source ~/.profile
 
 # add cargo bin to PATH
 set -gx PATH $HOME/.cargo/bin $PATH
+
+# Created by `pipx` on 2025-05-25 01:59:15
+set PATH $PATH /home/isomo/.local/bin
