@@ -55,7 +55,9 @@
     "window-rewrite": {
       "class<firefox>": "", // Windows whose classes are "firefox"
       "class<firefox> title<.*Github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-      "code": ""
+      "code": "",
+      "class<com.obsproject.Studio>": "🎥", // OBS Studio
+      "class<com.gitee.gmg137.NeteaseCloudMusicGtk4>": "🎵" // NetEase Cloud Music
     },
     "format-window-separator": " ",
     // Always show these workspaces, even when empty
