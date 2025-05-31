@@ -340,6 +340,25 @@ Steps:
 
 **Note:** This workaround was tested, but may not work if Bilibili enforces stricter policies in the future.
 
+## Use Vim/Neovim on VS Code
+
+### Issue
+
+- `Ctrl+C` and `Ctrl+V` don't work in VS Code with Vim extension
+- `y` and `p` commands don't copy/paste to system clipboard
+
+### Solution
+
+Enable system clipboard in VS Code settings:
+
+```json
+{
+  "vim.useSystemClipboard": true
+}
+```
+
+**Result:** Now `y` and `p` automatically work with system clipboard.
+
 ## ISSUE
 
 - [x] When launching applications via `.desktop` files (for example, using `wofi`), environment variables set in your shell (like fish) or in `hyprland.conf` are **not** passed to those applications.
