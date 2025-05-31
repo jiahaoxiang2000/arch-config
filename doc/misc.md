@@ -349,12 +349,36 @@ Steps:
 
 ### Solution
 
+#### For VSCodeVim Extension (vscodevim.vim)
+
 Enable system clipboard in VS Code settings:
 
 ```json
 {
   "vim.useSystemClipboard": true
 }
+```
+
+#### For VSCode Neovim Extension (asvetliakov.vscode-neovim)
+
+Configure clipboard in your Neovim init file (`~/.config/nvim/init.lua` or `~/.config/nvim/init.vim`):
+
+**For init.lua:**
+
+```lua
+vim.opt.clipboard = "unnamedplus"
+```
+
+**For init.vim:**
+
+```vim
+set clipboard=unnamedplus
+```
+
+**Requirements:** Install clipboard tools on Linux:
+
+```bash
+sudo pacman -S xclip wl-clipboard
 ```
 
 **Result:** Now `y` and `p` automatically work with system clipboard.
