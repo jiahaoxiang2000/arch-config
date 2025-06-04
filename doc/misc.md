@@ -392,4 +392,4 @@ sudo pacman -S xclip wl-clipboard
 ## Proxy Server
 
 - **wgetcloud** : try to use on 2025-06-04 19:49.
-- [longmao](https://v2speeds.lmvipaff.com/login) : here we had used one years, on the high throughput times will be unstable, but the low throughput times is stable. 2025-06-04 20:03.  
+- [longmao](https://v2speeds.lmvipaff.com/login) : here we had used one years, on the high throughput times will be unstable, but the low throughput times is stable. 2025-06-04 20:03.
