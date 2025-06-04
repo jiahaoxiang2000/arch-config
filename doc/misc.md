@@ -388,3 +388,8 @@ sudo pacman -S xclip wl-clipboard
 - [x] When launching applications via `.desktop` files (for example, using `wofi`), environment variables set in your shell (like fish) or in `hyprland.conf` are **not** passed to those applications.
   - Here we to change the `~/.bashrc` and `~/.profile` to set the environment variables, then it works, here not the know what the file to work. the `config.fish` is can work on the application, but need the machine restart.
 - As a result, input methods (such as fcitx5) or other environment-dependent features may not work as expected in apps started this way.
+
+## Proxy Server
+
+- **wgetcloud** : try to use on 2025-06-04 19:49.
+- [longmao](https://v2speeds.lmvipaff.com/login) : here we had used one years, on the high throughput times will be unstable, but the low throughput times is stable. 2025-06-04 20:03.  
