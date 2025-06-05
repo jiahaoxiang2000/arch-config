@@ -2,3 +2,5 @@
 	editor = nvim
 [commit]
 	template = /home/isomo/.config/git/commit_template.txt
+[init]
+	defaultBranch = main

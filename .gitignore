@@ -131,3 +131,4 @@ iterm2/AppSupport
 zed/prompts/prompts-library-db.0.mdb/data.mdb
 zed/prompts/prompts-library-db.0.mdb/lock.mdb
 configstore/update-notifier-yo.json
+gh/hosts.yml
