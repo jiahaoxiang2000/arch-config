@@ -11,7 +11,7 @@ end
 
 # Quick translation to Chinese function
 function tozh
-    trans -x localhost:12345 -4 :zh "$argv"
+    trans-cli "$argv"
 end
 
 # node version manager
