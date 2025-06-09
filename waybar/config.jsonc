@@ -2,13 +2,13 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 30, // Waybar height (to be removed for auto height)
+  "height": 20, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 1, // Gaps between modules (4px)
   "output": "HDMI-A-1", // Output to display the bar
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": [],
+  "modules-left": ["hyprland/workspaces" ],
+  "modules-center": ["hyprland/window"],
   "modules-right": ["clock", "pulseaudio", "tray"],
   // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
@@ -30,34 +30,35 @@
     "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
-    },
+      "format-icons": {
+        "headphone": "🎧",
+        "hands-free": "📞",
+        "headset": "🎧",
+        "phone": "📱",
+        "portable": "🔊",
+        "car": "🚗",
+        "default": ["🔈", "🔉", "🔊"]
+      },
     "on-click": "pavucontrol"
   },
   "hyprland/workspaces": {
     // Show workspace name, icon, and window icons
-    "format": "{icon} {name} {windows}",
+    "format": "{name} {windows}",
     // Format icons object for workspace states
-    "format-icons": {
-      "active": "",
-      "default": "",
-      "empty": ""
-    },
+      "format-icons": {
+        "active": "●",
+        "default": "○",
+        "empty": "○"
+      },
     // Window representation config
-    "window-rewrite-default": "😄",
+    // Window representation config
+    "window-rewrite-default": "◦",
     "window-rewrite": {
-      "class<firefox>": "", // Windows whose classes are "firefox"
-      "class<firefox> title<.*Github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-      "code": "",
-      "class<com.obsproject.Studio>": "🎥", // OBS Studio
-      "class<com.gitee.gmg137.NeteaseCloudMusicGtk4>": "🎵" // NetEase Cloud Music
+      "class<firefox>": "●", // Windows whose classes are "firefox"
+      "class<firefox> title<.*Github.*>": "◉", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
+      "code": "◆",
+      "class<com.obsproject.Studio>": "▲", // OBS Studio
+      "class<com.gitee.gmg137.NeteaseCloudMusicGtk4>": "♪" // NetEase Cloud Music
     },
     "format-window-separator": " ",
     // Always show these workspaces, even when empty
