@@ -2,7 +2,7 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 20, // Waybar height (to be removed for auto height)
+  "height": 10, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 1, // Gaps between modules (4px)
   "output": "HDMI-A-1", // Output to display the bar
@@ -14,7 +14,7 @@
   "reload_style_on_change": true, // Reload style on change
   "tray": {
     // "icon-size": 21,
-    "spacing": 10
+    // "spacing": 10
   },
   "clock": {
     // "timezone": "America/New_York",
@@ -43,14 +43,13 @@
   },
   "hyprland/workspaces": {
     // Show workspace name, icon, and window icons
-    "format": "{name} {windows}",
+    "format": "{name}",
     // Format icons object for workspace states
       "format-icons": {
         "active": "●",
         "default": "○",
         "empty": "○"
       },
-    // Window representation config
     // Window representation config
     "window-rewrite-default": "◦",
     "window-rewrite": {
