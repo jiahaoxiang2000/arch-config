@@ -1,43 +1,22 @@
 {
   "editor.fontSize": 22,
-  "terminal.integrated.fontSize": 16,
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
     "workbench.action.tasks.runTask"
   ],
-  "github.copilot.enable": {
-    "markdown": true,
-    "plaintext": true
-  },
-  "git.autofetch": true,
-"editor.wordWrap": "on",
-  "git.confirmSync": false,
-  "remote.autoForwardPortsSource": "hybrid",
-  "makefile.configureOnOpen": true,
   "cmake.options.statusBarVisibility": "visible",
   "workbench.editor.enablePreview": false,
   "explorer.confirmDelete": false,
-  "workbench.panel.showLabels": false,
   "diffEditor.renderSideBySide": false,
-  "editor.mouseWheelZoom": true,
   "chat.editor.fontSize": 0,
-  "chat.editor.wordWrap": "on",
-  "workbench.activityBar.location": "top",
-  "workbench.navigationControl.enabled": false,
   "chat.commandCenter.enabled": false,
-  "window.commandCenter": false,
   "editor.fontFamily": "\"Maple Mono NF CN\",'Martian Mono', Consolas, 'Courier New', monospace",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
   "notebook.lineNumbers": "on",
-  "Lingma.PreferredLanguage for AI Chat": "English",
-  "Lingma.PreferredLanguage forCommitMessage": "English",
-  "Lingma.DisplayLanguage": "English",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "vim.useCtrlKeys": false,
+  "vim.useCtrlKeys": false
 }

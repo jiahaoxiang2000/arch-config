@@ -1,4 +1,5 @@
 {
+  // Remote SSH platform configurations
   "remote.SSH.remotePlatform": {
     "8.134.209.76": "linux",
     "172.17.1.175": "linux",
@@ -8,9 +9,16 @@
     "81.71.65.222": "linux",
     "111.230.99.80": "linux"
   },
+
+  // Security settings
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.integrated.inheritEnv": false,
   "security.promptForLocalFileProtocolHandling": false,
+
+  // Terminal settings
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.fontSize": 16,
+
+  // Settings that apply to all profiles
   "workbench.settings.applyToAllProfiles": [
     "editor.scrollbar.horizontal",
     "inlineChat.hideOnRequest",
@@ -18,12 +26,70 @@
     "github.copilot.nextEditSuggestions.enabled",
     "window.zoomLevel",
     "vim.useCtrlKeys",
-    "vim.useSystemClipboard"
+    "vim.useSystemClipboard",
+    "git.autofetch",
+    "git.confirmSync",
+    "editor.wordWrap",
+    "workbench.colorTheme",
+    "workbench.activityBar.location",
+    "workbench.panel.showLabels",
+    "editor.formatOnSave",
+    "terminal.integrated.fontSize",
+    "editor.mouseWheelZoom",
+    "github.copilot.enable",
+    "github.copilot.chat.search.semanticTextResults",
+    "workbench.navigationControl.enabled",
+    "window.commandCenter",
+    "chat.editor.wordWrap",
+    "Lingma.PreferredLanguage for AI Chat",
+    "Lingma.DisplayLanguage",
+    "Lingma.PreferredLanguage forCommitMessage",
+    "remote.autoForwardPortsSource",
+    "makefile.configureOnOpen"
   ],
+
+  // Editor settings (common across profiles)
   "editor.scrollbar.horizontal": "hidden",
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.mouseWheelZoom": true,
+
+  // Git settings (common across profiles)
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Workbench settings (common across profiles)
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.activityBar.location": "top",
+  "workbench.panel.showLabels": false,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "window.zoomLevel": 3,
+
+  // Chat settings (common across profiles)
   "inlineChat.hideOnRequest": true,
   "inlineChat.enableV2": true,
+  "chat.editor.wordWrap": "on",
+
+  // GitHub Copilot settings (common across profiles)
   "github.copilot.nextEditSuggestions.enabled": true,
-  "window.zoomLevel": 3,
-  "vim.useSystemClipboard": true
+  "github.copilot.enable": {
+    "markdown": true,
+    "plaintext": true
+  },
+  "github.copilot.chat.search.semanticTextResults": true,
+
+  // Vim settings (common across profiles)
+  "vim.useSystemClipboard": true,
+
+  // Lingma settings (common across profiles)
+  "Lingma.PreferredLanguage for AI Chat": "English",
+  "Lingma.DisplayLanguage": "English",
+  "Lingma.PreferredLanguage forCommitMessage": "English",
+
+  // Remote settings (common across profiles)
+  "remote.autoForwardPortsSource": "hybrid",
+
+  // Build tools (common across profiles)
+  "makefile.configureOnOpen": true
 }

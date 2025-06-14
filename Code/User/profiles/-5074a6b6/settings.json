@@ -1,6 +1,5 @@
 {
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true,
     "editor.formatOnSave": true
   },
@@ -15,20 +14,11 @@
   },
   "editor.fontSize": 16,
   "notebook.output.scrolling": true,
-  "editor.mouseWheelZoom": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
   },
-  "editor.wordWrap": "on",
-  "github.copilot.enable": {
-    "markdown": true
-  },
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "python.languageServer": "Pylance",
-  "remote.autoForwardPortsSource": "hybrid",
   "workbench.editorLargeFileConfirmation": 40,
   "remote.extensionKind": {
     "GitHub.copilot": ["ui"],
@@ -38,7 +28,6 @@
   "redhat.telemetry.enabled": true,
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
-  "github.copilot.editor.enableAutoCompletions": true,
   "chatgpt.lang": "en",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -65,16 +54,8 @@
       "file": ".copilot-instructions.md"
     }
   ],
-  "github.copilot.chat.search.semanticTextResults": true,
-  "chat.editor.wordWrap": "on",
-  "workbench.navigationControl.enabled": false,
-  "window.commandCenter": false,
-  "workbench.activityBar.location": "top",
-  "workbench.panel.showLabels": false,
   "terminal.integrated.suggest.enabled": true,
   "verilog.linting.linter": "iverilog",
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
   "cmake.pinnedCommands": [
     "workbench.action.tasks.configureTaskRunner",
@@ -89,11 +70,7 @@
       "text": "Use conventional commit message format. For example, 'feat: add new feature' or 'fix: bug fix'."
     }
   ],
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "terminal.integrated.fontSize": 16,
-  "Lingma.PreferredLanguage for AI Chat": "English",
-  "Lingma.DisplayLanguage": "English",
-  "Lingma.PreferredLanguage forCommitMessage": "English",
+  "terminal.integrated.defaultProfile.linux": "fish",
   "Lingma.cloudModelAutoTriggerGenerateLength": "medium",
   "Lingma.localMachineModel": true,
   "Lingma.cloudModelAutoTriggerDisplayRule": false,

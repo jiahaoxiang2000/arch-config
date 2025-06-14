@@ -23,7 +23,6 @@
   "chat.agent.enabled": true,
   "chat.detectParticipant.enabled": true,
   "chat.editor.fontSize": 16,
-  "chat.editor.wordWrap": "on",
   "chat.promptFiles": true,
   "cSpell.userWords": ["datapath"],
   "diffEditor.ignoreTrimWhitespace": false,
@@ -32,16 +31,13 @@
   "editor.fontFamily": "'JetBrains Mono Nerd Font', 'Martian Mono', Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
-  "editor.formatOnSave": true,
   "editor.glyphMargin": false,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "editor.mouseWheelZoom": true,
   "editor.renderWhitespace": "none",
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true
   },
-  "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
@@ -52,8 +48,6 @@
   },
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "afterDelay",
-  "git.autofetch": true,
-  "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.openRepositoryInParentFolders": "always",
   "github.copilot.chat.agent.thinkingTool": true,
@@ -68,14 +62,12 @@
       "text": "Message should be a short description of the change"
     }
   ],
-  "github.copilot.chat.search.semanticTextResults": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": true,
     "plaintext": false,
     "scminput": false
   },
-  "github.copilot.nextEditSuggestions.enabled": true,
   "githubPullRequests.experimental.chat": true,
   "githubPullRequests.experimental.notificationsView": true,
   "gitlens.ai.model": "vscode",
@@ -145,7 +137,6 @@
   "notebook.lineNumbers": "on",
   "notebook.markup.fontFamily": "Consolas",
   "notebook.markup.fontSize": 20,
-  "remote.autoForwardPortsSource": "hybrid",
   "remote.extensionKind": {
     "GitHub.copilot": ["ui"],
     "github.copilot-chat": ["ui"]
@@ -153,14 +144,10 @@
   "terminal.integrated.env.osx": {
     "PATH": "${env:PATH}:/Library/TeX/texbin"
   },
-  "terminal.integrated.fontSize": 16,
   "todo-tree.general.tags": ["BUG", "HACK", "TODO", "XXX", "[ ]", "[x]"],
   "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.useCtrlKeys": false,
-  "window.commandCenter": false,
-  "workbench.activityBar.location": "top",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorAssociations": {
     "*.bib": "default",
@@ -168,12 +155,6 @@
     "*.pdf": "latex-workshop-pdf-hook"
   },
   "workbench.editorLargeFileConfirmation": 50,
-  "workbench.navigationControl.enabled": false,
-  "workbench.panel.showLabels": false,
   "workbench.startupEditor": "none",
-  "editor.scrollbar.horizontal": "hidden",
-  "inlineChat.hideOnRequest": true,
-  "inlineChat.enableV2": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "vim.useSystemClipboard": true
+  "workbench.iconTheme": "material-icon-theme"
 }

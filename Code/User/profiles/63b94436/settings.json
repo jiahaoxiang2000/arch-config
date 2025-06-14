@@ -1,15 +1,11 @@
 {
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnType": true,
     "editor.formatOnSave": true
   },
   "files.autoSave": "afterDelay",
   "jupyter.themeMatplotlibPlots": true,
-  "jupyter.widgetScriptSources": [
-    "unpkg.com",
-    "jsdelivr.com"
-  ],
+  "jupyter.widgetScriptSources": ["unpkg.com", "jsdelivr.com"],
   "files.exclude": {
     "**/.csv": true,
     "**/.parquet": true,
@@ -18,21 +14,13 @@
   },
   "editor.fontSize": 18,
   "notebook.output.scrolling": true,
-  "editor.mouseWheelZoom": true,
-  "git.autofetch": true,
-  "git.confirmSync": false,
   "notebook.cellToolbarLocation": {
     "default": "right",
     "jupyter-notebook": "right"
   },
-  "editor.wordWrap": "on",
-  "github.copilot.enable": {
-    "markdown": true
-  },
   "python.languageServer": "Pylance",
-  "remote.autoForwardPortsSource": "hybrid",
   "workbench.editorLargeFileConfirmation": 40,
- /*  "remote.extensionKind": {
+  /*  "remote.extensionKind": {
     "GitHub.copilot": [
       "ui"
     ],
@@ -44,26 +32,17 @@
   "redhat.telemetry.enabled": true,
   "notebook.formatOnCellExecution": true,
   "notebook.formatOnSave.enabled": true,
-  "github.copilot.editor.enableAutoCompletions": true,
   "chatgpt.lang": "en",
-  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "diffEditor.ignoreTrimWhitespace": false
   },
-  "cSpell.userWords": [
-    "Jiahao",
-    "Xiang"
-  ],
+  "cSpell.userWords": ["Jiahao", "Xiang"],
   "editor.fontFamily": "'Martian Mono', Consolas, 'Courier New', monospace",
-  "workbench.activityBar.location": "top",
-  "workbench.panel.showLabels": false,
-  "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.lineNumbers": "relative",
-  "terminal.integrated.fontSize": 16,
   "github.copilot.chat.editor.temporalContext.enabled": true,
   "notebook.markup.fontFamily": "Consolas",
   "extensions.experimental.affinity": {
@@ -83,11 +62,8 @@
       "text": "Message should be a short description of the change"
     }
   ],
-  "workbench.navigationControl.enabled": false,
   "breadcrumbs.enabled": false,
   "notebook.stickyScroll.enabled": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "window.commandCenter": false,
   "github.copilot.chat.notebook.followCellExecution.enabled": true,
   "python.analysis.typeCheckingMode": "basic"
 }
