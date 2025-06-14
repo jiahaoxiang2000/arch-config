@@ -1,12 +1,13 @@
 // Place your key bindings in this file to override the defaults
+// Vim-style navigation keybindings
 [
   {
-    "key": "alt+left",
+    "key": "ctrl+o",
     "command": "workbench.action.navigateBack",
     "when": "canNavigateBack"
   },
   {
-    "key": "alt+right",
+    "key": "ctrl+i",
     "command": "workbench.action.navigateForward",
     "when": "canNavigateForward"
   }
