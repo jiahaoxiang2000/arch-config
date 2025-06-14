@@ -76,6 +76,9 @@ Temporary Items
 ### server ###
 # ignore the vscode server data, it had sync by default
 Code/
+# but track specific configuration files under profiles
+!Code/User/profiles/*/keybindings.json
+!Code/User/profiles/*/settings.json
 # go language server
 go/*
 # input server
