@@ -1,0 +1,29 @@
+{
+  "remote.SSH.remotePlatform": {
+    "8.134.209.76": "linux",
+    "172.17.1.175": "linux",
+    "127.0.0.1": "linux",
+    "192.168.71.175": "linux",
+    "43.128.87.171": "linux",
+    "81.71.65.222": "linux",
+    "111.230.99.80": "linux"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "terminal.integrated.inheritEnv": false,
+  "security.promptForLocalFileProtocolHandling": false,
+  "workbench.settings.applyToAllProfiles": [
+    "editor.scrollbar.horizontal",
+    "inlineChat.hideOnRequest",
+    "inlineChat.enableV2",
+    "github.copilot.nextEditSuggestions.enabled",
+    "window.zoomLevel",
+    "vim.useCtrlKeys",
+    "vim.useSystemClipboard"
+  ],
+  "editor.scrollbar.horizontal": "hidden",
+  "inlineChat.hideOnRequest": true,
+  "inlineChat.enableV2": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "window.zoomLevel": 3,
+  "vim.useSystemClipboard": true
+}

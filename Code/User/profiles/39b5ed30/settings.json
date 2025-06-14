@@ -1,0 +1,28 @@
+{
+    "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "redhat.telemetry.enabled": true,
+    "workbench.panel.showLabels": false,
+    "editor.fontSize": 18,
+    "editor.fontFamily": "'Martian Mono', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 16,
+    "editor.wordWrap": "on",
+    "github.copilot.enable": {
+        "markdown": true
+    },
+    "editor.formatOnSave": true,
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "git.confirmSync": false,
+    "rsp-ui.enableStartServerOnActivation": [
+        {
+            "id": "redhat.vscode-community-server-connector",
+            "name": "Community Server Connector",
+            "startOnActivation": true
+        }
+    ],
+    "git.autofetch": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "microprofile.alwaysShowOverview": false
+}

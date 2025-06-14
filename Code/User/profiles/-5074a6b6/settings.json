@@ -1,0 +1,104 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true
+  },
+  "files.autoSave": "afterDelay",
+  "jupyter.themeMatplotlibPlots": true,
+  "jupyter.widgetScriptSources": ["unpkg.com", "jsdelivr.com"],
+  "files.exclude": {
+    "**/.csv": true,
+    "**/.parquet": true,
+    "**/.pkl": true,
+    "**/.xls": true
+  },
+  "editor.fontSize": 16,
+  "notebook.output.scrolling": true,
+  "editor.mouseWheelZoom": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "right"
+  },
+  "editor.wordWrap": "on",
+  "github.copilot.enable": {
+    "markdown": true
+  },
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "python.languageServer": "Pylance",
+  "remote.autoForwardPortsSource": "hybrid",
+  "workbench.editorLargeFileConfirmation": 40,
+  "remote.extensionKind": {
+    "GitHub.copilot": ["ui"],
+    "github.copilot-chat": ["ui"]
+  },
+  "markdown.preview.fontSize": 20,
+  "redhat.telemetry.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "notebook.formatOnSave.enabled": true,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "chatgpt.lang": "en",
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.commandsToSkipShell": ["matlab.interrupt"],
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.fontFamily": "'Martian Mono', Consolas, 'Courier New', monospace",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": ".copilot-instructions.md"
+    }
+  ],
+  "github.copilot.chat.search.semanticTextResults": true,
+  "chat.editor.wordWrap": "on",
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "workbench.activityBar.location": "top",
+  "workbench.panel.showLabels": false,
+  "terminal.integrated.suggest.enabled": true,
+  "verilog.linting.linter": "iverilog",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "cmake.pinnedCommands": [
+    "workbench.action.tasks.configureTaskRunner",
+    "workbench.action.tasks.runTask"
+  ],
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.mp4": "vscode.videoPreview"
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Use conventional commit message format. For example, 'feat: add new feature' or 'fix: bug fix'."
+    }
+  ],
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontSize": 16,
+  "Lingma.PreferredLanguage for AI Chat": "English",
+  "Lingma.DisplayLanguage": "English",
+  "Lingma.PreferredLanguage forCommitMessage": "English",
+  "Lingma.cloudModelAutoTriggerGenerateLength": "medium",
+  "Lingma.localMachineModel": true,
+  "Lingma.cloudModelAutoTriggerDisplayRule": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "chat.agent.enabled": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "github.copilot.chat.agent.thinkingTool": true
+}

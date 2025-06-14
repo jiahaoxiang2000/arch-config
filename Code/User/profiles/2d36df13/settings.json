@@ -1,0 +1,35 @@
+{
+    "editor.wordWrap": "on",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": "true",
+        "scminput": false
+    },
+    "git.autofetch": true,
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+    "cSpell.userWords": [
+        "datastruct"
+    ],
+    "[vue]": {
+        "editor.defaultFormatter": "Vue.volar"
+    },
+    "git.confirmSync": false,
+    "explorer.fileNesting.patterns": {
+        "Cargo.toml": "Cargo.lock",
+        "*.sqlite": "${capture}.${extname}-*",
+        "*.db": "${capture}.${extname}-*",
+        "*.sqlite3": "${capture}.${extname}-*",
+        "*.db3": "${capture}.${extname}-*",
+        "*.sdb": "${capture}.${extname}-*",
+        "*.s3db": "${capture}.${extname}-*"
+    },
+    "terminal.integrated.fontSize": 16,
+    "workbench.activityBar.location": "top",
+    "workbench.panel.showLabels": false,
+    "editor.fontFamily": "'Maple Mono NF CN', Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "files.autoSave": "afterDelay",
+    "editor.formatOnSave": true,
+    "makefile.configureOnOpen": true,
+}
