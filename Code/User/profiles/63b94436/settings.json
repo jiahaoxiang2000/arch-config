@@ -20,14 +20,6 @@
   },
   "python.languageServer": "Pylance",
   "workbench.editorLargeFileConfirmation": 40,
-  /*  "remote.extensionKind": {
-    "GitHub.copilot": [
-      "ui"
-    ],
-    "github.copilot-chat": [
-      "ui"
-    ]
-  } */
   "markdown.preview.fontSize": 20,
   "redhat.telemetry.enabled": true,
   "notebook.formatOnCellExecution": true,

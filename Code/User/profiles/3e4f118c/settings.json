@@ -137,17 +137,10 @@
   "notebook.lineNumbers": "on",
   "notebook.markup.fontFamily": "Consolas",
   "notebook.markup.fontSize": 20,
-  "remote.extensionKind": {
-    "GitHub.copilot": ["ui"],
-    "github.copilot-chat": ["ui"]
-  },
   "terminal.integrated.env.osx": {
     "PATH": "${env:PATH}:/Library/TeX/texbin"
   },
   "todo-tree.general.tags": ["BUG", "HACK", "TODO", "XXX", "[ ]", "[x]"],
-  "vim.sneak": true,
-  "vim.sneakReplacesF": true,
-  "vim.useCtrlKeys": false,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorAssociations": {
     "*.bib": "default",

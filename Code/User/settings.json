@@ -1,12 +1,4 @@
 {
-  // Security settings
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.promptForLocalFileProtocolHandling": false,
-
-  // Terminal settings
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.fontSize": 16,
-
   // Settings that apply to all profiles
   "workbench.settings.applyToAllProfiles": [
     "editor.scrollbar.horizontal",
@@ -16,6 +8,7 @@
     "window.zoomLevel",
     "vim.useCtrlKeys",
     "vim.useSystemClipboard",
+    "vim.handleKeys",
     "git.autofetch",
     "git.confirmSync",
     "editor.wordWrap",
@@ -33,6 +26,14 @@
     "remote.autoForwardPortsSource",
     "makefile.configureOnOpen"
   ],
+
+  // Security settings
+  "security.workspace.trust.untrustedFiles": "open",
+  "security.promptForLocalFileProtocolHandling": false,
+
+  // Terminal settings
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.fontSize": 16,
 
   // Editor settings (common across profiles)
   "editor.scrollbar.horizontal": "hidden",
@@ -67,7 +68,7 @@
   // Vim settings (common across profiles)
   "vim.useSystemClipboard": true,
   "vim.usneak": true,
-  "vim.useCtrlKeys": false,
+  "vim.useCtrlKeys": true,
   "vim.handleKeys": {
     "<C-o>": true, // Vim: Jump back (matches your keybindings.json)
     "<C-i>": true, // Vim: Jump forward (matches your keybindings.json)
