@@ -162,5 +162,22 @@
       ]
     },
     "when": "listFocus && !inputFocus"
+  },
+
+  // ========================================
+  // Chat Tab Navigation (Input ↔ History)
+  // ========================================
+  // by this we want History to Input on chat.
+  {
+    "key": "tab",
+    "command": "workbench.action.chat.focusInput",
+    "when": "inChat && !inChatInput"
+  },
+  // here we want Input to History on chat.
+  // BUG: we should first to focus the chat history list, then the `tab` key works as expected.
+  {
+    "key": "tab",
+    "command": "list.focusAnyLast",
+    "when": "inChat && inChatInput"
   }
 ]
