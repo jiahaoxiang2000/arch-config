@@ -18,7 +18,6 @@
     "vim.surround",
     "vim.camelCaseMotion.enable",
     "vim.replaceWithRegister",
-    "vim.textwidth",
     "vim.leader",
     "vim.foldfix",
     "vim.statusBarColorControl",
@@ -136,7 +135,6 @@
   "vim.surround": true,
   "vim.camelCaseMotion.enable": true,
   "vim.replaceWithRegister": true,
-  "vim.textwidth": 80,
   "vim.leader": "<space>",
   "vim.foldfix": true,
 
