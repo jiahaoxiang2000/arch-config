@@ -169,6 +169,98 @@ The keybinding configuration focuses on essential navigation while preserving co
 | `Ctrl+O`   | Navigate Back    | Go to previous location | Matches Vim's `Ctrl+O` jump back    |
 | `Ctrl+I`   | Navigate Forward | Go to next location     | Matches Vim's `Ctrl+I` jump forward |
 
+### 🪟 **Vim-Style View Pane Navigation**
+
+Complete Vim-style window and pane management using `Ctrl+W` prefix (traditional Vim pattern):
+
+#### **Editor Group Navigation:**
+
+| Keybinding      | Command                   | Description                    |
+| --------------- | ------------------------- | ------------------------------ |
+| `Ctrl+W H`      | Focus Previous Group      | Focus left editor group        |
+| `Ctrl+W L`      | Focus Next Group          | Focus right editor group       |
+| `Ctrl+W J`      | Focus Below Group         | Focus editor group below       |
+| `Ctrl+W K`      | Focus Above Group         | Focus editor group above       |
+| `Ctrl+W Ctrl+W` | Focus Active Editor Group | Return to editor from any view |
+
+#### **Sidebar & Panel Navigation:**
+
+| Keybinding       | Command          | Description               |
+| ---------------- | ---------------- | ------------------------- |
+| `Ctrl+W E`       | Focus Explorer   | Open/focus file explorer  |
+| `Ctrl+W Shift+E` | Toggle Sidebar   | Show/hide sidebar         |
+| `Ctrl+W T`       | Focus Terminal   | Focus terminal panel      |
+| `Ctrl+W Shift+T` | Toggle Panel     | Show/hide bottom panel    |
+| `Ctrl+W P`       | Focus Problems   | Focus problems panel      |
+| `Ctrl+W O`       | Focus Output     | Focus output panel        |
+| `Ctrl+W G`       | Focus Git/SCM    | Focus source control view |
+| `Ctrl+W D`       | Focus Debug      | Focus debug view          |
+| `Ctrl+W X`       | Focus Extensions | Focus extensions view     |
+
+#### **Editor Management:**
+
+| Keybinding       | Command                | Description                  |
+| ---------------- | ---------------------- | ---------------------------- |
+| `Ctrl+W S`       | Split Editor Down      | Split editor horizontally    |
+| `Ctrl+W V`       | Split Editor Right     | Split editor vertically      |
+| `Ctrl+W Q`       | Close Active Editor    | Close current editor         |
+| `Ctrl+W Shift+Q` | Close Editors in Group | Close all editors in group   |
+| `Ctrl+W N`       | Next Editor            | Next tab in editor group     |
+| `Ctrl+W Shift+N` | Previous Editor        | Previous tab in editor group |
+
+#### **Resize Editor Groups:**
+
+| Keybinding       | Command              | Description          |
+| ---------------- | -------------------- | -------------------- |
+| `Ctrl+W Shift+H` | Decrease View Width  | Make editor narrower |
+| `Ctrl+W Shift+L` | Increase View Width  | Make editor wider    |
+| `Ctrl+W Shift+J` | Decrease View Height | Make editor shorter  |
+| `Ctrl+W Shift+K` | Increase View Height | Make editor taller   |
+
+#### **Move Editors Between Groups:**
+
+| Keybinding           | Command                       | Description               |
+| -------------------- | ----------------------------- | ------------------------- |
+| `Ctrl+W Shift+Right` | Move Editor to Next Group     | Move current editor right |
+| `Ctrl+W Shift+Left`  | Move Editor to Previous Group | Move current editor left  |
+
+#### **Maximize & Layout:**
+
+| Keybinding       | Command                | Description             |
+| ---------------- | ---------------------- | ----------------------- |
+| `Ctrl+W M`       | Toggle Maximized Panel | Maximize/restore panel  |
+| `Ctrl+W Shift+M` | Toggle Editor Widths   | Maximize/restore editor |
+
+### **🎯 Vim Window Management Benefits:**
+
+This comprehensive keybinding system provides:
+
+1. **Familiar Vim Pattern**: Uses `Ctrl+W` prefix exactly like traditional Vim
+2. **Complete Keyboard Control**: Navigate entire VS Code interface without mouse
+3. **Logical Mnemonics**:
+   - `E` for Explorer, `T` for Terminal, `G` for Git
+   - `H/J/K/L` for directional movement (Vim standard)
+   - `S/V` for horizontal/vertical splits (Vim standard)
+   - `Q` for quit/close operations (Vim standard)
+4. **Context Awareness**: Most commands only work when editor has focus
+5. **Consistent Workflow**: Maintains muscle memory from terminal Vim
+
+### **🚀 Example Workflow:**
+
+```vim
+# Start in editor, want to check git status and run tests
+Ctrl+W G          # Switch to Git view
+# Review changes, then need terminal
+Ctrl+W T          # Switch to terminal
+# Run tests, then back to code
+Ctrl+W Ctrl+W     # Return to editor
+# Need to split for comparison
+Ctrl+W V          # Vertical split
+# Navigate between splits
+Ctrl+W L          # Focus right split
+Ctrl+W H          # Focus left split
+```
+
 ### 🅥 Advanced Vim Key Bindings
 
 **Smart Key Handling Configuration:**

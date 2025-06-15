@@ -104,13 +104,11 @@
   // Move editors between groups
   {
     "key": "ctrl+w shift+right",
-    "command": "workbench.action.moveEditorToNextGroup",
-    "when": "editorTextFocus"
+    "command": "workbench.action.moveEditorToNextGroup"
   },
   {
     "key": "ctrl+w shift+left",
-    "command": "workbench.action.moveEditorToPreviousGroup",
-    "when": "editorTextFocus"
+    "command": "workbench.action.moveEditorToPreviousGroup"
   },
 
   // Focus specific views with Vim-style mnemonics
