@@ -58,8 +58,8 @@
   // Close Editor Group (Vim-style)
   {
     "key": "ctrl+w q",
-    "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus || inSettingsEditor || inKeybindings"
+    "command": "workbench.action.closeActiveEditor"
+    // "when": "editorTextFocus || inSettingsEditor || inKeybindings"
   },
   {
     "key": "ctrl+w shift+q",
