@@ -149,7 +149,6 @@
     "<C-y>": false, // VS Code: Scroll up
     "<C-f>": false, // VS Code: Find in file
     "<C-p>": false, // VS Code: Quick Open
-    "<C-w>": false, // VS Code: Close tab
     "<C-s>": false, // VS Code: Save
     "<C-a>": false, // VS Code: Select all
     "<C-c>": false, // VS Code: Copy

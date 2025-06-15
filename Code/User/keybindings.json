@@ -59,7 +59,7 @@
   {
     "key": "ctrl+w q",
     "command": "workbench.action.closeActiveEditor",
-    "when": "editorTextFocus"
+    "when": "editorTextFocus || inSettingsEditor || inKeybindings"
   },
   {
     "key": "ctrl+w shift+q",
