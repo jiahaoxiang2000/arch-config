@@ -27,6 +27,7 @@
     "vim.insertModeKeyBindings",
     "vim.normalModeKeyBindingsNonRecursive",
     "vim.visualModeKeyBindingsNonRecursive",
+    "vim.operatorPendingModeKeyBindingsNonRecursive",
 
     // Editor settings for Vim
     "editor.scrollbar.horizontal",
@@ -148,7 +149,7 @@
     "<C-f>": false, // VS Code: Find in file
     "<C-p>": false, // VS Code: Quick Open
     "<C-w>": false, // VS Code: Close tab
-    "<C-n>": false, // VS Code: New file
+    "<C-n>": true, // Vim : nohlsearch
     "<C-s>": false, // VS Code: Save
     "<C-a>": false, // VS Code: Select all
     "<C-c>": false, // VS Code: Copy
@@ -159,12 +160,11 @@
 
   // Vim key bindings for enhanced workflow
   "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
-    }
+    // {
+    //   "before": ["j", "j"],
+    //   "after": ["<Esc>"]
+    // }
   ],
-
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "d"],
@@ -181,10 +181,6 @@
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.quickOpen"]
-    },
-    {
-      "before": ["<leader>", "p"],
-      "commands": ["workbench.action.showCommands"]
     },
     {
       "before": ["g", "d"],
@@ -206,18 +202,13 @@
 
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": [">"],
-      "commands": ["editor.action.indentLines"]
-    },
-    {
-      "before": ["<"],
-      "commands": ["editor.action.outdentLines"]
-    },
-    {
       "before": ["p"],
       "after": ["p", "g", "v", "y"]
     }
   ],
+
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [],
+
   // Remote settings (common across profiles)
   "remote.autoForwardPortsSource": "hybrid",
 
