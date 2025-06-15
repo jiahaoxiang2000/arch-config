@@ -273,20 +273,22 @@ This configuration provides a complete Vim experience because:
 - **File Picker**: `<leader>f` - Quick file opening
 - **Save File**: `<leader>w` - Quick save
 
-### � Switching Between Vim Modes
+## 🖱️ Multi-Cursor Mode
 
-**VSCodeVim Mode:**
+Enter multi-cursor mode by:
 
-- Traditional Vim emulation within VS Code
-- Best for users transitioning from Vim
-- Integrated with VS Code features
+- **On OSX**: `cmd-d`. **On Windows**: `ctrl-d`.
+- **`gb`** - A new shortcut we added which is equivalent to `cmd-d` (OSX) or `ctrl-d` (Windows). It adds another cursor at the next word that matches the word the cursor is currently on.
+- **Running "Add Cursor Above/Below"** or the shortcut on any platform.
 
-**Neovim Mode:**
+### **Multi-Cursor Operations in Vim Mode:**
 
-- Direct Neovim embedding
-- Full Neovim configuration support
-- Advanced plugin ecosystem access
-- Better performance for complex operations
+Once you have multiple cursors, you should be able to use Vim commands as you see fit:
+
+- **Each cursor has its own clipboard**
+- **Pressing Escape in Multi-Cursor Visual Mode** will bring you to Multi-Cursor Normal mode
+- **Pressing Escape again** will return you to Normal mode
+- **Most Vim operations work** across all cursors simultaneously
 
 ## 🎯 Vim Workflow Integration
 
