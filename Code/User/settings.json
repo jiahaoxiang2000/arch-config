@@ -1,15 +1,4 @@
 {
-  // Remote SSH platform configurations
-  "remote.SSH.remotePlatform": {
-    "8.134.209.76": "linux",
-    "172.17.1.175": "linux",
-    "127.0.0.1": "linux",
-    "192.168.71.175": "linux",
-    "43.128.87.171": "linux",
-    "81.71.65.222": "linux",
-    "111.230.99.80": "linux"
-  },
-
   // Security settings
   "security.workspace.trust.untrustedFiles": "open",
   "security.promptForLocalFileProtocolHandling": false,
@@ -41,9 +30,6 @@
     "workbench.navigationControl.enabled",
     "window.commandCenter",
     "chat.editor.wordWrap",
-    "Lingma.PreferredLanguage for AI Chat",
-    "Lingma.DisplayLanguage",
-    "Lingma.PreferredLanguage forCommitMessage",
     "remote.autoForwardPortsSource",
     "makefile.configureOnOpen"
   ],
@@ -78,18 +64,27 @@
     "plaintext": true
   },
   "github.copilot.chat.search.semanticTextResults": true,
-
   // Vim settings (common across profiles)
   "vim.useSystemClipboard": true,
-
-  // Lingma settings (common across profiles)
-  "Lingma.PreferredLanguage for AI Chat": "English",
-  "Lingma.DisplayLanguage": "English",
-  "Lingma.PreferredLanguage forCommitMessage": "English",
+  "vim.usneak": true,
+  "vim.useCtrlKeys": false,
+  "vim.handleKeys": {
+    "<C-o>": true, // Vim: Jump back (matches your keybindings.json)
+    "<C-i>": true, // Vim: Jump forward (matches your keybindings.json)
+    "<C-d>": true, // Vim: Half page down
+    "<C-u>": true, // Vim: Half page up
+    "<C-f>": false, // VS Code: Find in file
+    "<C-p>": false, // VS Code: Quick Open
+    "<C-w>": false, // VS Code: Close tab
+    "<C-n>": false, // VS Code: New file
+    "<C-s>": false, // VS Code: Save
+    "<C-a>": false, // VS Code: Select all
+    "<C-c>": false, // VS Code: Copy
+    "<C-v>": false, // VS Code: Paste
+    "<C-x>": false, // VS Code: Cut
+    "<C-z>": false // VS Code: Undo
+  },
 
   // Remote settings (common across profiles)
-  "remote.autoForwardPortsSource": "hybrid",
-
-  // Build tools (common across profiles)
-  "makefile.configureOnOpen": true
+  "remote.autoForwardPortsSource": "hybrid"
 }

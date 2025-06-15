@@ -82,6 +82,7 @@ Code/*
 Code/User/*
 !Code/User/keybindings.json
 !Code/User/settings.json
+!Code/User/*.md
 # Allow profile keybindings and settings
 !Code/User/profiles/
 Code/User/profiles/*
