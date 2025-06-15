@@ -126,5 +126,41 @@
     "key": "ctrl+w x",
     "command": "workbench.view.extensions", // Extensions
     "when": "editorTextFocus"
+  },
+
+  // ========================================
+  // Chat Navigation - List Scroll Commands Only
+  // ========================================
+
+  // Basic list scrolling - Execute 3 times for more distance
+  {
+    "key": "j",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.scrollDown",
+        "list.scrollDown",
+        "list.scrollDown",
+        "list.scrollDown",
+        "list.scrollDown",
+        "list.scrollDown"
+      ]
+    },
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "k",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "list.scrollUp",
+        "list.scrollUp",
+        "list.scrollUp",
+        "list.scrollUp",
+        "list.scrollUp",
+        "list.scrollUp"
+      ]
+    },
+    "when": "listFocus && !inputFocus"
   }
 ]
