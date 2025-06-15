@@ -225,115 +225,21 @@ The keybinding configuration focuses on essential navigation while preserving co
 | `<`        | Outdent Lines | Unindent selected lines           |
 | `p`        | Smart Paste   | Paste without overriding register |
 
-### 🎯 Why Comprehensive Vim Integration?
+## 🎩 **VSCodeVim Tricks!**
 
-This configuration provides a complete Vim experience because:
+### **🎯 VS Code Integration Commands:**
 
-1. **Full VSCodeVim Implementation**: Based on official VSCodeVim README recommendations
-2. **All Emulated Plugins Enabled**: EasyMotion, Sneak, Surround, CamelCase, ReplaceWithRegister
-3. **Smart Key Handling**: Preserves essential VS Code shortcuts while enabling Vim navigation
-4. **Enhanced Visual Feedback**: Highlighting, search improvements, and status integration
-5. **Cross-Profile Consistency**: All settings applied to all VS Code profiles
-6. **Performance Optimized**: Extension affinity and optimized key handling
+VS Code has a lot of nifty tricks and we try to preserve some of them:
 
-### 🅥 Available Vim Features (Comprehensive Implementation)
+- **`gd`** - Jump to definition. Navigate directly to where a symbol is defined.
 
-#### **Core Vim Navigation & Editing:**
+- **`gq`** - On a visual selection, reflow and wordwrap blocks of text, preserving commenting style. Great for formatting documentation comments.
 
-- `h, j, k, l` - Basic directional movement with relative line numbers
-- `w, b, e, ge` - Word-based movement (enhanced with CamelCase support)
-- `0, $, ^` - Line beginning/end/first non-blank
-- `gg, G` - Document beginning/end
-- `Ctrl+d, Ctrl+u` - Half-page scrolling
-- `Ctrl+f, Ctrl+b` - Full-page scrolling (when enabled)
-- `Ctrl+o, Ctrl+i` - Jump list navigation
+- **`gb`** - Adds another cursor on the next word it finds which is the same as the word under the cursor. Perfect for multi-cursor editing.
 
-#### **Enhanced Search & Navigation:**
+- **`af`** - Visual mode command which selects increasingly large blocks of text. For example, if you had `"blah (foo [bar 'ba|z'])"` then it would select `'baz'` first. If you pressed `af` again, it'd then select `[bar 'baz']`, and if you did it a third time it would select `"(foo [bar 'baz'])"`.
 
-- **Incremental Search**: `/pattern` with live highlighting as you type
-- **Smart Case Search**: Automatic case sensitivity based on pattern
-- **Highlight Search**: All matches highlighted with `vim.hlsearch`
-- **Sneak Navigation**: `s{char}{char}` for quick two-character jumps
-- **EasyMotion**: `<leader><leader>s{char}` for visual jump targets
-
-#### **Advanced Text Objects & Operations:**
-
-- **Surround Plugin**: `cs"'` (change quotes), `ds"` (delete quotes), `ys<motion>"` (add quotes)
-- **CamelCase Motion**: `<leader>w`, `<leader>b`, `<leader>e` for camelCase navigation
-- **Replace with Register**: `gr<motion>` to replace text with register contents
-- **Enhanced Visual Mode**: Improved indentation and paste behavior
-
-#### **VS Code Integration Commands:**
-
-- **Go to Definition**: `gd` - Jump to symbol definition
-- **Show Hover**: `gh` - Display type information and documentation
-- **Go to Implementation**: `gi` - Jump to implementation
-- **Go to References**: `gr` - Show all symbol references
-- **Command Palette**: `<leader>p` - Quick access to VS Code commands
-- **File Picker**: `<leader>f` - Quick file opening
-- **Save File**: `<leader>w` - Quick save
-
-## 🖱️ Multi-Cursor Mode
-
-Enter multi-cursor mode by:
-
-- **On OSX**: `cmd-d`. **On Windows**: `ctrl-d`.
-- **`gb`** - A new shortcut we added which is equivalent to `cmd-d` (OSX) or `ctrl-d` (Windows). It adds another cursor at the next word that matches the word the cursor is currently on.
-- **Running "Add Cursor Above/Below"** or the shortcut on any platform.
-
-### **Multi-Cursor Operations in Vim Mode:**
-
-Once you have multiple cursors, you should be able to use Vim commands as you see fit:
-
-- **Each cursor has its own clipboard**
-- **Pressing Escape in Multi-Cursor Visual Mode** will bring you to Multi-Cursor Normal mode
-- **Pressing Escape again** will return you to Normal mode
-- **Most Vim operations work** across all cursors simultaneously
-
-## 🎯 Vim Workflow Integration
-
-### 🔧 Extension Management
-
-**Extension Priorities:**
-
-```json
-"extensions.experimental.affinity": {
-  "asvetliakov.vscode-neovim": 1
-}
-```
-
-This ensures optimal performance by loading Neovim extension in the main process.
-
-### 🎨 Vim-Optimized Visual Settings
-
-**Font Configuration:**
-
-- **Primary**: `JetBrains Mono Nerd Font` (programming ligatures + icons)
-- **Fallback**: `Martian Mono, Consolas, Courier New`
-- **Size**: 18px (comfortable for extended coding sessions)
-- **Ligatures**: Enabled for better code readability
-
-**Editor Layout for Vim Users:**
-
-- **Line Numbers**: Relative (essential for Vim navigation)
-- **Minimap**: Disabled (Vim users prefer text-based navigation)
-- **Glyph Margin**: Hidden for cleaner interface
-- **Whitespace**: Not rendered (reduces visual clutter)
-
-### ⚡ Performance Optimizations
-
-**Startup Configuration:**
-
-- **Startup Editor**: None (faster load times)
-- **Auto Save**: After delay (preserves Vim editing flow)
-- **Large File Threshold**: 50MB before confirmation
-
-**File Handling:**
-
-- **Explorer Confirmations**: Disabled for delete, drag-drop, paste
-- **Smart Commit**: Enabled for streamlined Git workflow
-
-## 🚀 Advanced Vim Usage Tips
+- **`gh`** - Equivalent to hovering your mouse over wherever the cursor is. Handy for seeing types and error messages without reaching for the mouse!
 
 ### 🎯 **Essential Vim Commands in VS Code**
 
