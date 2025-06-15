@@ -1,31 +1,82 @@
 {
   // Settings that apply to all profiles
   "workbench.settings.applyToAllProfiles": [
-    "editor.scrollbar.horizontal",
-    "inlineChat.hideOnRequest",
-    "inlineChat.enableV2",
-    "github.copilot.nextEditSuggestions.enabled",
-    "window.zoomLevel",
+    // Vim core settings
+    "vim.highlightedyank.enable",
+    "vim.highlightedyank.color",
+    "vim.highlightedyank.duration",
     "vim.useCtrlKeys",
     "vim.useSystemClipboard",
     "vim.handleKeys",
-    "git.autofetch",
-    "git.confirmSync",
+    "vim.easymotion",
+    "vim.incsearch",
+    "vim.hlsearch",
+    "vim.smartcase",
+    "vim.ignorecase",
+    "vim.sneak",
+    "vim.sneakUseIgnorecaseAndSmartcase",
+    "vim.surround",
+    "vim.camelCaseMotion.enable",
+    "vim.replaceWithRegister",
+    "vim.textwidth",
+    "vim.leader",
+    "vim.foldfix",
+    "vim.statusBarColorControl",
+
+    // Vim key bindings
+    "vim.insertModeKeyBindings",
+    "vim.normalModeKeyBindingsNonRecursive",
+    "vim.visualModeKeyBindingsNonRecursive",
+
+    // Editor settings for Vim
+    "editor.scrollbar.horizontal",
+    "editor.lineNumbers",
+    "editor.cursorSurroundingLines",
+    "editor.scrollBeyondLastLine",
     "editor.wordWrap",
+    "editor.formatOnSave",
+    "editor.mouseWheelZoom",
+
+    // Workbench settings
     "workbench.colorTheme",
     "workbench.activityBar.location",
     "workbench.panel.showLabels",
-    "editor.formatOnSave",
+    "workbench.navigationControl.enabled",
+    "workbench.list.automaticKeyboardNavigation",
+    "window.commandCenter",
+    "window.zoomLevel",
+
+    // System and compatibility
+    "keyboard.dispatch",
+    "security.workspace.trust.untrustedFiles",
+    "security.promptForLocalFileProtocolHandling",
+
+    // Terminal settings
+    "terminal.integrated.inheritEnv",
     "terminal.integrated.fontSize",
-    "editor.mouseWheelZoom",
+
+    // Git settings
+    "git.autofetch",
+    "git.confirmSync",
+
+    // Chat and AI settings
+    "inlineChat.hideOnRequest",
+    "inlineChat.enableV2",
+    "chat.editor.wordWrap",
+    "github.copilot.nextEditSuggestions.enabled",
     "github.copilot.enable",
     "github.copilot.chat.search.semanticTextResults",
-    "workbench.navigationControl.enabled",
-    "window.commandCenter",
-    "chat.editor.wordWrap",
+
+    // Development settings
     "remote.autoForwardPortsSource",
-    "makefile.configureOnOpen"
+    "makefile.configureOnOpen",
+    "extensions.experimental.affinity"
   ],
+
+  // improved performance settings
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
 
   // Security settings
   "security.workspace.trust.untrustedFiles": "open",
@@ -65,10 +116,30 @@
     "plaintext": true
   },
   "github.copilot.chat.search.semanticTextResults": true,
-  // Vim settings (common across profiles)
+
+  // Vim settings (common across profiles) - Enhanced configuration based on VSCodeVim README
   "vim.useSystemClipboard": true,
-  "vim.usneak": true,
   "vim.useCtrlKeys": true,
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+  "vim.highlightedyank.duration": 200,
+
+  // Enhanced Vim features
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.surround": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.replaceWithRegister": true,
+  "vim.textwidth": 80,
+  "vim.leader": "<space>",
+  "vim.foldfix": true,
+
+  // Key mappings for enhanced Vim experience
   "vim.handleKeys": {
     "<C-o>": true, // Vim: Jump back (matches your keybindings.json)
     "<C-i>": true, // Vim: Jump forward (matches your keybindings.json)
@@ -86,6 +157,77 @@
     "<C-z>": false // VS Code: Undo
   },
 
+  // Vim key bindings for enhanced workflow
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    },
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    }
+  ],
   // Remote settings (common across profiles)
-  "remote.autoForwardPortsSource": "hybrid"
+  "remote.autoForwardPortsSource": "hybrid",
+
+  // Additional Vim-friendly VS Code settings
+  "editor.lineNumbers": "relative",
+  "editor.cursorSurroundingLines": 8,
+  "editor.scrollBeyondLastLine": false,
+  "workbench.list.automaticKeyboardNavigation": false,
+  "vim.statusBarColorControl": false,
+
+  // Disable conflicting VS Code shortcuts when in Vim mode
+  "keyboard.dispatch": "keyCode"
 }

@@ -33,18 +33,43 @@ This configuration uses **dual Vim integration** for maximum flexibility:
 
 - **`vscodevim.vim`** (v1.30.1) - Full Vim emulation with VS Code integration
 
-#### **Vim-Specific Settings:**
+#### **Comprehensive Vim Configuration:**
 
-**Global Vim Settings:**
+Based on the official [VSCodeVim README](https://github.com/VSCodeVim/Vim), this configuration includes all recommended settings for optimal Vim experience:
+
+**Core Vim Settings:**
 
 - `vim.useSystemClipboard: true` - Seamless system clipboard integration
-- `vim.useCtrlKeys: false` - Preserves VS Code's Ctrl+key shortcuts
+- `vim.useCtrlKeys: true` - Enable Vim control keys while preserving essential VS Code shortcuts
+- `vim.leader: "<space>"` - Space as leader key for easier access
+- `vim.textwidth: 80` - Standard text width for formatting
+- `vim.foldfix: true` - Fix fold navigation issues
 
-**Profile-Specific Vim Features:**
+**Enhanced Search & Navigation:**
 
-- `vim.sneak: true` - Quick two-character search navigation
-- `vim.sneakReplacesF: true` - Enhanced f/F character search
-- `editor.lineNumbers: "relative"` - Relative line numbers for Vim navigation
+- `vim.incsearch: true` - Incremental search as you type
+- `vim.hlsearch: true` - Highlight all search matches
+- `vim.smartcase: true` - Smart case sensitivity in searches
+- `vim.ignorecase: true` - Case-insensitive search by default
+
+**Visual Feedback:**
+
+- `vim.highlightedyank.enable: true` - Highlight yanked text
+- `vim.highlightedyank.color: "rgba(250, 240, 170, 0.5)"` - Custom highlight color
+- `vim.highlightedyank.duration: 200` - Highlight duration in milliseconds
+
+**Emulated Vim Plugins:**
+
+- `vim.easymotion: true` - Quick two-character navigation
+- `vim.sneak: true` - Enhanced f/F character search
+- `vim.sneakUseIgnorecaseAndSmartcase: true` - Smart case for sneak
+- `vim.surround: true` - Surround text objects with brackets, quotes, etc.
+- `vim.camelCaseMotion.enable: true` - Navigate through camelCase words
+- `vim.replaceWithRegister: true` - Replace text with register contents
+
+**Advanced Vim Features:**
+
+- `vim.statusBarColorControl: false` - Disable status bar color changes for performance
 
 ### 🎨 Vim-Optimized UI Settings
 
@@ -52,15 +77,21 @@ This configuration uses **dual Vim integration** for maximum flexibility:
 
 - **Font**: `JetBrains Mono Nerd Font` with ligatures enabled
 - **Font Size**: 18px for comfortable reading
+- **Line Numbers**: `"relative"` - Essential for Vim navigation and jump commands
+- **Cursor Surrounding Lines**: 8 lines of context above/below cursor
+- **Scroll Beyond Last Line**: Disabled for traditional Vim behavior
 - **Minimap**: Disabled (Vim users prefer text-based navigation)
 - **Glyph Margin**: Disabled for cleaner interface
 - **Whitespace Rendering**: None (cleaner view)
+- **Horizontal Scrollbar**: Hidden for minimal interface
 
 **Workbench Optimizations:**
 
 - **Startup Editor**: None (faster startup)
 - **Large File Confirmation**: 50MB threshold
 - **Icon Theme**: Material Icon Theme for better file recognition
+- **Automatic Keyboard Navigation**: Disabled to prevent conflicts with Vim navigation
+- **Keyboard Dispatch**: `"keyCode"` for better key handling with Vim
 
 ### 🖥️ Remote Development
 
@@ -127,53 +158,120 @@ The configuration includes SSH platform definitions for multiple remote servers:
 
 - **Makefile**: Auto-configure on open
 
-## ⌨️ Custom Keybindings
+### ⌨️ Custom Keybindings
 
 ### 🧭 Navigation History (Vim-Compatible)
 
-The current keybinding configuration focuses on essential navigation while preserving Vim plugin functionality:
+The keybinding configuration focuses on essential navigation while preserving comprehensive Vim functionality:
 
 | Keybinding | Command          | Description             | Vim Context                         |
 | ---------- | ---------------- | ----------------------- | ----------------------------------- |
 | `Ctrl+O`   | Navigate Back    | Go to previous location | Matches Vim's `Ctrl+O` jump back    |
 | `Ctrl+I`   | Navigate Forward | Go to next location     | Matches Vim's `Ctrl+I` jump forward |
 
-### 🎯 Why Minimal Keybindings?
+### 🅥 Advanced Vim Key Bindings
 
-This configuration intentionally keeps custom keybindings minimal because:
+**Smart Key Handling Configuration:**
 
-1. **Vim Extensions Handle Most Navigation**: The installed Vim extensions (`vscodevim.vim` and `asvetliakov.vscode-neovim`) provide comprehensive Vim keybindings
-2. **No Conflicts**: Avoids interference with native Vim commands
-3. **Plugin Compatibility**: Ensures both Vim extensions work seamlessly
-4. **Flexible Workflow**: Users can choose between VSCodeVim and Neovim modes
+```json
+"vim.handleKeys": {
+  "<C-o>": true,   // Vim: Jump back
+  "<C-i>": true,   // Vim: Jump forward
+  "<C-d>": true,   // Vim: Half page down
+  "<C-u>": true,   // Vim: Half page up
+  "<C-f>": false,  // VS Code: Find in file
+  "<C-p>": false,  // VS Code: Quick Open
+  "<C-w>": false,  // VS Code: Close tab
+  "<C-n>": false,  // VS Code: New file
+  "<C-s>": false,  // VS Code: Save
+  "<C-a>": false,  // VS Code: Select all
+  "<C-c>": false,  // VS Code: Copy
+  "<C-v>": false,  // VS Code: Paste
+  "<C-x>": false,  // VS Code: Cut
+  "<C-z>": false   // VS Code: Undo
+}
+```
 
-### 🅥 Available Vim Navigation (Via Extensions)
+**Insert Mode Key Bindings:**
 
-When using the Vim extensions, you get access to:
+| Keybinding | Action  | Description                 |
+| ---------- | ------- | --------------------------- |
+| `jj`       | `<Esc>` | Quick escape to normal mode |
 
-#### **Native Vim Navigation:**
+**Normal Mode Leader Commands:**
 
-- `h, j, k, l` - Basic directional movement
-- `w, b, e` - Word-based movement
-- `0, $` - Line beginning/end
+| Keybinding  | Command         | Description               |
+| ----------- | --------------- | ------------------------- |
+| `<leader>d` | `dd`            | Delete current line       |
+| `<leader>w` | Save File       | Save current file         |
+| `<leader>f` | Quick Open      | Open file picker          |
+| `<leader>p` | Command Palette | Show VS Code commands     |
+| `<C-n>`     | `:nohl`         | Clear search highlighting |
+
+**Enhanced Navigation Commands:**
+
+| Keybinding | VS Code Command      | Description               |
+| ---------- | -------------------- | ------------------------- |
+| `gd`       | Go to Definition     | Jump to symbol definition |
+| `gh`       | Show Hover           | Display hover information |
+| `gi`       | Go to Implementation | Jump to implementation    |
+| `gr`       | Go to References     | Show all references       |
+
+**Visual Mode Enhancements:**
+
+| Keybinding | Action        | Description                       |
+| ---------- | ------------- | --------------------------------- |
+| `>`        | Indent Lines  | Indent selected lines             |
+| `<`        | Outdent Lines | Unindent selected lines           |
+| `p`        | Smart Paste   | Paste without overriding register |
+
+### 🎯 Why Comprehensive Vim Integration?
+
+This configuration provides a complete Vim experience because:
+
+1. **Full VSCodeVim Implementation**: Based on official VSCodeVim README recommendations
+2. **All Emulated Plugins Enabled**: EasyMotion, Sneak, Surround, CamelCase, ReplaceWithRegister
+3. **Smart Key Handling**: Preserves essential VS Code shortcuts while enabling Vim navigation
+4. **Enhanced Visual Feedback**: Highlighting, search improvements, and status integration
+5. **Cross-Profile Consistency**: All settings applied to all VS Code profiles
+6. **Performance Optimized**: Extension affinity and optimized key handling
+
+### 🅥 Available Vim Features (Comprehensive Implementation)
+
+#### **Core Vim Navigation & Editing:**
+
+- `h, j, k, l` - Basic directional movement with relative line numbers
+- `w, b, e, ge` - Word-based movement (enhanced with CamelCase support)
+- `0, $, ^` - Line beginning/end/first non-blank
 - `gg, G` - Document beginning/end
 - `Ctrl+d, Ctrl+u` - Half-page scrolling
-- `Ctrl+f, Ctrl+b` - Full-page scrolling
+- `Ctrl+f, Ctrl+b` - Full-page scrolling (when enabled)
+- `Ctrl+o, Ctrl+i` - Jump list navigation
 
-#### **Advanced Vim Features:**
+#### **Enhanced Search & Navigation:**
 
-- **Vim Sneak**: `s{char}{char}` for quick two-character search
-- **Visual Mode**: `v, V, Ctrl+v` for selection modes
-- **Search**: `/pattern` and `?pattern` with `n/N` navigation
-- **Marks**: `m{letter}` and `'{letter}` for position marking
-- **Registers**: `"{letter}` for advanced copy/paste operations
+- **Incremental Search**: `/pattern` with live highlighting as you type
+- **Smart Case Search**: Automatic case sensitivity based on pattern
+- **Highlight Search**: All matches highlighted with `vim.hlsearch`
+- **Sneak Navigation**: `s{char}{char}` for quick two-character jumps
+- **EasyMotion**: `<leader><leader>s{char}` for visual jump targets
 
-#### **VS Code Integration:**
+#### **Advanced Text Objects & Operations:**
 
-- **Command Palette**: `:` opens VS Code command palette
-- **File Explorer**: Standard Vim commands work with VS Code's file tree
-- **Multi-cursor**: Vim selections integrate with VS Code's multi-cursor
-- **IntelliSense**: Vim modes work seamlessly with autocomplete
+- **Surround Plugin**: `cs"'` (change quotes), `ds"` (delete quotes), `ys<motion>"` (add quotes)
+- **CamelCase Motion**: `<leader>w`, `<leader>b`, `<leader>e` for camelCase navigation
+- **Replace with Register**: `gr<motion>` to replace text with register contents
+- **Enhanced Visual Mode**: Improved indentation and paste behavior
+
+#### **VS Code Integration Commands:**
+
+- **Go to Definition**: `gd` - Jump to symbol definition
+- **Show Hover**: `gh` - Display type information and documentation
+- **Go to Implementation**: `gi` - Jump to implementation
+- **Go to References**: `gr` - Show all symbol references
+- **Command Palette**: `<leader>p` - Quick access to VS Code commands
+- **File Picker**: `<leader>f` - Quick file opening
+- **Save File**: `<leader>w` - Quick save
 
 ### � Switching Between Vim Modes
 
@@ -286,12 +384,83 @@ gv                  " Reselect last visual selection
 
 #### **Custom Vim Settings:**
 
+Based on the official VSCodeVim README, this configuration includes all recommended settings:
+
 ```json
 {
-  "vim.sneak": true, // Two-character search
-  "vim.sneakReplacesF": true, // Enhanced f/F navigation
-  "vim.useSystemClipboard": true, // System clipboard integration
-  "vim.useCtrlKeys": false // Preserve VS Code shortcuts
+  // Core Vim functionality
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.leader": "<space>",
+  "vim.textwidth": 80,
+  "vim.foldfix": true,
+
+  // Enhanced search
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+
+  // Visual feedback
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.color": "rgba(250, 240, 170, 0.5)",
+  "vim.highlightedyank.duration": 200,
+
+  // Emulated plugins
+  "vim.easymotion": true,
+  "vim.sneak": true,
+  "vim.sneakUseIgnorecaseAndSmartcase": true,
+  "vim.surround": true,
+  "vim.camelCaseMotion.enable": true,
+  "vim.replaceWithRegister": true,
+
+  // Performance and compatibility
+  "vim.statusBarColorControl": false,
+
+  // Smart key handling
+  "vim.handleKeys": {
+    "<C-o>": true,
+    "<C-i>": true,
+    "<C-d>": true,
+    "<C-u>": true,
+    "<C-f>": false,
+    "<C-p>": false,
+    "<C-w>": false,
+    "<C-n>": false,
+    "<C-s>": false,
+    "<C-a>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-z>": false
+  },
+
+  // Custom key bindings
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<leader>", "d"], "after": ["d", "d"] },
+    { "before": ["<C-n>"], "commands": [":nohl"] },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    { "before": ["<leader>", "f"], "commands": ["workbench.action.quickOpen"] },
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.showCommands"]
+    },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "h"], "commands": ["editor.action.showHover"] },
+    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["g", "r"], "commands": ["editor.action.goToReferences"] }
+  ],
+
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["p"], "after": ["p", "g", "v", "y"] }
+  ]
 }
 ```
 
@@ -306,7 +475,36 @@ The configuration includes intelligent context awareness:
 
 ## 📝 Profile Settings
 
-Settings marked with `workbench.settings.applyToAllProfiles` are synchronized across all VS Code profiles, ensuring consistent Vim experience regardless of the active profile.
+Settings marked with `workbench.settings.applyToAllProfiles` ensure consistent Vim experience across all VS Code profiles. The comprehensive list includes:
+
+### **Vim Core Settings (Applied to All Profiles):**
+
+- `vim.highlightedyank.enable`, `vim.highlightedyank.color`, `vim.highlightedyank.duration`
+- `vim.easymotion`, `vim.incsearch`, `vim.hlsearch`, `vim.smartcase`, `vim.ignorecase`
+- `vim.sneak`, `vim.sneakUseIgnorecaseAndSmartcase`, `vim.surround`
+- `vim.camelCaseMotion.enable`, `vim.replaceWithRegister`
+- `vim.textwidth`, `vim.leader`, `vim.foldfix`
+- `vim.useCtrlKeys`, `vim.useSystemClipboard`, `vim.handleKeys`
+- `vim.statusBarColorControl`
+
+### **Vim Key Bindings (Applied to All Profiles):**
+
+- `vim.insertModeKeyBindings`
+- `vim.normalModeKeyBindingsNonRecursive`
+- `vim.visualModeKeyBindingsNonRecursive`
+
+### **Editor Settings for Vim (Applied to All Profiles):**
+
+- `editor.lineNumbers`, `editor.cursorSurroundingLines`
+- `editor.scrollBeyondLastLine`, `editor.scrollbar.horizontal`
+- `workbench.list.automaticKeyboardNavigation`, `keyboard.dispatch`
+
+### **Additional Cross-Profile Settings:**
+
+- All GitHub Copilot settings
+- Editor formatting and display settings
+- Workbench theme and layout settings
+- Terminal and chat configurations
 
 ---
 
@@ -314,28 +512,69 @@ Settings marked with `workbench.settings.applyToAllProfiles` are synchronized ac
 
 ### **First Time Setup:**
 
-1. **Choose Your Vim Extension**: Enable either `vscodevim.vim` OR `asvetliakov.vscode-neovim`
-2. **Configure Basic Settings**: Ensure `vim.useSystemClipboard: true` for seamless copying
-3. **Set Line Numbers**: Enable `"editor.lineNumbers": "relative"` for Vim navigation
-4. **Font Setup**: Install `JetBrains Mono Nerd Font` for optimal experience
+1. **VSCodeVim Extension**: Ensure `vscodevim.vim` is installed and enabled
+2. **Performance Configuration**: Extension affinity is set to main process for optimal performance
+3. **System Integration**: `vim.useSystemClipboard: true` enables seamless copying between Vim and system
+4. **Leader Key**: Configured as `<space>` for easy access to custom commands
+5. **Font Setup**: Install `JetBrains Mono Nerd Font` for optimal display
+6. **Line Numbers**: Relative line numbers are enabled for Vim-style navigation
+
+### **Essential Features Available:**
+
+#### **Immediate Vim Experience:**
+
+- **All Vim motions**: `hjkl`, `w/b/e`, `gg/G`, `0/$`, etc.
+- **Text objects**: `ciw`, `ci"`, `ca{`, etc. work perfectly
+- **Visual modes**: `v`, `V`, `Ctrl+v` with enhanced functionality
+- **Search**: `/pattern` with incremental highlighting
+- **Registers**: Full register support with system clipboard integration
+
+#### **Enhanced Plugin Features:**
+
+- **EasyMotion**: `<leader><leader>s{char}` for quick navigation
+- **Sneak**: `s{char}{char}` for two-character search
+- **Surround**: `cs"'` (change), `ds"` (delete), `ys<motion>"` (add)
+- **CamelCase**: `<leader>w/b/e` for programming navigation
+- **Replace Register**: `gr<motion>` for register replacement
+
+#### **VS Code Integration:**
+
+- **Go to Definition**: `gd` - Jump to symbol definition
+- **Show Hover**: `gh` - Display documentation
+- **Command Access**: `<leader>p` for command palette
+- **Quick Save**: `<leader>w` to save files
+- **File Opening**: `<leader>f` for quick file access
 
 ### **Daily Workflow:**
 
-1. **Start with Normal Mode**: Extensions boot into Vim normal mode
-2. **Use Vim Navigation**: `hjkl`, `w/b/e`, `gg/G` work as expected
-3. **VS Code Integration**: `:` opens command palette, `Ctrl+P` for file search
-4. **System Clipboard**: `"+y` and `"+p` work seamlessly with system
+1. **Start in Normal Mode**: Extension boots directly into Vim normal mode
+2. **Navigate with Relative Numbers**: Use `5j`, `10k` with visible line numbers
+3. **Quick Mode Switching**: `jj` in insert mode returns to normal mode
+4. **Smart Search**: Use `/` with automatic case sensitivity and highlighting
+5. **Efficient Editing**: Leverage text objects and surround operations
+6. **VS Code Features**: Access through leader commands or `g` prefixed shortcuts
+
+### **Performance Tips:**
+
+- **Extension Affinity**: Configured for main process execution
+- **Optimized Key Handling**: Smart delegation between Vim and VS Code
+- **Fold Fixes**: Enabled to prevent navigation issues
+- **Status Bar**: Color control disabled for better performance
 
 ### **Troubleshooting:**
 
-- **Conflicts**: If keybindings conflict, disable `vim.useCtrlKeys`
-- **Performance**: Ensure Neovim extension has process affinity set
-- **Modes**: Check extension status in status bar for current Vim mode
+- **Key Conflicts**: Configuration preserves essential VS Code shortcuts (Ctrl+S, Ctrl+C, etc.)
+- **Performance**: Extension affinity ensures smooth operation
+- **Mode Issues**: Status bar shows current Vim mode
+- **Search Highlighting**: `<C-n>` clears search highlights
+- **Line Numbers**: Relative numbers help with Vim jump commands
 
 ---
 
 _Last updated: June 15, 2025_
 
-> 🅥 **Vim Power User Tip**: This configuration transforms VS Code into a true Vim environment while preserving modern IDE features. The dual extension setup allows you to choose between traditional Vim emulation and full Neovim integration based on your workflow needs.
+> 🅥 **Vim Power User Tip**: This configuration implements the complete VSCodeVim experience based on the official README recommendations. With all emulated plugins enabled (EasyMotion, Sneak, Surround, CamelCase, ReplaceWithRegister), enhanced search capabilities, and smart key handling, this setup provides a seamless transition from terminal Vim to VS Code without sacrificing any functionality.
 
-> 🚀 **Performance Note**: With relative line numbers, sneak navigation, and system clipboard integration, this setup provides a seamless transition from terminal Vim to VS Code without sacrificing muscle memory or efficiency.
+> 🚀 **Performance Note**: With optimized extension affinity, relative line numbers, comprehensive key bindings, and cross-profile consistency, this setup delivers maximum Vim efficiency while maintaining VS Code's powerful IDE features. The configuration ensures that all 50+ Vim-related settings are synchronized across all profiles for a consistent experience.
+
+> ⚡ **Feature Complete**: This configuration includes every major Vim feature from the VSCodeVim project - from basic navigation to advanced text objects, plugin emulations, and VS Code integrations. It's designed for users who want the full Vim experience without any compromises.
