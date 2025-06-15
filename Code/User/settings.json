@@ -146,11 +146,12 @@
     "<C-i>": true, // Vim: Jump forward (matches your keybindings.json)
     "<C-d>": true, // Vim: Half page down
     "<C-u>": true, // Vim: Half page up
+    "<C-n>": true, // Vim : nohlsearch
+    "<C-b>": false, // VS Code: sidebar toggle
     "<C-y>": false, // VS Code: Scroll up
     "<C-f>": false, // VS Code: Find in file
     "<C-p>": false, // VS Code: Quick Open
     "<C-w>": false, // VS Code: Close tab
-    "<C-n>": true, // Vim : nohlsearch
     "<C-s>": false, // VS Code: Save
     "<C-a>": false, // VS Code: Select all
     "<C-c>": false, // VS Code: Copy

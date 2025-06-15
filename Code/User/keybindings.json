@@ -1,3 +1,132 @@
 // Place your key bindings in this file to override the defaults
-// Vim-style navigation keybindings
-[]
+// Vim-style navigation keybindings for VS Code view panes
+[
+  // ========================================
+  // Vim-style View Pane Navigation (Ctrl+W prefix like traditional Vim)
+  // ========================================
+
+  // Focus Editor Groups (Vim-style window navigation)
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w j",
+    "command": "workbench.action.focusBelowGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w k",
+    "command": "workbench.action.focusAboveGroup",
+    "when": "editorTextFocus"
+  },
+
+  // Focus Problems Panel
+  {
+    "key": "ctrl+w p",
+    "command": "workbench.panel.markers.view.focus"
+  },
+
+  // Return to Editor from any view
+  {
+    "key": "ctrl+w ctrl+w",
+    "command": "workbench.action.focusActiveEditorGroup"
+  },
+
+  // ========================================
+  // Vim-style Editor Group Management
+  // ========================================
+
+  // Split Editor (Vim-style)
+  {
+    "key": "ctrl+w s",
+    "command": "workbench.action.splitEditorDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w v",
+    "command": "workbench.action.splitEditor",
+    "when": "editorTextFocus"
+  },
+
+  // Close Editor Group (Vim-style)
+  {
+    "key": "ctrl+w q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w shift+q",
+    "command": "workbench.action.closeEditorsInGroup",
+    "when": "editorTextFocus"
+  },
+
+  // Resize Editor Groups (Vim-style)
+  {
+    "key": "ctrl+w shift+h",
+    "command": "workbench.action.decreaseViewWidth"
+  },
+  {
+    "key": "ctrl+w shift+l",
+    "command": "workbench.action.increaseViewWidth"
+  },
+  {
+    "key": "ctrl+w shift+j",
+    "command": "workbench.action.decreaseViewHeight"
+  },
+  {
+    "key": "ctrl+w shift+k",
+    "command": "workbench.action.increaseViewHeight"
+  },
+
+  // ========================================
+  // Additional Vim-style Navigation
+  // ========================================
+
+  // Navigate between editors in group (Vim tab-like)
+  {
+    "key": "ctrl+w n",
+    "command": "workbench.action.nextEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w shift+n",
+    "command": "workbench.action.previousEditor",
+    "when": "editorTextFocus"
+  },
+
+  // Move editors between groups
+  {
+    "key": "ctrl+w shift+right",
+    "command": "workbench.action.moveEditorToNextGroup",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w shift+left",
+    "command": "workbench.action.moveEditorToPreviousGroup",
+    "when": "editorTextFocus"
+  },
+
+  // Focus specific views with Vim-style mnemonics
+  {
+    "key": "ctrl+w g",
+    "command": "workbench.view.scm", // Git/Source Control
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w d",
+    "command": "workbench.view.debug", // Debug view
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+w x",
+    "command": "workbench.view.extensions", // Extensions
+    "when": "editorTextFocus"
+  }
+]
