@@ -4,3 +4,6 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:jiahaoxiang2000/nvim-config.git
+[submodule "Code/User"]
+	path = Code/User
+	url = git@github.com:jiahaoxiang2000/vscode-config.git
