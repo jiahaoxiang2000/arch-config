@@ -4,3 +4,16 @@
 	template = /home/isomo/.config/git/commit_template.txt
 [init]
 	defaultBranch = main
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[difftool]
+	prompt = false
+[mergetool]
+	prompt = false
+	keepBackup = false
