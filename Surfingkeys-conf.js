@@ -10,7 +10,7 @@ api.map('gt', 'T');
 api.unmap('<ctrl-i>');
 
 // set the block website.
-settings.blocklistPattern = /((calendar).google|udemy).com|.*follow.is/i;
+settings.blocklistPattern = /((calendar).google|udemy|member.bilibili).com|.*follow.is/i;
 
 // set theme
 settings.theme = `
