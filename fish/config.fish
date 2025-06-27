@@ -14,6 +14,10 @@ function tozh
     trans-cli "$argv"
 end
 
+function toen
+    trans-cli -f zh -t en "$argv"
+end
+
 # node version manager
 if type -q fnm
     fnm env | source
