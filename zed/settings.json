@@ -11,22 +11,17 @@
     "edit_prediction_provider": "copilot"
   },
   "relative_line_numbers": true,
-  "agent": {
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
-    },
-    "enable_experimental_live_diffs": true,
-    "version": "2"
-  },
   "soft_wrap": "bounded",
   "vim_mode": true,
   "ui_font_size": 14,
   "buffer_font_size": 16,
   "theme": {
     "mode": "system",
-    "light": "Github Dark Tritanopia",
+    "light": "GitHub Dark Default",
     "dark": "GitHub Dark Default"
+  },
+  "terminal": {
+    "dock": "right"
   },
   "lsp": {
     "texlab": {

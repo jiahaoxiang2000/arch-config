@@ -31,7 +31,7 @@
       "ctrl-w shift-l": "workspace::SwapPaneRight",
       "ctrl-w shift-k": "workspace::SwapPaneUp",
       "ctrl-w shift-j": "workspace::SwapPaneDown",
-      "ctrl-w q": "workspace::CloseActiveDock"
+      "ctrl-w q": "pane::CloseActiveItem"
     }
   }
 ]
