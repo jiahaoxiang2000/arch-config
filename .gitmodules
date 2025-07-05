@@ -7,3 +7,6 @@
 [submodule "Code/User"]
 	path = Code/User
 	url = git@github.com:jiahaoxiang2000/vscode-config.git
+[submodule "zed"]
+	path = zed
+	url = git@github.com:jiahaoxiang2000/zed-conf.git
