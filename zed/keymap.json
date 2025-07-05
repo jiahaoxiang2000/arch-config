@@ -26,7 +26,12 @@
       "ctrl-w h": "workspace::ActivatePaneLeft",
       "ctrl-w l": "workspace::ActivatePaneRight",
       "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w j": "workspace::ActivatePaneDown"
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w shift-h": "workspace::SwapPaneLeft",
+      "ctrl-w shift-l": "workspace::SwapPaneRight",
+      "ctrl-w shift-k": "workspace::SwapPaneUp",
+      "ctrl-w shift-j": "workspace::SwapPaneDown",
+      "ctrl-w q": "workspace::CloseActiveDock"
     }
   }
 ]
