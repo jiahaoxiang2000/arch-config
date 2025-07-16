@@ -109,21 +109,11 @@ riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
 # first to kill all running instances of i3bar-river
-killall -q i3bar-river
+killall -q i3bar-river kanshi
 # then to spawn a new instance of i3bar-river
 riverctl spawn i3bar-river
 # Start kanshi for automatic display configuration
-kanshi &
-
-# Declare a passthrough mode. This mode has only a single mapping to return to
-# normal mode. This makes it useful for testing a nested wayland compositor
-riverctl declare-mode passthrough
-
-# Super+F11 to enter passthrough mode
-riverctl map normal Super F11 enter-mode passthrough
-
-# Super+F11 to return to normal mode
-riverctl map passthrough Super F11 enter-mode normal
+riverctl spawn kanshi 
 
 # Super+0 to focus all tags
 # Super+Shift+0 to tag focused view with all tags
