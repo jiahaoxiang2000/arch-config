@@ -1,5 +1,5 @@
 profile {
-    output "Xiaomi Corporation Mi Monitor 6731900005455" mode 3840x2160@60Hz position 0,0 scale 2.398438
+    output "Xiaomi Corporation Mi Monitor 6731900005455" mode 3840x2160@60Hz position 0,354 scale 2.398438
     output "Xiaomi Corporation P27QBB-RA 4790810041016" mode 2560x1440@60Hz position 1600,0 scale 1.597656 transform 270
 }
 
