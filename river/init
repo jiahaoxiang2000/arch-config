@@ -109,7 +109,9 @@ riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
 # first to kill all running instances of i3bar-river
-killall -q i3bar-river kanshi
+killall -q i3bar-river kanshi fcitx5
+# to open the fcitx5 
+riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river
 riverctl spawn i3bar-river
 # Start kanshi for automatic display configuration
