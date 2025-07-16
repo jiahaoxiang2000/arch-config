@@ -151,3 +151,8 @@ CherryStudio/*
 gh-copilot/config.yml
 Apple Music/**
 BambuStudio/**
+code-oss-dev/**
+claude/**
+htop/**
+user-dirs.**
+configstore/update-notifier-@google/**
