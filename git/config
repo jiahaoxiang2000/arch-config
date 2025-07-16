@@ -2,6 +2,9 @@
 	editor = nvim
 [commit]
 	template = /home/isomo/.config/git/commit_template.txt
+	gpgsign = true
+[user]
+	signingkey = 58866DB747177065 
 [init]
 	defaultBranch = main
 [diff]
