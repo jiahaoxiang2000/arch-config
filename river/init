@@ -11,7 +11,7 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
 term="footclient"
-menu="${HOME}/.local/bin/wmenu-run-color"
+menu="wmenu-run"
 tiler="rivercarro"
 
 riverctl map normal Super+Shift r                  spawn "${HOME}/.config/river/init"
@@ -103,8 +103,11 @@ all_tags=$(((1 << 32) - 1))
 riverctl map normal Super 0 set-focused-tags $all_tags
 riverctl map normal Super+Shift 0 set-view-tags $all_tags
 
-# Super+Space to toggle float
-riverctl map normal Super Space toggle-float
+# Super+Space to launch application menu
+riverctl map normal Super Space spawn "$menu"
+
+# Super+Shift+Space to toggle float  
+riverctl map normal Super+Shift Space toggle-float
 
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
