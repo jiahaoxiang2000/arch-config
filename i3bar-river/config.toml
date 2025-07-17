@@ -2,6 +2,19 @@
 # Optional: with no status generator the bar will display only tags and layout name.
 command = "i3status-rs"
 
+# Colors
+background = "#1a1a1aff"
+color = "#f0f0f0ff"
+separator = "#404040ff"
+tag_fg = "#b0b0b0ff"
+tag_bg = "#1a1a1aff"
+tag_focused_fg = "#000000ff"
+tag_focused_bg = "#4a90e2ff"
+tag_urgent_fg = "#ffffffff"
+tag_urgent_bg = "#e74c3cff"
+tag_inactive_fg = "#707070ff"
+tag_inactive_bg = "#1a1a1aff"
+
 # The font and various sizes
 font = "monospace 10"
 height = 16
@@ -11,7 +24,7 @@ margin_left = 0
 margin_right = 0
 separator_width = 2.0
 tags_r = 0.0
-tags_padding = 25.0
+tags_padding = 15.0
 tags_margin = 0.0
 blocks_r = 0.0
 blocks_overlap = 0.0
