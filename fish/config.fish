@@ -37,7 +37,6 @@ set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 # proxy settings
 set -x HTTPS_PROXY "http://127.0.0.1:1080"
 set -x HTTP_PROXY "http://127.0.0.1:1080"
-set -x ALL_PROXY "socks5://127.0.0.1:1080"
 set -x NO_PROXY "localhost,127.0.0.1,::1"
 
 # source the ~/.profile file, some key is on the ~/.profile
