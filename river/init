@@ -119,13 +119,13 @@ riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
 # first to kill all running instances of i3bar-river
 killall -q i3bar-river kanshi fcitx5 ydotoold
-# Kill existing SSH tunnels on port 1080
-pkill -f "ssh.*1080.*ubuntu@43.139.157.97"
-pkill -f "ssh.*2017.*ubuntu@43.139.157.97"
-# Start SSH tunnel for proxy
-riverctl spawn "ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97 -i ~/.ssh/id_github"
-# Start SSH tunnel for port 2017
-riverctl spawn "ssh -N -L 0.0.0.0:2017:127.0.0.1:2017 ubuntu@43.139.157.97 -i ~/.ssh/id_github"
+# Kill existing SSH tunnels and start new ones
+# 1080 for proxy, 2017 for V2Raya, 40031 for bitwarden sync
+for port in 1080 2017 40031
+do
+    pkill -f "ssh.*$port.*ubuntu@43.139.157.97"
+    riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.139.157.97 -i ~/.ssh/id_github"
+done
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river
