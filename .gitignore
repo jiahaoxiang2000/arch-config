@@ -158,3 +158,5 @@ user-dirs.**
 configstore/update-notifier-@google/**
 wireshark/**
 git/ignore
+qutebrowser/quickmarks
+qutebrowser/bookmarks/urls
