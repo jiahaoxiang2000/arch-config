@@ -860,7 +860,7 @@ c.colors.webpage.darkmode.enabled = True
 ## always the global value.
 ## Type: FormatString
 # c.content.headers.user_agent = 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version_short} Safari/{webkit_version}'
-
+c.content.headers.user_agent = 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) Safari/{webkit_version}'
 ## Enable hyperlink auditing (`<a ping>`).
 ## Type: Bool
 # c.content.hyperlink_auditing = False
