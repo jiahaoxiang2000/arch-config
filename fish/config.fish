@@ -47,3 +47,8 @@ set -gx PATH $HOME/.cargo/bin $PATH
 
 # Created by `pipx` on 2025-05-25 01:59:15
 set PATH $PATH /home/isomo/.local/bin
+
+# SSH tunnel startup - check if tunnel is already running before starting
+if not pgrep -f "ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97" > /dev/null
+    nohup ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97 -i ~/.ssh/id_github >/dev/null 2>&1 &
+end
