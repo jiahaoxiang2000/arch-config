@@ -55,3 +55,5 @@ set PATH $PATH /home/isomo/.local/bin
 # if not pgrep -f "ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97" > /dev/null
 #     nohup ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97 -i ~/.ssh/id_github >/dev/null 2>&1 &
 # end
+
+alias claude="/home/isomo/.claude/local/claude"
