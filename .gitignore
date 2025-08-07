@@ -160,3 +160,4 @@ wireshark/**
 git/ignore
 qutebrowser/quickmarks
 qutebrowser/bookmarks/urls
+configstore/update-notifier-@qwen-code/qwen-code.json

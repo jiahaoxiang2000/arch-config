@@ -40,7 +40,7 @@ set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 # set -x NO_PROXY "localhost,127.0.0.1,::1"
 
 # source the ~/.profile file, some key is on the ~/.profile
-# source ~/.profile
+source ~/.profile
 
 # add cargo bin to PATH
 set -gx PATH $HOME/.cargo/bin $PATH
