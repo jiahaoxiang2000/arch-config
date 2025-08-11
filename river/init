@@ -82,6 +82,10 @@ riverctl border-color-unfocused 0x586e75
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
+# Swap Caps Lock and Escape keys
+riverctl keyboard-layout -variant "" -options "caps:swapescape" ""
+
+
 # Add specific configuration for Magic Mouse
 riverctl input "pointer-76-803-Jiahao___s_Magic_Mouse" pointer-accel -0.6
 riverctl input "pointer-76-803-Jiahao___s_Magic_Mouse" accel-profile flat
