@@ -1,9 +1,0 @@
-# Wofi Configuration
-# Use fish shell for executing commands
-# Specify the shell used for executing commands
-exec_search=true
-term=kitty
-hide_scroll=true
-allow_markup=true
-no_actions=true
-shell=/usr/bin/fish

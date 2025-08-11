@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=QQ
-Exec=/opt/QQ/qq %U
-Terminal=false
-Type=Application
-Icon=/usr/share/icons/hicolor/512x512/apps/qq.png
-StartupWMClass=QQ
-Categories=Network;
-Comment=QQ
