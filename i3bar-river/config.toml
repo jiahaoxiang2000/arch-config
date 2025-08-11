@@ -29,18 +29,18 @@ tags_margin = 0.0
 blocks_r = 0.0
 blocks_overlap = 0.0
 
-# Misc
-position = "top"                 # either "top" or "bottom"
-layer = "top"                    # one of "top", "overlay", "bottom" or "background"
+# # Misc
+# position = "top"                 # either "top" or "bottom"
+# layer = "top"                    # one of "top", "overlay", "bottom" or "background"
 hide_inactive_tags = true
-invert_touchpad_scrolling = true
-show_tags = true
+# invert_touchpad_scrolling = true
+# show_tags = true
 show_layout_name = false
-blend = true                     # whether tags/blocks colors should blend with bar's background
-show_mode = true
-start_hidden = false             # whether the bar is initially in the 'hidden' state
+# blend = true                     # whether tags/blocks colors should blend with bar's background
+# show_mode = true
+# start_hidden = false             # whether the bar is initially in the 'hidden' state
 
-# WM-specific options
+# # WM-specific options
 [wm.river]
 max_tag = 9 # Show only the first nine tags
 
