@@ -37,10 +37,13 @@ set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 # proxy settings
 set -x HTTPS_PROXY "http://127.0.0.1:1080"
 set -x HTTP_PROXY "http://127.0.0.1:1080"
+set -x https_proxy "http://127.0.0.1:1080"
+set -x http_proxy "http://127.0.0.1:1080"
 set -x NO_PROXY "localhost,127.0.0.1,::1"
+set -x no_proxy "localhost,127.0.0.1,::1"
 
 # source the ~/.profile file, some key is on the ~/.profile
-source ~/.profile
+# source ~/.profile
 
 # add cargo bin to PATH
 set -gx PATH $HOME/.cargo/bin $PATH
@@ -56,4 +59,4 @@ set PATH $PATH /home/isomo/.local/bin
 #     nohup ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97 -i ~/.ssh/id_github >/dev/null 2>&1 &
 # end
 
-alias claude="/home/isomo/.claude/local/claude"
+# alias claude="/home/isomo/.claude/local/claude"
