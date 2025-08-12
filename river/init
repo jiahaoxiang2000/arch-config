@@ -20,7 +20,7 @@ riverctl map normal Super+Shift R spawn "${HOME}/.config/river/init"
 riverctl map normal Super t spawn foot
 
 # Super+Q to close the focused view
-riverctl map normal Super Q close
+riverctl map normal Super W close
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -121,8 +121,8 @@ riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
 riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
-# first to kill all running instances of i3bar-river
-killall -q i3bar-river kanshi fcitx5 ydotoold
+# first to kill all running instances of tools
+killall -q i3bar-river kanshi fcitx5 ydotoold xremap
 # Kill existing SSH tunnels and start new ones
 # 1080 for proxy, 2017 for V2Raya
 for port in 1080 2017 
@@ -130,6 +130,8 @@ do
     pkill -f "ssh.*$port.*ubuntu@43.139.157.97"
     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.139.157.97 -i ~/.ssh/id_github"
 done
+# for key remapping based on xremap
+riverctl spawn "xremap ~/.config/xremap/config.yml"
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river

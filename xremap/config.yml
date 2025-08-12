@@ -1,0 +1,41 @@
+modmap:
+  - name: Global
+    remap:
+
+virtual_modifiers:
+  - CapsLock
+
+keymap:
+  - name: CapsLock-like Navigation (Alt as modifier)
+    remap:
+      # Navigation keys (Alt + vim keys)
+      CapsLock-a: home
+      CapsLock-semicolon: end
+      CapsLock-j: down
+      CapsLock-k: up
+      CapsLock-h: left
+      CapsLock-l: right
+
+      # Word navigation
+      CapsLock-u: C-left
+      CapsLock-i: C-right
+
+      # Deletion
+      CapsLock-y: backspace
+      CapsLock-o: C-backspace
+
+      # Text selection
+      CapsLock-n: C-S-left
+      CapsLock-m: C-S-right
+      CapsLock-comma: S-home
+      CapsLock-dot: S-end
+      CapsLock-b: S-left
+      CapsLock-e: S-right
+      CapsLock-slash: S-down
+      CapsLock-p: S-up
+
+      # Page navigation
+      CapsLock-d: pagedown
+      CapsLock-f: pageup
+      CapsLock-s: S-pagedown
+      CapsLock-r: S-pageup
