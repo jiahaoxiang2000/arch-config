@@ -20,7 +20,7 @@ riverctl map normal Super+Shift R spawn "${HOME}/.config/river/init"
 riverctl map normal Super t spawn foot
 
 # Super+Q to close the focused view
-riverctl map normal Super W close
+riverctl map normal Super Q close
 
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
@@ -131,7 +131,7 @@ do
     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.139.157.97 -i ~/.ssh/id_github"
 done
 # for key remapping based on xremap
-riverctl spawn "xremap ~/.config/xremap/config.yml"
+riverctl spawn "~/.cargo/bin/xremap ~/.config/xremap/config.yml"
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river

@@ -4,6 +4,7 @@ set -x GTK_IM_MODULE fcitx
 set -x QT_IM_MODULE fcitx
 set -x XMODIFIERS @im=fcitx
 set -x QT_FONT_DPI 120 
+set -x QT_SCALE_FACTOR 0.8
 # Custom date format function - formats date in YYYY-MM-DD HH:MM:SS TZ format (24-hour, no weekday)
 function mydate
     date +"%Y-%m-%d %H:%M:%S %Z"
@@ -34,14 +35,6 @@ end
 set -x FNM_NODE_DIST_MIRROR https://npmmirror.com/mirrors/node
 set -x NPM_CONFIG_REGISTRY https://registry.npmmirror.com
 
-# proxy settings
-set -x HTTPS_PROXY "http://127.0.0.1:1080"
-set -x HTTP_PROXY "http://127.0.0.1:1080"
-set -x https_proxy "http://127.0.0.1:1080"
-set -x http_proxy "http://127.0.0.1:1080"
-set -x NO_PROXY "localhost,127.0.0.1,::1"
-set -x no_proxy "localhost,127.0.0.1,::1"
-
 # source the ~/.profile file, some key is on the ~/.profile
 # source ~/.profile
 
@@ -54,9 +47,9 @@ set -gx PATH /opt/nvim-linux-x86_64/bin $PATH
 # Created by `pipx` on 2025-05-25 01:59:15
 set PATH $PATH /home/isomo/.local/bin
 
-# SSH tunnel startup - check if tunnel is already running before starting
-# if not pgrep -f "ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97" > /dev/null
-#     nohup ssh -N -L 0.0.0.0:1080:127.0.0.1:1080 ubuntu@43.139.157.97 -i ~/.ssh/id_github >/dev/null 2>&1 &
-# end
-
-# alias claude="/home/isomo/.claude/local/claude"
+# proxy split by the application
+function claude
+    set -lx HTTPS_PROXY "http://127.0.0.1:1080"
+    set -lx HTTP_PROXY "http://127.0.0.1:1080"
+    ~/.local/bin/claude $argv
+end
