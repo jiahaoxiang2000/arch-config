@@ -1,0 +1,16 @@
+[tts]
+server = "http://192.168.71.202:8000"
+
+[auto_reply]
+enabled = true
+cooldown_seconds = 2
+triggers = [
+    { keywords = ["测试", "test"], response = "这是一个测试回复" },
+    { keywords = ["什么系统", "what os", "用的什么操作系统", "operating system"], response = "使用 Arch Linux btw" },
+    { keywords = ["什么桌面", "what wm", "什么窗口管理器", "window manager", "desktop environment"], response = "river" },
+    { keywords = ["什么终端", "what terminal", "terminal emulator"], response = "Foot Terminal" },
+    { keywords = ["什么shell", "what shell", "用的什么shell"], response = "Fish Shell" },
+    { keywords = ["什么编辑器", "what editor", "用的什么编辑器", "code editor"], response = "Vscode" },
+    { keywords = ["配置文件", "dotfiles", "config files", "配置在哪"], response = "配置文件开源" },
+    { keywords = ["什么字体", "what font", "用的什么字体"], response = "JetBrains Mono + Nerd Fonts" },
+]
