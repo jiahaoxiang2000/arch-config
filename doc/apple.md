@@ -30,6 +30,12 @@ parm:           report_undeciphered:Report undeciphered multi-touch state field 
 options hid-magicmouse emulate_3button=0 emulate_scroll_wheel=1 scroll_speed=32 scroll_acceleration=0 report_undeciphered=0
 ```
 
+```bash
+# Reload the kernel module with new settings
+sudo modprobe -r hid_magicmouse
+sudo modprobe hid_magicmouse
+```
+
 it can be recognized by the `evtest /dev/input/event26`, but not recognized by the `libinput` .
 
 ```bash
