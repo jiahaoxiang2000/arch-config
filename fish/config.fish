@@ -53,3 +53,7 @@ function claude
     set -lx HTTP_PROXY "http://127.0.0.1:1080"
     ~/.local/bin/claude $argv
 end
+
+function godot
+    command godot --display-driver wayland $argv
+end
