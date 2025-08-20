@@ -97,6 +97,9 @@ riverctl rule-add -app-id 'float*' -title 'foo' float
 # Make all views with app-id "bar" and any title use client-side decorations
 riverctl rule-add -app-id "bar" csd
 
+# Add the float for the godot game project dev
+riverctl rule-add -app-id 'gdcv' float
+
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
@@ -121,8 +124,6 @@ riverctl map normal Super Right send-layout-cmd rivertile "main-location right"
 riverctl map normal Super Down  send-layout-cmd rivertile "main-location bottom"
 riverctl map normal Super Left  send-layout-cmd rivertile "main-location left"
 
-# first to kill all running instances of tools
-killall -q i3bar-river kanshi fcitx5 ydotoold xremap
 # Kill existing SSH tunnels and start new ones
 # 1080 for proxy, 2017 for V2Raya
 for port in 1080 2017 
@@ -130,8 +131,10 @@ do
     pkill -f "ssh.*$port.*ubuntu@43.139.157.97"
     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.139.157.97 -i ~/.ssh/id_github"
 done
-# for key remapping based on xremap
-riverctl spawn "~/.cargo/bin/xremap ~/.config/xremap/config.yml"
+# first to kill all running instances of tools
+killall -q i3bar-river kanshi fcitx5 ydotoold xremap
+# for key remapping based on xremap (with delay for device initialization)
+riverctl spawn "sleep 2 && ~/.cargo/bin/xremap ~/.config/xremap/config.yml"
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river
