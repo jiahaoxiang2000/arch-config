@@ -1,6 +1,10 @@
 modmap:
   - name: Global
     remap:
+      CapsLock:
+        held: CapsLock
+        alone: Esc
+        free_hold: true
 
 virtual_modifiers:
   - CapsLock

@@ -83,7 +83,7 @@ riverctl border-color-unfocused 0x586e75
 riverctl set-repeat 50 300
 
 # Swap Caps Lock and Escape keys
-riverctl keyboard-layout -variant "" -options "caps:swapescape" ""
+# riverctl keyboard-layout -variant "" -options "caps:swapescape" ""
 
 
 # Add specific configuration for Magic Mouse
@@ -134,7 +134,7 @@ done
 # first to kill all running instances of tools
 killall -q i3bar-river kanshi fcitx5 ydotoold xremap
 # for key remapping based on xremap (with delay for device initialization)
-riverctl spawn "sleep 2 && ~/.cargo/bin/xremap ~/.config/xremap/config.yml"
+riverctl spawn "sleep 2 && xremap ~/.config/xremap/config.yml"
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
 # then to spawn a new instance of i3bar-river
