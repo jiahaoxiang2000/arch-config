@@ -54,6 +54,14 @@ function claude
     ~/.local/bin/claude $argv
 end
 
+function claude-deepseek
+    source ~/.profile
+    set -lx ANTHROPIC_BASE_URL "https://api.deepseek.com/anthropic"
+    set -lx ANTHROPIC_MODEL "deepseek-chat"
+    set -lx ANTHROPIC_SMALL_FAST_MODEL "deepseek-chat"
+    ~/.local/bin/claude $argv
+end
+
 function godot
     command godot --display-driver wayland $argv
 end
