@@ -55,7 +55,7 @@ function claude
 end
 
 function claude-deepseek
-    source ~/.profile
+    source ~/.token
     set -lx ANTHROPIC_BASE_URL "https://api.deepseek.com/anthropic"
     set -lx ANTHROPIC_MODEL "deepseek-chat"
     set -lx ANTHROPIC_SMALL_FAST_MODEL "deepseek-chat"
