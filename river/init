@@ -132,11 +132,11 @@ do
     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.139.157.97 -i ~/.ssh/id_github"
 done
 
-for port in 5000
-do
-    pkill -f "ssh.*$port.*ubuntu@43.128.87.171"
-    riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.128.87.171 -i ~/.ssh/id_github"
-done
+# for port in 5000
+# do
+#     pkill -f "ssh.*$port.*ubuntu@43.128.87.171"
+#     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.128.87.171 -i ~/.ssh/id_github"
+# done
 # first to kill all running instances of tools
 killall -q i3bar-river kanshi fcitx5 ydotoold xremap
 # for key remapping based on xremap (with delay for device initialization)
