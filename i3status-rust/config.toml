@@ -2,12 +2,6 @@ icons_format = "{icon}"
 
 [theme]
 
-[icons]
-icons = "awesome4"
-[icons.overrides]
-bat = ["|E|", "|_|", "|=|", "|F|"]
-bat_charging = "|^| "
-
 [[block]]
 block = "cpu"
 info_cpu = 20
