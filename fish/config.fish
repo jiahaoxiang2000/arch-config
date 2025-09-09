@@ -56,9 +56,19 @@ end
 
 function claude-deepseek
     source ~/.token
+    set -lx ANTHROPIC_AUTH_TOKEN $DEEPSEEK_AUTH_TOKEN
     set -lx ANTHROPIC_BASE_URL "https://api.deepseek.com/anthropic"
     set -lx ANTHROPIC_MODEL "deepseek-chat"
     set -lx ANTHROPIC_SMALL_FAST_MODEL "deepseek-chat"
+    ~/.local/bin/claude $argv
+end
+
+function claude-kimi
+    source ~/.token
+    set -lx ANTHROPIC_AUTH_TOKEN $KIMI_AUTH_TOKEN
+    set -lx ANTHROPIC_BASE_URL "https://api.moonshot.cn/v1"
+    set -lx ANTHROPIC_MODEL "kimi-k2-0905-preview"
+    set -lx ANTHROPIC_SMALL_FAST_MODEL "kimi-k2-0905-preview"
     ~/.local/bin/claude $argv
 end
 
