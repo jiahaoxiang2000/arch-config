@@ -16,6 +16,7 @@ The config repository contains the configuration files for the various tools and
 | Kanshi        | `kanshi/config`                                       | Display configuration manager            |
 | i3status-rust | `i3status-rust/config.toml`                           | Status bar for tiling WMs                |
 | i3bar-river   | `i3bar-river/config.toml`                             | River window manager bar                 |
+| River         | `river/init`                                          | Wayland compositor/window manager        |
 | Xremap        | `xremap/config.yml`                                   | Key remapping tool                       |
 | Surfingkeys   | `Surfingkeys-conf.js`                                 | Browser key bindings                     |
 | Mouse Gesture | `mouse-gesture/config.json`                           | Mouse gesture configuration              |
