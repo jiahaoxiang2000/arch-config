@@ -23,6 +23,6 @@ The config repository contains the configuration files for the various tools and
 | VS Code       | `Code/User`, `code-flags.conf`                        | Editor settings and flags                |
 | blivedm_rs    | `blivedm_rs/config.toml`                              | Bilibili live danmaku client             |
 
-# References
+## References
 
 - [Gununixchad - dotfiles](https://github.com/gnuunixchad/dotfiles)
