@@ -72,6 +72,15 @@ function claude-kimi
     ~/.local/bin/claude $argv
 end
 
+function claude-bigmodel
+    source ~/.token
+    set -lx ANTHROPIC_AUTH_TOKEN $BIGMODEL_AUTH_TOKEN
+    set -lx ANTHROPIC_BASE_URL "https://open.bigmodel.cn/api/anthropic"
+    set -lx ANTHROPIC_MODEL "GLM-4.5"
+    set -lx ANTHROPIC_SMALL_FAST_MODEL "GLM-4.5-Air"
+    ~/.local/bin/claude $argv
+end
+
 function godot
     command godot --display-driver wayland $argv
 end
