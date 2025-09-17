@@ -22,4 +22,4 @@ cmd = "pavucontrol"
 [[block]]
 block = "time"
 interval = 5
-format = " $timestamp.datetime(f:'%R %d/%m %a') "
+format = " $timestamp.datetime(f:'%R %m-%d %a') "

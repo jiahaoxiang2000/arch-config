@@ -49,8 +49,8 @@ set PATH $PATH /home/isomo/.local/bin
 
 # proxy split by the application
 function claude
-    set -lx HTTPS_PROXY "http://127.0.0.1:1080"
-    set -lx HTTP_PROXY "http://127.0.0.1:1080"
+    # set -lx HTTPS_PROXY "http://127.0.0.1:1080"
+    # set -lx HTTP_PROXY "http://127.0.0.1:1080"
     ~/.local/bin/claude $argv
 end
 
