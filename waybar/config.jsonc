@@ -1,0 +1,59 @@
+// -*- mode: jsonc -*-
+{
+  // "layer": "top", // Waybar at top layer
+  // "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 20, // Waybar height (to be removed for auto height)
+  // "width": 1280, // Waybar width
+  "spacing": 1, // Gaps between modules (4px)
+  //   "output": "DP-6", // Output to display the bar
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["clock", "pulseaudio", "tray"],
+  // "margin": 1, // Margin around the bar
+  "reload_style_on_change": true, // Reload style on change
+  "tray": {
+    // "icon-size": 21,
+    "spacing": 10
+  },
+  "clock": {
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a %H:%M %m-%d}",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "🎧",
+      "hands-free": "📞",
+      "headset": "🎧",
+      "phone": "📱",
+      "portable": "🔊",
+      "car": "🚗",
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "hyprland/workspaces": {
+    // Show workspace name, icon, and window icons
+    "format": "{name}",
+    "format-window-separator": " ",
+    // Always show these workspaces, even when empty
+    // Switch to workspace on click
+    "on-click": "activate",
+    // Scroll to switch workspaces
+    "on-scroll-up": "activate-prev",
+    "on-scroll-down": "activate-next",
+    // Sort workspaces by number
+    "sort-by": "number",
+    // Show special workspaces (like scratchpads)
+    "show-special": true
+  }
+}

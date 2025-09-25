@@ -1,0 +1,106 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: #2b303b;
+    color: #ffffff;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+}
+
+button:hover {
+    background: #3c4043;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    border-radius: 0;
+    color: #ffffff;
+    min-width: 0;
+}
+
+#workspaces button:hover {
+    background: #3c4043;
+}
+
+#workspaces button.active {
+    background-color: #64727D;
+    color: #ffffff;
+}
+
+#workspaces button.empty {
+    color: #666666;
+}
+
+#workspaces button.persistent {
+    color: #7aa2f7;
+}
+
+#workspaces button.special {
+    color: #e0af68;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    padding: 0 8px;
+    border-radius: 0;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#window,
+#workspaces {
+    margin: 0 2px;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    color: #f53c3c;
+}
+
+#pulseaudio.muted {
+    color: #666666;
+}
+
+#tray > .needs-attention {
+    background-color: #eb4d4b;
+}
