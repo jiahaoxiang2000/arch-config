@@ -138,17 +138,18 @@ done
 #     riverctl spawn "ssh -N -L 0.0.0.0:$port:127.0.0.1:$port ubuntu@43.128.87.171 -i ~/.ssh/id_github"
 # done
 # first to kill all running instances of tools
-killall -q i3bar-river kanshi fcitx5 ydotoold xremap
+killall -q i3bar-river fcitx5 
 # for key remapping based on xremap (with delay for device initialization)
-riverctl spawn "sleep 2 && xremap ~/.config/xremap/config.yml"
 # to open the fcitx5 
 riverctl spawn "fcitx5 -d"
+# for the xdg portal
+riverctl spawn "dbus-update-activation-environment --systemd DISPLAY  WAYLAND_DISPLAY"
 # then to spawn a new instance of i3bar-river
 riverctl spawn i3bar-river
 # Start ydotoold for keyboard and mouse input simulation
-riverctl spawn ydotoold
-# Start kanshi for automatic display configuration
-riverctl spawn kanshi 
+# riverctl spawn ydotoold
+# Configure displays using wlr-randr
+riverctl spawn "wlr-randr --output DP-6 --mode 3840x2160@60Hz --pos 0,0 --scale 2.4 --output HDMI-A-1 --mode 2560x1440@60Hz --pos 1600,0 --scale 1.6 --transform 270" 
 
 # Super+0 to focus all tags
 # Super+Shift+0 to tag focused view with all tags
