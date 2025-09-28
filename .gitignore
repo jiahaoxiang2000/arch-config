@@ -167,3 +167,4 @@ unity3d/**
 environment.d/*
 fontconfig/*
 systemd/user/tray.target
+qqmusic/*

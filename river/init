@@ -114,9 +114,9 @@ riverctl map normal Super+Shift Space toggle-float
 # Super+F to toggle fullscreen
 riverctl map normal Super F toggle-fullscreen
 
-# Screenshot bindings
-riverctl map normal Super S spawn 'hyprshot -m region -o ~/Pictures'
-riverctl map normal Super+Shift S spawn 'hyprshot -m window -o ~/Pictures'
+# Screenshot bindings (matching Hyprland config)
+riverctl map normal Super S spawn 'hyprshot -m region  --clipboard -o ~/Pictures'
+riverctl map normal Super+Shift S spawn 'hyprshot -m region -o ~/Pictures'
 
 # Super+{Up,Right,Down,Left} to change layout orientation
 riverctl map normal Super Up    send-layout-cmd rivertile "main-location top"
