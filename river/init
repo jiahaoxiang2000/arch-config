@@ -149,7 +149,7 @@ riverctl spawn i3bar-river
 # Start ydotoold for keyboard and mouse input simulation
 # riverctl spawn ydotoold
 # Configure displays using wlr-randr
-riverctl spawn "wlr-randr --output DP-6 --mode 3840x2160@60Hz --pos 0,0 --scale 2.4 --output HDMI-A-1 --mode 2560x1440@60Hz --pos 1600,0 --scale 1.6 --transform 270" 
+riverctl spawn "wlr-randr --output DP-1 --mode 3840x2160@60Hz --pos 0,0 --scale 2.4 --output HDMI-A-1 --mode 2560x1440@60Hz --pos 1600,0 --scale 1.6 --transform 270" 
 
 # Super+0 to focus all tags
 # Super+Shift+0 to tag focused view with all tags
