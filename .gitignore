@@ -169,3 +169,4 @@ fontconfig/*
 systemd/user/tray.target
 qqmusic/*
 tmux/tmux.conf
+unityhub/*
