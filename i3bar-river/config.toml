@@ -16,7 +16,7 @@ tag_inactive_fg = "#707070ff"
 tag_inactive_bg = "#1a1a1aff"
 
 # The font and various sizes
-font = "monospace 10"
+font = "JetBrainsMono Nerd Font 10"
 height = 16
 margin_top = 0
 margin_bottom = 0

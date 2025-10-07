@@ -1,0 +1,6 @@
+i3bar-river
+paru
+paru-debug
+ttf-font-awesome-5
+visual-studio-code-bin
+xremap-wlroots-bin
