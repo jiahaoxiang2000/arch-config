@@ -30,6 +30,7 @@ linux-headers
 man-db
 nano
 neovim
+netease-cloud-music-gtk-bin
 networkmanager
 newsboat
 nodejs

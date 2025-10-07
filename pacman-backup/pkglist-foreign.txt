@@ -1,4 +1,5 @@
 i3bar-river
+netease-cloud-music-gtk-bin
 paru
 paru-debug
 ttf-font-awesome-5

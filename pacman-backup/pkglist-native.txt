@@ -13,6 +13,7 @@ alsa-topology-conf
 alsa-ucm-conf
 amd-ucode
 aom
+appstream
 archlinux-keyring
 at-spi2-core
 attr
@@ -152,6 +153,7 @@ lazygit
 lcms2
 leancrypto
 less
+libadwaita
 libarchive
 libass
 libassuan
@@ -182,6 +184,7 @@ libfdk-aac
 libffi
 libfontenc
 libfreeaptx
+libfyaml
 libgcrypt
 libglvnd
 libgpg-error
@@ -290,6 +293,7 @@ libxkbcommon-x11
 libxkbfile
 libxklavier
 libxml2
+libxmlb
 libxmu
 libxrandr
 libxrender
