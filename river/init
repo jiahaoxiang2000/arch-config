@@ -100,6 +100,15 @@ riverctl rule-add -app-id "bar" csd
 # Add the float for the godot game project dev
 riverctl rule-add -app-id 'gdcv' float
 
+# Float the window
+riverctl rule-add -app-id "wshowkeys_rs" float
+# Position: move to coordinates (20, 750)
+riverctl rule-add -app-id "wshowkeys_rs" position 20 750
+# Size: 300x80
+riverctl rule-add -app-id "wshowkeys_rs" dimensions 300 80
+# No focus when mapped (equivalent to noinitialfocus)
+riverctl rule-add -app-id "wshowkeys_rs" -no-float-on-create
+
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
