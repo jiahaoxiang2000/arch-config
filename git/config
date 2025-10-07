@@ -1,3 +1,6 @@
+[user]
+	email = jiahaoxiang2000@gmail.com
+	name = isomo
 [core]
 	editor = nvim
 [commit]

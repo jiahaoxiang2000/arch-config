@@ -25,4 +25,4 @@ The config repository contains the configuration files for the various tools and
 
 ## References
 
-- [Gununixchad - dotfiles](https://github.com/gnuunixchad/dotfiles)
+- [Gunuconfignixchad - dotfiles](https://github.com/gnuunixchad/dotfiles)
