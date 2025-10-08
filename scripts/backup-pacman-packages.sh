@@ -1,24 +1,16 @@
 #!/usr/bin/env bash
 # Backup script for pacman packages
-# This creates lists of installed packages for easy reinstallation
+# This creates lists of manually installed packages (no dependencies)
 
 BACKUP_DIR="${HOME}/.config/pacman-backup"
 mkdir -p "${BACKUP_DIR}"
 
-# Export explicitly installed packages (packages you manually installed)
-pacman -Qqe > "${BACKUP_DIR}/pkglist-explicit.txt"
+# Export explicitly installed packages from official repos (no dependencies, no AUR)
+pacman -Qqen > "${BACKUP_DIR}/pkglist-native.txt"
 
-# Export all installed packages (including dependencies)
-pacman -Qq > "${BACKUP_DIR}/pkglist-all.txt"
-
-# Export foreign packages (AUR and other non-official repos)
-pacman -Qqm > "${BACKUP_DIR}/pkglist-foreign.txt"
-
-# Export native packages (from official repos only)
-pacman -Qqn > "${BACKUP_DIR}/pkglist-native.txt"
+# Export explicitly installed foreign packages (AUR, no dependencies)
+pacman -Qqem > "${BACKUP_DIR}/pkglist-foreign.txt"
 
 echo "Package lists exported to ${BACKUP_DIR}/"
-echo "- pkglist-explicit.txt: Explicitly installed packages"
-echo "- pkglist-all.txt: All installed packages"
-echo "- pkglist-foreign.txt: AUR/foreign packages"
-echo "- pkglist-native.txt: Official repository packages"
+echo "- pkglist-native.txt: Manually installed official repo packages"
+echo "- pkglist-foreign.txt: Manually installed AUR packages"
