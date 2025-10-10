@@ -8,6 +8,7 @@ biber
 bluez
 bluez-utils
 dkms
+dunst
 efibootmgr
 fcitx5
 fcitx5-chinese-addons
@@ -58,6 +59,7 @@ reflector
 ripgrep
 river
 smartmontools
+swaylock
 texlive-basic
 texlive-bibtexextra
 texlive-binextra
@@ -92,5 +94,7 @@ xdg-desktop-portal-wlr
 xdg-utils
 xorg-server
 xorg-xinit
+zed
+zip
 zram-generator
 zsh

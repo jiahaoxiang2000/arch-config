@@ -1,10 +1,12 @@
 adobe-source-han-mono-cn-fonts
 bbdown-bin
+daed
 i3bar-river
 netease-cloud-music-gtk-bin
 paru
 paru-debug
 ttf-font-awesome-5
+unityhub
 visual-studio-code-bin
 wshowkeys-mao-git
 xremap-wlroots-bin
