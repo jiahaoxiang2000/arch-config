@@ -1,0 +1,644 @@
+{
+    "DesktopAudioDevice1": {
+        "prev_ver": 536870913,
+        "name": "Desktop Audio",
+        "uuid": "2bb5c6ab-de9f-45ad-944a-987d001fbcb1",
+        "id": "pulse_output_capture",
+        "versioned_id": "pulse_output_capture",
+        "settings": {
+            "device_id": "default"
+        },
+        "mixers": 255,
+        "sync": 0,
+        "flags": 0,
+        "volume": 0.3162277638912201,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {}
+    },
+    "AuxAudioDevice1": {
+        "prev_ver": 536870913,
+        "name": "Mic/Aux",
+        "uuid": "2f458fcd-e8e4-4c72-bfe4-80dd507e7b18",
+        "id": "pulse_input_capture",
+        "versioned_id": "pulse_input_capture",
+        "settings": {
+            "device_id": "alsa_input.usb-352f_PD200X_Podcast_Microphone_230417-00.mono-fallback"
+        },
+        "mixers": 255,
+        "sync": 0,
+        "flags": 0,
+        "volume": 3.1622776985168457,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {},
+        "filters": [
+            {
+                "prev_ver": 536870913,
+                "name": "Noise Suppression",
+                "uuid": "962154fe-3b12-4301-a78b-524ab4fb1927",
+                "id": "noise_suppress_filter",
+                "versioned_id": "noise_suppress_filter_v2",
+                "settings": {},
+                "mixers": 255,
+                "sync": 0,
+                "flags": 0,
+                "volume": 1.0,
+                "balance": 0.5,
+                "enabled": true,
+                "muted": false,
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "hotkeys": {},
+                "deinterlace_mode": 0,
+                "deinterlace_field_order": 0,
+                "monitoring_type": 0,
+                "private_settings": {}
+            }
+        ]
+    },
+    "current_scene": "live",
+    "current_program_scene": "live",
+    "scene_order": [
+        {
+            "name": "live"
+        },
+        {
+            "name": "video"
+        }
+    ],
+    "name": "isomo",
+    "groups": [],
+    "quick_transitions": [
+        {
+            "name": "Cut",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 1,
+            "fade_to_black": false
+        },
+        {
+            "name": "Fade",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 2,
+            "fade_to_black": false
+        },
+        {
+            "name": "Fade",
+            "duration": 300,
+            "hotkeys": [],
+            "id": 3,
+            "fade_to_black": true
+        }
+    ],
+    "transitions": [],
+    "saved_projectors": [],
+    "canvases": [],
+    "current_transition": "Fade",
+    "transition_duration": 300,
+    "preview_locked": false,
+    "scaling_enabled": false,
+    "scaling_level": -12,
+    "scaling_off_x": 0.0,
+    "scaling_off_y": 0.0,
+    "modules": {
+        "scripts-tool": [],
+        "output-timer": {
+            "streamTimerHours": 0,
+            "streamTimerMinutes": 0,
+            "streamTimerSeconds": 30,
+            "recordTimerHours": 0,
+            "recordTimerMinutes": 0,
+            "recordTimerSeconds": 30,
+            "autoStartStreamTimer": false,
+            "autoStartRecordTimer": false,
+            "pauseRecordTimer": true
+        }
+    },
+    "resolution": {
+        "x": 4803,
+        "y": 2700
+    },
+    "version": 2,
+    "sources": [
+        {
+            "prev_ver": 536870913,
+            "name": "live",
+            "uuid": "ff387a1b-6e60-4b72-84bf-0a70f069ca73",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 6,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Wayland output(dmabuf) 2",
+                        "source_uuid": "1b0f8885-2a5c-4819-89e2-223437ad58b7",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 4803.0,
+                            "y": 2700.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7788889408111572,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 0.8536458611488342,
+                            "y": 0.8537036776542664
+                        },
+                        "scale_rel": {
+                            "x": 0.8536458611488342,
+                            "y": 0.8537036776542664
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Wayland output(dmabuf) 3",
+                        "source_uuid": "d9e19d3a-e6c0-42ce-aaed-397a47a0b5e4",
+                        "visible": true,
+                        "locked": false,
+                        "rot": -90.0,
+                        "scale_ref": {
+                            "x": 4803.0,
+                            "y": 2700.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 3284.0,
+                            "y": 2700.0
+                        },
+                        "pos_rel": {
+                            "x": 0.6537036895751953,
+                            "y": 1.0
+                        },
+                        "scale": {
+                            "x": 1.0546875,
+                            "y": 1.054861068725586
+                        },
+                        "scale_rel": {
+                            "x": 1.0546875,
+                            "y": 1.054861068725586
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Video Capture Device (V4L2)",
+                        "source_uuid": "7735e166-5c2a-46d8-b470-ed6153a2ce8a",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 260,
+                        "crop_top": 120,
+                        "crop_right": 130,
+                        "crop_bottom": 0,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 2684.5,
+                            "y": 1867.0
+                        },
+                        "pos_rel": {
+                            "x": 0.209629625082016,
+                            "y": 0.3829629421234131
+                        },
+                        "scale": {
+                            "x": 2.2410714626312256,
+                            "y": 2.2361111640930176
+                        },
+                        "scale_rel": {
+                            "x": 0.8964285850524902,
+                            "y": 0.894444465637207
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Text (FreeType 2)",
+                        "source_uuid": "29b17f4b-a4af-454c-b757-4de3bea62317",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 1920.0,
+                            "y": 1080.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 6,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 44.0,
+                            "y": 1845.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7462962865829468,
+                            "y": 0.36666667461395264
+                        },
+                        "scale": {
+                            "x": 0.5401086211204529,
+                            "y": 0.539850115776062
+                        },
+                        "scale_rel": {
+                            "x": 0.21604345738887787,
+                            "y": 0.21594005823135376
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": [],
+                "libobs.show_scene_item.6": [],
+                "libobs.hide_scene_item.6": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Text (FreeType 2)",
+            "uuid": "29b17f4b-a4af-454c-b757-4de3bea62317",
+            "id": "text_ft2_source",
+            "versioned_id": "text_ft2_source_v2",
+            "settings": {
+                "text": "NixOs 还是太难\n\n回到Arch了 zzz \n\n可以弹幕聊天 ",
+                "font": {
+                    "face": "Source Han Sans CN",
+                    "style": "Regular",
+                    "size": 256,
+                    "flags": 0
+                },
+                "antialiasing": false
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "video",
+            "uuid": "c55f4f47-260f-4ec8-b69f-abb40d5e1b8e",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 3,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Wayland output(dmabuf)",
+                        "source_uuid": "6dc9727f-b1ae-47e9-8d09-684cfe583f38",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "scale_ref": {
+                            "x": 4803.0,
+                            "y": 2700.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 3,
+                        "group_item_backup": false,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "pos_rel": {
+                            "x": -1.7788889408111572,
+                            "y": -1.0
+                        },
+                        "scale": {
+                            "x": 1.25,
+                            "y": 1.25
+                        },
+                        "scale_rel": {
+                            "x": 1.25,
+                            "y": 1.25
+                        },
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_rel": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.3": [],
+                "libobs.hide_scene_item.3": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "canvas_uuid": "6c69626f-6273-4c00-9d88-c5136d61696e",
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Video Capture Device (V4L2)",
+            "uuid": "7735e166-5c2a-46d8-b470-ed6153a2ce8a",
+            "id": "v4l2_input",
+            "versioned_id": "v4l2_input",
+            "settings": {
+                "device_id": "/dev/video0",
+                "input": 0,
+                "pixelformat": 1196444237
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Wayland output(dmabuf)",
+            "uuid": "6dc9727f-b1ae-47e9-8d09-684cfe583f38",
+            "id": "wlrobs-dmabuf",
+            "versioned_id": "wlrobs-dmabuf",
+            "settings": {
+                "output": "DP-1"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Wayland output(dmabuf) 2",
+            "uuid": "1b0f8885-2a5c-4819-89e2-223437ad58b7",
+            "id": "wlrobs-dmabuf",
+            "versioned_id": "wlrobs-dmabuf",
+            "settings": {
+                "output": "DP-1"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 536870913,
+            "name": "Wayland output(dmabuf) 3",
+            "uuid": "d9e19d3a-e6c0-42ce-aaed-397a47a0b5e4",
+            "id": "wlrobs-dmabuf",
+            "versioned_id": "wlrobs-dmabuf",
+            "settings": {
+                "output": "HDMI-A-1"
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {},
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        }
+    ]
+}

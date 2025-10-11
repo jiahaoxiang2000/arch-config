@@ -111,6 +111,7 @@ QtProject.conf
 pavucontrol.ini
 
 obs-studio/*
+!obs-studio/isomo.json
 github-copilot/*
 kdenlive*
 vlc/*
