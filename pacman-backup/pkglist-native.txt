@@ -20,6 +20,7 @@ fcitx5-pinyin-zhwiki
 firefox
 foot
 fzf
+gamescope
 git
 git-lfs
 github-cli
@@ -59,11 +60,13 @@ pipewire-jack
 pipewire-pulse
 playerctl
 python
+python-pipx
 reflector
 ripgrep
 river
 sagemath
 smartmontools
+steam
 swaylock
 texlive-basic
 texlive-bibtexextra

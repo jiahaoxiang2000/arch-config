@@ -5,6 +5,8 @@ i3bar-river
 netease-cloud-music-gtk-bin
 paru
 paru-debug
+protontricks
+protonup-qt
 ttf-font-awesome-5
 unityhub
 visual-studio-code-bin
