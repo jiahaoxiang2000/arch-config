@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: #2b303b;
-    color: #ffffff;
+    background-color: #1a1b26;
+    color: #c0caf5;
 }
 
 window#waybar.hidden {
@@ -20,28 +20,36 @@ button {
 }
 
 button:hover {
-    background: #3c4043;
+    background: #24283b;
 }
 
-#workspaces button {
+#workspaces button,
+#tags button {
     padding: 0 8px;
     background-color: transparent;
     border-radius: 0;
-    color: #ffffff;
+    color: #a9b1d6;
     min-width: 0;
 }
 
-#workspaces button:hover {
-    background: #3c4043;
+#workspaces button:hover,
+#tags button:hover {
+    background: #24283b;
 }
 
-#workspaces button.active {
-    background-color: #64727D;
-    color: #ffffff;
+#workspaces button.active,
+#tags button.focused {
+    background-color: #414868;
+    color: #c0caf5;
 }
 
-#workspaces button.empty {
-    color: #666666;
+#workspaces button.empty,
+#tags button.occupied {
+    color: #a9b1d6;
+}
+
+#tags button.urgent {
+    color: #f7768e;
 }
 
 #workspaces button.persistent {
@@ -71,36 +79,39 @@ button:hover {
 #mpd {
     padding: 0 8px;
     border-radius: 0;
-    color: #ffffff;
+    color: #c0caf5;
     background-color: transparent;
 }
 
 #window,
-#workspaces {
+#workspaces,
+#tags {
     margin: 0 2px;
 }
 
-.modules-left > widget:first-child > #workspaces {
+.modules-left > widget:first-child > #workspaces,
+.modules-left > widget:first-child > #tags {
     margin-left: 0;
 }
 
-.modules-right > widget:last-child > #workspaces {
+.modules-right > widget:last-child > #workspaces,
+.modules-right > widget:last-child > #tags {
     margin-right: 0;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: #f7768e;
+    color: #1a1b26;
 }
 
 #network.disconnected {
-    color: #f53c3c;
+    color: #f7768e;
 }
 
 #pulseaudio.muted {
-    color: #666666;
+    color: #565f89;
 }
 
 #tray > .needs-attention {
-    background-color: #eb4d4b;
+    background-color: #f7768e;
 }

@@ -5,13 +5,18 @@
   "height": 20, // Waybar height (to be removed for auto height)
   // "width": 1280, // Waybar width
   "spacing": 1, // Gaps between modules (4px)
-  //   "output": "DP-6", // Output to display the bar
+  "output": "DP-1", // Output to display the bar
   // Choose the order of the modules
-  "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["hyprland/window"],
-  "modules-right": ["clock", "pulseaudio", "tray"],
+  "modules-left": ["river/tags"],
+  "modules-center": ["river/window"],
+  "modules-right": ["tray","cpu","pulseaudio","clock"],
   // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
+  "cpu": {
+    "interval": 10,
+    "format": "{}% ",
+    "max-length": 10
+  },
   "tray": {
     // "icon-size": 21,
     "spacing": 10
@@ -19,41 +24,35 @@
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%a %H:%M %m-%d}",
+    "format": "{:%H:%M %m-%d %a}",
     "format-alt": "{:%Y-%m-%d}"
   },
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
     "format-icons": {
-      "headphone": "🎧",
-      "hands-free": "📞",
-      "headset": "🎧",
-      "phone": "📱",
-      "portable": "🔊",
-      "car": "🚗",
-      "default": ["🔈", "🔉", "🔊"]
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
     },
-    "on-click": "pavucontrol"
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
   },
-  "hyprland/workspaces": {
-    // Show workspace name, icon, and window icons
-    "format": "{name}",
-    "format-window-separator": " ",
-    // Always show these workspaces, even when empty
-    // Switch to workspace on click
-    "on-click": "activate",
-    // Scroll to switch workspaces
-    "on-scroll-up": "activate-prev",
-    "on-scroll-down": "activate-next",
-    // Sort workspaces by number
-    "sort-by": "number",
-    // Show special workspaces (like scratchpads)
-    "show-special": true
+  "river/tags": {
+    "num-tags": 9,
+    "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    "hide-vacant" : true
+  },
+  "river/window": {
+    "format": "{}"
   }
 }
