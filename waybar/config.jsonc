@@ -9,23 +9,23 @@
   // Choose the order of the modules
   "modules-left": ["river/tags"],
   "modules-center": ["river/window"],
-  "modules-right": ["tray","cpu","pulseaudio","clock"],
+  "modules-right": ["tray", "cpu", "pulseaudio", "clock"],
   // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
   "cpu": {
     "interval": 10,
-    "format": "{}% ",
-    "max-length": 10
+    "format": "{usage}% CPU",
+    "max-length": 10,
   },
   "tray": {
     // "icon-size": 21,
-    "spacing": 10
+    "spacing": 10,
   },
   "clock": {
     // "timezone": "America/New_York",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%H:%M %m-%d %a}",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "{:%Y-%m-%d}",
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
@@ -41,18 +41,18 @@
       "phone-muted": "",
       "portable": "",
       "car": "",
-      "default": ["", ""]
+      "default": ["", ""],
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
+    "ignored-sinks": ["Easy Effects Sink"],
   },
   "river/tags": {
     "num-tags": 9,
     "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-    "hide-vacant" : true
+    "hide-vacant": true,
   },
   "river/window": {
-    "format": "{}"
-  }
+    "format": "{}",
+  },
 }
