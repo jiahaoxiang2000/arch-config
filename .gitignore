@@ -165,9 +165,9 @@ configstore/update-notifier-@qwen-code/qwen-code.json
 godot/editor_settings-4.4.tres
 probe-rs-tools/probe-rs-tools-receipt.json
 unity3d/**
-environment.d/*
 fontconfig/*
 systemd/user/tray.target
 qqmusic/*
 tmux/tmux.conf
 unityhub/*
+GIMP/3.0

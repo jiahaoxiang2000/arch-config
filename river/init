@@ -11,7 +11,7 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
 term="footclient"
-menu="wmenu-run"
+menu="env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx wmenu-run"
 tiler="rivercarro"
 
 riverctl map normal Super+Shift R spawn "${HOME}/.config/river/init"
