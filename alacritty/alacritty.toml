@@ -1,0 +1,115 @@
+# Alacritty configuration
+# Similar to foot/foot.ini configuration
+
+[window]
+# Enable DPI awareness
+#dynamic_padding = true
+opacity = 1.0
+
+# Hide window decorations (title bar)
+decorations = "none"
+
+[font]
+# Font configuration matching foot setup
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+size = 14.0
+
+[mouse]
+# Hide cursor when typing
+hide_when_typing = true
+
+[keyboard]
+# Key bindings matching foot configuration
+bindings = [
+    # Font size controls
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+
+    # Copy/paste (Alacritty defaults work well, but explicit for clarity)
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+]
+
+# Solarized Dark - One of the most color-blind friendly themes
+# Engineered with both color wheel and lightness relationships
+# Excellent for deuteranopia and protanopia (red-green color blindness)
+[colors.primary]
+background = "#002b36"
+foreground = "#839496"
+
+[colors.normal]
+black = "#073642"
+red = "#dc322f"
+green = "#859900"
+yellow = "#b58900"
+blue = "#268bd2"
+magenta = "#d33682"
+cyan = "#2aa198"
+white = "#eee8d5"
+
+[colors.bright]
+black = "#002b36"
+red = "#cb4b16"
+green = "#586e75"
+yellow = "#657b83"
+blue = "#839496"
+magenta = "#6c71c4"
+cyan = "#93a1a1"
+white = "#fdf6e3"
+
+# Alternative: Nord Theme (also color-blind friendly)
+# Uncomment to use Nord instead
+# [colors.primary]
+# background = "#2e3440"
+# foreground = "#d8dee9"
+#
+# [colors.normal]
+# black = "#3b4252"
+# red = "#bf616a"
+# green = "#a3be8c"
+# yellow = "#ebcb8b"
+# blue = "#81a1c1"
+# magenta = "#b48ead"
+# cyan = "#88c0d0"
+# white = "#e5e9f0"
+#
+# [colors.bright]
+# black = "#4c566a"
+# red = "#bf616a"
+# green = "#a3be8c"
+# yellow = "#ebcb8b"
+# blue = "#81a1c1"
+# magenta = "#b48ead"
+# cyan = "#8fbcbb"
+# white = "#eceff4"
+
+# Alternative: Gruvbox Dark (high contrast, color-blind friendly)
+# Uncomment to use Gruvbox instead
+# [colors.primary]
+# background = "#282828"
+# foreground = "#ebdbb2"
+#
+# [colors.normal]
+# black = "#282828"
+# red = "#cc241d"
+# green = "#98971a"
+# yellow = "#d79921"
+# blue = "#458588"
+# magenta = "#b16286"
+# cyan = "#689d6a"
+# white = "#a89984"
+#
+# [colors.bright]
+# black = "#928374"
+# red = "#fb4934"
+# green = "#b8bb26"
+# yellow = "#fabd2f"
+# blue = "#83a598"
+# magenta = "#d3869b"
+# cyan = "#8ec07c"
+# white = "#ebdbb2"
