@@ -35,7 +35,7 @@ input {
     // Omitting settings disables them, or leaves them at their default values.
     // All commented-out settings here are examples, not defaults.
     touchpad {
-        // off
+        off
         tap
         // dwt
         // dwtp
@@ -49,11 +49,11 @@ input {
     }
 
     mouse {
-        // off
-        // natural-scroll
+    //     // off
+    //     // natural-scroll
         accel-speed -0.6
         accel-profile "flat"
-        // scroll-method "no-scroll"
+    //     // scroll-method "no-scroll"
     }
 
     trackpoint {
@@ -335,7 +335,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-    // off
+    off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     // slowdown 3.0
@@ -413,7 +413,7 @@ binds {
 
     // Mod-Shift-/, which is usually the same as Mod-?,
     // shows a list of important hotkeys.
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Shift+Slash hotkey-overlay-title="Show keymaps help" { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
@@ -423,7 +423,7 @@ binds {
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
-    Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    // Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -519,29 +519,6 @@ binds {
     Mod+Shift+Page_Up   { move-workspace-up; }
     Mod+Shift+U         { move-workspace-down; }
     Mod+Shift+I         { move-workspace-up; }
-
-    // You can bind mouse wheel scroll ticks using the following syntax.
-    // These binds will change direction based on the natural-scroll setting.
-    //
-    // To avoid scrolling through workspaces really fast, you can use
-    // the cooldown-ms property. The bind will be rate-limited to this value.
-    // You can set a cooldown on any bind, but it's most useful for the wheel.
-    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
-    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
-
-    Mod+WheelScrollRight      { focus-column-right; }
-    Mod+WheelScrollLeft       { focus-column-left; }
-    Mod+Ctrl+WheelScrollRight { move-column-right; }
-    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
-
-    // Usually scrolling up and down with Shift in applications results in
-    // horizontal scrolling; these binds replicate that.
-    Mod+Shift+WheelScrollDown      { focus-column-right; }
-    Mod+Shift+WheelScrollUp        { focus-column-left; }
-    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
-    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
     // Similarly, you can bind touchpad scroll "ticks".
     // Touchpad scrolling is continuous, so for these binds it is split into
@@ -645,7 +622,7 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Print { screenshot; }
+    Mod+S { screenshot; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
@@ -667,54 +644,4 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
-    // ============================================================================
-    // River WM keybindings (commented out - uncomment to use instead of defaults)
-    // ============================================================================
-
-    // Basic window management
-    // Mod+T { spawn "foot"; }  // Terminal (River used foot)
-    // Mod+Q { close-window; }  // Close window
-    // Mod+Space { spawn-sh "env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx wmenu-run"; }  // App launcher with fcitx
-
-    // Window focus (vim-style navigation)
-    // Mod+H { focus-column-left; }
-    // Mod+J { focus-window-down; }
-    // Mod+K { focus-window-up; }
-    // Mod+L { focus-column-right; }
-
-    // Swap windows
-    // Mod+Shift+J { move-window-down; }
-    // Mod+Shift+K { move-window-up; }
-
-    // Monitor/output focus
-    // Mod+H { focus-monitor-left; }
-    // Mod+L { focus-monitor-right; }
-
-    // Send to monitor/output
-    // Mod+Shift+H { move-column-to-monitor-left; }
-    // Mod+Shift+L { move-column-to-monitor-right; }
-
-    // Window state
-    // Mod+Shift+Space { toggle-window-floating; }
-    // Mod+F { fullscreen-window; }
-    // Mod+Return { /* zoom - bump to top of stack (no direct Niri equivalent) */ }
-
-    // Layout adjustments (River used rivertile main-ratio)
-    // Mod+Period { set-column-width "-5%"; }  // Decrease main ratio
-    // Mod+Comma { set-column-width "+5%"; }  // Increase main ratio
-    // Mod+Shift+Period { /* main-count +1 (no direct Niri equivalent) */ }
-    // Mod+Shift+Comma { /* main-count -1 (no direct Niri equivalent) */ }
-
-    // Screenshots with hyprshot (instead of Niri's default screenshot)
-    // Mod+S { spawn-sh "hyprshot -m region --clipboard -o ~/Pictures"; }  // Screenshot region to clipboard
-    // Mod+Shift+S { spawn-sh "hyprshot -m region -o ~/Pictures"; }  // Screenshot region to file
-
-    // Layout orientation (River-specific, no Niri equivalent)
-    // Mod+Up { /* main-location top */ }
-    // Mod+Right { /* main-location right */ }
-    // Mod+Down { /* main-location bottom */ }
-    // Mod+Left { /* main-location left */ }
-
-    // Reload config
-    // Mod+Shift+R { spawn-sh "~/.config/river/init"; }  // River config reload
 }
