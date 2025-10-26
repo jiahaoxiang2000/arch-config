@@ -82,6 +82,9 @@ riverctl border-color-unfocused 0x586e75
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
 
+# Auto-hide mouse cursor after 3 seconds of inactivity
+riverctl hide-cursor timeout 3000
+
 # Swap Caps Lock and Escape keys
 # riverctl keyboard-layout -variant "" -options "caps:swapescape" ""
 
