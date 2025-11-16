@@ -83,7 +83,7 @@ riverctl border-color-unfocused 0x586e75
 riverctl set-repeat 50 300
 
 # Auto-hide mouse cursor after 3 seconds of inactivity
-riverctl hide-cursor timeout 3000
+# riverctl hide-cursor timeout 3000
 
 # Swap Caps Lock and Escape keys
 # riverctl keyboard-layout -variant "" -options "caps:swapescape" ""
@@ -147,7 +147,10 @@ killall -q waybar fcitx5
 # to open the fcitx5
 riverctl spawn "fcitx5 -d"
 # for the xdg portal
-riverctl spawn "dbus-update-activation-environment --systemd DISPLAY  WAYLAND_DISPLAY"
+# riverctl spawn "dbus-update-activation-environment --systemd DISPLAY  WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river"
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
 # Start ydotoold for keyboard and mouse input simulation
 # riverctl spawn ydotoold
 # Configure displays using wlr-randr
