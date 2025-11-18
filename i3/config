@@ -1,0 +1,299 @@
+# i3 config file (v4)
+# Migrated from River window manager configuration
+# See https://i3wm.org/docs/userguide.html for reference
+
+# Modifier key (Super/Windows key)
+set $mod Mod4
+
+# Font for window titles and bar
+font pango:monospace 10
+
+# ============================================================================
+# DISPLAY CONFIGURATION
+# ============================================================================
+
+# Configure displays (native resolution, no scaling to avoid blur in X11)
+# DP-0: 3840x2160@60Hz at position 0,0 (primary)
+# HDMI-0: 2560x1440@60Hz rotated left (becomes 1440x2560) at position 3840,0
+# Note: Adjust application font sizes instead of using display scaling in X11
+exec --no-startup-id xrandr --output DP-0 --mode 3840x2160 --rate 60 --pos 0x0 --primary  --output HDMI-0 --mode 2560x1440 --rate 60 --rotate right --pos 3840x0 
+# ============================================================================
+# AUTOSTART SERVICES
+# ============================================================================
+
+# Kill existing instances before starting
+exec --no-startup-id killall -q fcitx5
+
+# Start fcitx5 input method framework
+exec --no-startup-id fcitx5 -d
+
+# XDG portal setup for proper desktop integration
+exec --no-startup-id systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec --no-startup-id dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=i3
+exec --no-startup-id systemctl --user restart xdg-desktop-portal
+
+# XDG autostart applications
+exec --no-startup-id dex --autostart --environment i3
+
+# Network manager applet
+exec --no-startup-id nm-applet
+
+# Screen locker
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# Set keyboard repeat rate (50ms delay, 300ms rate)
+exec --no-startup-id xset r rate 300 50
+
+
+# ============================================================================
+# WINDOW APPEARANCE
+# ============================================================================
+
+# Border colors (Solarized theme from River config)
+# class                 border  backgr. text    indicator child_border
+client.focused          #93a1a1 #93a1a1 #002b36 #93a1a1   #93a1a1
+client.focused_inactive #586e75 #586e75 #839496 #586e75   #586e75
+client.unfocused        #586e75 #586e75 #839496 #586e75   #586e75
+client.urgent           #dc322f #dc322f #fdf6e3 #dc322f   #dc322f
+client.placeholder      #002b36 #002b36 #839496 #002b36   #002b36
+client.background       #002b36
+
+# Gaps configuration (if i3-gaps is installed)
+gaps inner 2
+gaps outer 2
+
+# ============================================================================
+# KEY BINDINGS - BASIC CONTROLS
+# ============================================================================
+
+# Start terminal (X11 terminal)
+bindsym $mod+t exec i3-sensible-terminal
+
+# Alternative terminal options (uncomment preferred):
+# bindsym $mod+t exec xterm
+# bindsym $mod+t exec alacritty
+# bindsym $mod+t exec kitty
+
+# Application launcher (rofi with fcitx5 environment)
+bindsym $mod+space exec --no-startup-id env GTK_IM_MODULE=fcitx QT_IM_MODULE=fcitx XMODIFIERS=@im=fcitx rofi -show drun -show-icons
+
+# Reload configuration
+bindsym $mod+Shift+c reload
+
+# Restart i3 inplace
+bindsym $mod+Shift+r restart
+
+# Exit i3
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+
+# Kill focused window
+bindsym $mod+q kill
+
+# ============================================================================
+# KEY BINDINGS - WINDOW FOCUS & NAVIGATION
+# ============================================================================
+
+# Focus windows (vim-style hjkl)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Alternative: arrow keys
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move focused window (vim-style)
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Alternative: arrow keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Focus parent/child container
+bindsym $mod+a focus parent
+#bindsym $mod+d focus child
+
+# ============================================================================
+# KEY BINDINGS - LAYOUT MANAGEMENT
+# ============================================================================
+
+# Split orientation
+bindsym $mod+b split h
+bindsym $mod+v split v
+
+# Toggle fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Change container layout
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle floating
+bindsym $mod+Shift+space floating toggle
+
+# Change focus between tiling/floating
+bindsym $mod+Control+space focus mode_toggle
+
+# Mouse controls for floating windows
+floating_modifier $mod
+
+# Drag tiling windows via titlebar
+tiling_drag modifier titlebar
+
+# ============================================================================
+# KEY BINDINGS - WORKSPACES
+# ============================================================================
+
+# Define workspace names
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+
+# Back and forth workspace switching
+bindsym $mod+Tab workspace back_and_forth
+
+# Move container to workspace and follow
+bindsym $mod+Control+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Control+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Control+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Control+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Control+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Control+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Control+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Control+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Control+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+Control+0 move container to workspace number $ws10; workspace number $ws10
+
+# ============================================================================
+# KEY BINDINGS - SCREENSHOTS
+# ============================================================================
+
+# Screenshot to clipboard (using Print key)
+bindsym Print exec --no-startup-id hyprshot -m region --clipboard -o ~/Pictures
+
+# Screenshot to file
+bindsym Shift+Print exec --no-startup-id hyprshot -m region -o ~/Pictures
+
+# Alternative screenshot bindings (Super+P)
+bindsym $mod+p exec --no-startup-id hyprshot -m region --clipboard -o ~/Pictures
+bindsym $mod+Shift+p exec --no-startup-id hyprshot -m region -o ~/Pictures
+
+# ============================================================================
+# KEY BINDINGS - MEDIA & SYSTEM CONTROLS
+# ============================================================================
+
+# Volume controls (pipewire/wpctl)
+bindsym XF86AudioRaiseVolume exec --no-startup-id wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+bindsym XF86AudioMute exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+
+# Media playback controls (playerctl)
+bindsym XF86AudioMedia exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+
+# Screen brightness controls
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+
+# Eject optical drive
+bindsym XF86Eject exec --no-startup-id eject -T
+
+# ============================================================================
+# WINDOW RULES
+# ============================================================================
+
+# Floating windows for specific applications
+for_window [class="gdcv"] floating enable
+for_window [class="wshowkeys_rs"] floating enable
+
+# Specific positioning for wshowkeys_rs (if supported)
+for_window [class="wshowkeys_rs"] floating enable, move position 20 750, resize set 300 80
+
+# Float windows with "float" in class name
+for_window [class="^float"] floating enable
+
+# ============================================================================
+# RESIZE MODE
+# ============================================================================
+
+mode "resize" {
+        # Vim-style resize bindings
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
+
+        # Arrow key bindings
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        # Exit resize mode
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# ============================================================================
+# STATUS BAR
+# ============================================================================
+
+bar {
+    status_command i3status
+    position top
+    colors {
+        background #002b36
+        statusline #839496
+        separator  #586e75
+
+        focused_workspace  #93a1a1 #93a1a1 #002b36
+        active_workspace   #586e75 #586e75 #839496
+        inactive_workspace #073642 #073642 #839496
+        urgent_workspace   #dc322f #dc322f #fdf6e3
+    }
+}
