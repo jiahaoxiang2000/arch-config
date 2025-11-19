@@ -42,8 +42,8 @@ input type:keyboard {
 # Kill existing instances before starting
 exec_always killall -q waybar fcitx5 || true
 
-# Start fcitx5 input method framework
-exec fcitx5 -d
+# Start fcitx5 input method framework (with small delay to let killall finish)
+exec_always sh -c 'sleep 0.5 && fcitx5 -d'
 
 # XDG portal setup for proper desktop integration
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
