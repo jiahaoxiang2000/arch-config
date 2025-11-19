@@ -1,0 +1,29 @@
+# Nvidia-specific environment variables for Sway
+# Source this file before starting Sway or add to your shell profile
+
+# Use GBM backend for better Nvidia performance
+export WLR_RENDERER=vulkan
+export WLR_NO_HARDWARE_CURSORS=1
+
+# GBM backend (recommended for newer Nvidia drivers)
+export GBM_BACKEND=nvidia-drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
+# Ensure XDG desktop portal knows we're using Sway
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=sway
+
+# Qt Wayland support
+export QT_QPA_PLATFORM=wayland
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+
+# Firefox Wayland
+export MOZ_ENABLE_WAYLAND=1
+
+# SDL Wayland
+export SDL_VIDEODRIVER=wayland
+
+# Additional Nvidia tweaks (uncomment if needed)
+# export __GL_GSYNC_ALLOWED=1
+# export __GL_VRR_ALLOWED=1

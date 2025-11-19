@@ -101,7 +101,6 @@ libreoffice/*
 # unknown folder
 dconf/*
 Kingsoft/*
-sway/*
 
 kdeglobals
 okular*

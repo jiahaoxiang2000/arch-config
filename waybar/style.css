@@ -1,63 +1,69 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 12px;
 }
 
 window#waybar {
-    background-color: #1a1b26;
-    color: #c0caf5;
+  background-color: #1a1b26; /* Deep dark blue-gray */
+  color: #c0caf5; /* Soft bright text */
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 button {
-    border: none;
-    border-radius: 0;
-    background: transparent;
+  border: none;
+  border-radius: 0;
+  background: transparent;
 }
 
 button:hover {
-    background: #24283b;
+  background: #24283b; /* Darker hover state */
 }
 
 #workspaces button,
 #tags button {
-    padding: 0 8px;
-    background-color: transparent;
-    border-radius: 0;
-    color: #a9b1d6;
-    min-width: 0;
+  padding: 0 8px;
+  background-color: transparent;
+  border-radius: 0;
+  color: #a9b1d6; /* Muted blue-gray text */
+  min-width: 0;
 }
 
 #workspaces button:hover,
 #tags button:hover {
-    background: #24283b;
+  background: #24283b; /* Subtle hover */
 }
 
+#workspaces button.focused,
 #workspaces button.active,
 #tags button.focused {
-    background-color: #414868;
-    color: #c0caf5;
+  background-color: #7aa2f7; /* Bright blue for active */
+  color: #1a1b26; /* Dark text on light background */
 }
 
-#workspaces button.empty,
-#tags button.occupied {
-    color: #a9b1d6;
+#workspaces button.visible {
+  background-color: #414868; /* Medium gray for visible */
+  color: #c0caf5; /* Bright text */
 }
 
+#workspaces button.urgent,
 #tags button.urgent {
-    color: #f7768e;
+  background-color: #f7768e; /* Pink-red for urgent */
+  color: #1a1b26; /* Dark text */
 }
 
 #workspaces button.persistent {
-    color: #7aa2f7;
+  color: #7dcfff; /* Cyan accent */
 }
 
-#workspaces button.special {
-    color: #e0af68;
+#mode {
+  padding: 0 8px;
+  background-color: #e0af68; /* Warm yellow/orange */
+  color: #1a1b26; /* Dark text */
+  font-weight: bold;
 }
 
 #clock,
@@ -72,46 +78,57 @@ button:hover {
 #wireplumber,
 #custom-media,
 #tray,
-#mode,
 #idle_inhibitor,
 #scratchpad,
 #power-profiles-daemon,
 #mpd {
-    padding: 0 8px;
-    border-radius: 0;
-    color: #c0caf5;
-    background-color: transparent;
+  padding: 0 8px;
+  border-radius: 0;
+  color: #c0caf5; /* Bright text */
+  background-color: transparent;
 }
 
 #window,
 #workspaces,
 #tags {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 .modules-left > widget:first-child > #workspaces,
 .modules-left > widget:first-child > #tags {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .modules-right > widget:last-child > #workspaces,
 .modules-right > widget:last-child > #tags {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f7768e;
-    color: #1a1b26;
+  background-color: #f7768e; /* Pink-red */
+  color: #1a1b26; /* Dark text */
 }
 
 #network.disconnected {
-    color: #f7768e;
+  color: #f7768e; /* Pink-red */
 }
 
 #pulseaudio.muted {
-    color: #565f89;
+  color: #565f89; /* Very muted gray */
 }
 
 #tray > .needs-attention {
-    background-color: #f7768e;
+  background-color: #f7768e; /* Pink-red */
+}
+
+#cpu {
+  color: #7dcfff; /* Bright cyan */
+}
+
+#clock {
+  color: #7aa2f7; /* Bright blue */
+}
+
+#pulseaudio {
+  color: #9ece6a; /* Bright green */
 }

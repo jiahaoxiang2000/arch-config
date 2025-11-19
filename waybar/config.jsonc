@@ -7,8 +7,8 @@
   "spacing": 1, // Gaps between modules (4px)
   "output": "DP-1", // Output to display the bar
   // Choose the order of the modules
-  "modules-left": ["river/tags"],
-  "modules-center": ["river/window"],
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": ["sway/window"],
   "modules-right": ["tray", "cpu", "pulseaudio", "clock"],
   // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
@@ -47,12 +47,32 @@
     "on-click": "pavucontrol",
     "ignored-sinks": ["Easy Effects Sink"],
   },
-  "river/tags": {
-    "num-tags": 9,
-    "tag-labels": ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
-    "hide-vacant": true,
+  "sway/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": false,
+    "format": "{name}",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "urgent": "",
+      "focused": "",
+      "default": "",
+    },
   },
-  "river/window": {
+  "sway/mode": {
+    "format": " {}",
+    "max-length": 50,
+  },
+  "sway/window": {
     "format": "{}",
+    "max-length": 50,
   },
 }
