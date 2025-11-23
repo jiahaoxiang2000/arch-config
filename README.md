@@ -4,39 +4,39 @@ Personal configuration files for Linux desktop setup. Shell (zsh) configuration 
 
 ## Desktop Environment
 
-| Application | Configuration | Description            |
-| ----------- | ------------- | ---------------------- |
-| Sway        | `sway/`       | Wayland window manager |
-| Waybar      | `waybar/`     | System status bar      |
-| Kitty       | `kitty/`      | Terminal emulator      |
+| Application | Configuration       | Description            |
+| ----------- | ------------------- | ---------------------- |
+| Sway        | [`sway/`](sway/)    | Wayland window manager |
+| Waybar      | [`waybar/`](waybar/)| System status bar      |
+| Kitty       | [`kitty/`](kitty/)  | Terminal emulator      |
 
 ## Development
 
-| Application | Configuration | Description                 |
-| ----------- | ------------- | --------------------------- |
-| Neovim      | `nvim/`       | Text editor (git submodule) |
-| Git         | `git/`        | Version control settings    |
+| Application | Configuration     | Description                 |
+| ----------- | ----------------- | --------------------------- |
+| Neovim      | [`nvim/`](nvim/)  | Text editor (git submodule) |
+| Git         | [`git/`](git/)    | Version control settings    |
 
 ## Input Method
 
-| Application | Configuration | Description          |
-| ----------- | ------------- | -------------------- |
-| fcitx5      | `fcitx5/`     | Chinese input method |
+| Application | Configuration           | Description          |
+| ----------- | ----------------------- | -------------------- |
+| fcitx5      | [`fcitx5/`](fcitx5/)    | Chinese input method |
 
 ## Media & Utilities
 
-| Application | Configuration | Description     |
-| ----------- | ------------- | --------------- |
-| OBS Studio  | `obs-studio/` | Video recording |
-| Kdenlive    | -             | Video editing   |
-| MPV         | `mpv/`        | Video player    |
+| Application | Configuration               | Description     |
+| ----------- | --------------------------- | --------------- |
+| OBS Studio  | [`obs-studio/`](obs-studio/)| Video recording |
+| Kdenlive    | -                           | Video editing   |
+| MPV         | [`mpv/`](mpv/)              | Video player    |
 
 ## Global Vim Keybindings
 
-| Application | Configuration         | Description               |
-| ----------- | --------------------- | ------------------------- |
-| Surfingkeys | `Surfingkeys-conf.js` | Browser vim keybindings   |
-| Xremap      | `xremap/`             | System-wide key remapping |
+| Application | Configuration                               | Description               |
+| ----------- | ------------------------------------------- | ------------------------- |
+| Surfingkeys | [`Surfingkeys-conf.js`](Surfingkeys-conf.js)| Browser vim keybindings   |
+| Xremap      | [`xremap/`](xremap/)                        | System-wide key remapping |
 
 ## Notes
 
