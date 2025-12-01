@@ -1,5 +1,6 @@
 adobe-source-han-mono-cn-fonts
 bbdown-bin
+codeql
 cutter-bin
 drawio-desktop-appimage
 i3bar-river

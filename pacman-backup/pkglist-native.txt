@@ -40,6 +40,8 @@ hyprshot
 i3status-rust
 iftop
 iwd
+jdk11-openjdk
+jdk8-openjdk
 john
 kdenlive
 kitty
@@ -51,6 +53,7 @@ linux
 linux-firmware
 linux-headers
 man-db
+maven
 mpv
 nano
 neovim
@@ -77,11 +80,13 @@ protontricks
 python
 python-pipx
 python-pwntools
+python-pyqt5
 reflector
 ripgrep
 river
 rofi
 sagemath
+simple-scan
 smartmontools
 steam
 strace
@@ -102,6 +107,7 @@ texlive-latexextra
 texlive-latexrecommended
 texlive-mathscience
 texlive-pictures
+texlive-plaingeneric
 texlive-publishers
 texlive-xetex
 tmux
