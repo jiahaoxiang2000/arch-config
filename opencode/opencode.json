@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "anthropic/claude-sonnet-4-5",
   "small_model": "deepseek/deepseek-chat",
   "theme": "github",
   "autoupdate": true,
@@ -16,6 +15,7 @@
   "agent": {},
   "command": {},
   "formatter": {},
+  "lsp": {},
   "permission": {},
   "mcp": {
     "all-in-mcp": {
@@ -32,7 +32,7 @@
   "disabled_providers": [],
   "keybinds": {
     "leader": "ctrl+x",
-    "app_exit": "ctrl+c,ctrl+d,<leader>q",
+    "app_exit": "ctrl+c,<leader>q",
     "editor_open": "<leader>e",
     "theme_list": "<leader>t",
     "sidebar_toggle": "<leader>b",
@@ -50,8 +50,8 @@
     "session_child_cycle_reverse": "<leader>+left",
     "messages_page_up": "pageup",
     "messages_page_down": "pagedown",
-    "messages_half_page_up": "ctrl+alt+u",
-    "messages_half_page_down": "ctrl+alt+d",
+    "messages_half_page_up": "ctrl+u",
+    "messages_half_page_down": "ctrl+d",
     "messages_first": "ctrl+g,home",
     "messages_last": "ctrl+alt+g,end",
     "messages_copy": "<leader>y",
@@ -67,7 +67,7 @@
     "agent_cycle": "tab",
     "agent_cycle_reverse": "shift+tab",
     "input_clear": "ctrl+c",
-    "input_forward_delete": "ctrl+d",
+    "input_forward_delete": "",
     "input_paste": "ctrl+v",
     "input_submit": "enter",
     "input_newline": "shift+enter,ctrl+j",
