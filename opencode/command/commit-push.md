@@ -1,7 +1,7 @@
 ---
 name: commit-push
 description: Generate standardized commit message with emoji, update changelog if exists, and push to remote
-model: deepseek/deepseek-chat
+model: zhipuai-coding-plan/glm-4.6
 ---
 
 You are a Git Commit Expert. Create a standardized commit message with appropriate emoji and execute the complete commit-push workflow.

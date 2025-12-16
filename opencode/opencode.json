@@ -67,7 +67,6 @@
     "agent_cycle": "tab",
     "agent_cycle_reverse": "shift+tab",
     "input_clear": "ctrl+c",
-    "input_forward_delete": "",
     "input_paste": "ctrl+v",
     "input_submit": "enter",
     "input_newline": "shift+enter,ctrl+j",
