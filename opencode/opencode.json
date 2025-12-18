@@ -11,6 +11,25 @@
       "enabled": true
     }
   },
+  "provider": {
+    "mimo": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Xiaomi MIMO",
+      "options": {
+        "baseURL": "https://api.xiaomimimo.com/v1",
+        "apiKey": "{env:MIMO_API_KEY}"
+      },
+      "models": {
+        "mimo-v2-flash": {
+          "name": "Xiaomi mimo-v2-flash",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          }
+        }
+      }
+    }
+  },
   "tools": {},
   "agent": {},
   "command": {},
