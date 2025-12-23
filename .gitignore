@@ -166,6 +166,7 @@ probe-rs-tools/probe-rs-tools-receipt.json
 unity3d/**
 fontconfig/*
 systemd/user/tray.target
+systemd/user/default.target.wants/
 qqmusic/*
 tmux/tmux.conf
 unityhub/*
