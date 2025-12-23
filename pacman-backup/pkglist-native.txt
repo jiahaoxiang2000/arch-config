@@ -54,6 +54,7 @@ linux-firmware
 linux-headers
 man-db
 maven
+minicom
 mpv
 nano
 neovim
@@ -63,7 +64,8 @@ nmap
 nodejs
 noto-fonts-emoji
 npm
-nvidia-dkms
+nvidia-open-dkms
+nvm
 nwg-look
 obs-studio
 okular
@@ -71,13 +73,17 @@ openssh
 paru
 paru-debug
 pavucontrol
+pdftk
 pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+platformio-core
+platformio-core-udev
 playerctl
 protontricks
 python
+python-pip
 python-pipx
 python-pwntools
 python-pyqt5
@@ -135,5 +141,6 @@ xorg-xinit
 yazi
 zed
 zip
+zoxide
 zram-generator
 zsh

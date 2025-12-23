@@ -5,11 +5,12 @@ Wants=network-online.target
 
 [Service]
 Type=simple
+ExecStartPre=/bin/sleep 3
 ExecStart=/usr/bin/ssh -NT -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -o TCPKeepAlive=yes -o ExitOnForwardFailure=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=10 -L 0.0.0.0:1080:127.0.0.1:1080 -L 0.0.0.0:2017:127.0.0.1:2017 ubuntu@43.139.157.97 -i %h/.ssh/id_github
 Restart=on-failure
-RestartSec=5
-StartLimitInterval=60
-StartLimitBurst=5
+RestartSec=2
+StartLimitInterval=30
+StartLimitBurst=3
 
 [Install]
 WantedBy=default.target
