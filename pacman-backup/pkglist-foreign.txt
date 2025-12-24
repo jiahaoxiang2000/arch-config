@@ -5,7 +5,10 @@ cutter-bin
 drawio-desktop-appimage
 i3bar-river
 ida-free
+lib32-nvidia-580xx-utils
 netease-cloud-music-gtk-bin
+nvidia-580xx-dkms
+nvidia-580xx-utils
 protonup-qt
 python-translate-shell
 qqmusic-bin

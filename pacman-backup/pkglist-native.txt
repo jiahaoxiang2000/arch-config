@@ -64,7 +64,6 @@ nmap
 nodejs
 noto-fonts-emoji
 npm
-nvidia-open-dkms
 nvm
 nwg-look
 obs-studio
