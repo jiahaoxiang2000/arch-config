@@ -161,7 +161,6 @@ git/ignore
 qutebrowser/quickmarks
 qutebrowser/bookmarks/urls
 configstore/update-notifier-@qwen-code/qwen-code.json
-godot/editor_settings-4.4.tres
 probe-rs-tools/probe-rs-tools-receipt.json
 unity3d/**
 fontconfig/*
@@ -182,3 +181,4 @@ rizin
 trashrc
 simple-scan
 turborepo/telemetry.json
+godot/recent_dirs
