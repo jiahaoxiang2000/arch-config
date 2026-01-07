@@ -182,3 +182,4 @@ trashrc
 simple-scan
 turborepo/telemetry.json
 godot/recent_dirs
+godot/editor_settings-*.tres
