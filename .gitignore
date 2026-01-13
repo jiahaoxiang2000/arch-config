@@ -118,8 +118,6 @@ dconf/*
 evolution/*
 gnome-session/*
 goa-1.0/*
-gtk-3.0/*
-gtk-4.0/*
 ibus/*
 nautilus/*
 pulse/*
@@ -184,3 +182,4 @@ turborepo/telemetry.json
 godot/recent_dirs
 godot/editor_settings-*.tres
 openspec
+gtk-3.0/bookmarks
