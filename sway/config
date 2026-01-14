@@ -196,12 +196,15 @@ bindsym $mod+Control+9 move container to workspace number $ws9; workspace number
 bindsym $mod+Control+0 move container to workspace number $ws10; workspace number $ws10
 
 # ============================================================================
-# KEY BINDINGS - SCREENSHOTS
+# KEY BINDINGS - TOOLS
 # ============================================================================
 
 # screenshot bindings (Super+P)
 bindsym $mod+p exec hyprshot -m region --clipboard -o ~/Pictures
 bindsym $mod+Shift+p exec hyprshot -m region -o ~/Pictures
+
+# Audio2Text for audio translate realtime
+bindsym $mod+Shift+i exec --no-startup-id ~/.config/sway/toggle-audio2text.sh
 
 # ============================================================================
 # KEY BINDINGS - MEDIA & SYSTEM CONTROLS
