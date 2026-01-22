@@ -1,6 +1,10 @@
 [tts]
 server = "http://localhost:8000"
 
+# ali_model = "qwen3-tts-flash"
+# ali_voice = "Momo"
+# ali_language_type = "Auto"
+
 [auto_reply]
 enabled = true
 cooldown_seconds = 2
