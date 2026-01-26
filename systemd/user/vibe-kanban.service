@@ -1,10 +1,14 @@
 [Unit]
 Description=Vibe Kanban Task Management System
-After=network.target
+After=network.target graphical-session.target
 
 [Service]
 Type=simple
 Environment="PORT=9000"
+Environment="DISPLAY=:0"
+Environment="WAYLAND_DISPLAY=wayland-1"
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+Environment="DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus"
 ExecStart=/home/isomo/.nvm/versions/node/v24.12.0/bin/npx vibe-kanban
 Restart=on-failure
 RestartSec=5
