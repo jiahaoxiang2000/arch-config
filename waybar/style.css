@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-  background-color: #1a1b26; /* Deep dark blue-gray */
-  color: #c0caf5; /* Soft bright text */
+  background-color: #f5f5f5; /* Light gray background */
+  color: #1a1a1a; /* Dark text for contrast */
 }
 
 window#waybar.hidden {
@@ -20,7 +20,7 @@ button {
 }
 
 button:hover {
-  background: #24283b; /* Darker hover state */
+  background: #e0e0e0; /* Light hover state */
 }
 
 #workspaces button,
@@ -28,41 +28,41 @@ button:hover {
   padding: 0 8px;
   background-color: transparent;
   border-radius: 0;
-  color: #a9b1d6; /* Muted blue-gray text */
+  color: #555555; /* Medium gray text */
   min-width: 0;
 }
 
 #workspaces button:hover,
 #tags button:hover {
-  background: #24283b; /* Subtle hover */
+  background: #e0e0e0; /* Subtle hover */
 }
 
 #workspaces button.focused,
 #workspaces button.active,
 #tags button.focused {
-  background-color: #7aa2f7; /* Bright blue for active */
-  color: #1a1b26; /* Dark text on light background */
+  background-color: #0066cc; /* High contrast blue for active */
+  color: #ffffff; /* White text on blue background */
 }
 
 #workspaces button.visible {
-  background-color: #414868; /* Medium gray for visible */
-  color: #c0caf5; /* Bright text */
+  background-color: #cccccc; /* Medium gray for visible */
+  color: #1a1a1a; /* Dark text */
 }
 
 #workspaces button.urgent,
 #tags button.urgent {
-  background-color: #f7768e; /* Pink-red for urgent */
-  color: #1a1b26; /* Dark text */
+  background-color: #d32f2f; /* High contrast red for urgent */
+  color: #ffffff; /* White text */
 }
 
 #workspaces button.persistent {
-  color: #7dcfff; /* Cyan accent */
+  color: #0066cc; /* Blue accent - distinguishable from red/green */
 }
 
 #mode {
   padding: 0 8px;
-  background-color: #e0af68; /* Warm yellow/orange */
-  color: #1a1b26; /* Dark text */
+  background-color: #f57c00; /* High contrast orange */
+  color: #ffffff; /* White text */
   font-weight: bold;
 }
 
@@ -84,7 +84,7 @@ button:hover {
 #mpd {
   padding: 0 8px;
   border-radius: 0;
-  color: #c0caf5; /* Bright text */
+  color: #1a1a1a; /* Dark text */
   background-color: transparent;
 }
 
@@ -105,30 +105,30 @@ button:hover {
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f7768e; /* Pink-red */
-  color: #1a1b26; /* Dark text */
+  background-color: #d32f2f; /* High contrast red */
+  color: #ffffff; /* White text */
 }
 
 #network.disconnected {
-  color: #f7768e; /* Pink-red */
+  color: #d32f2f; /* High contrast red */
 }
 
 #pulseaudio.muted {
-  color: #565f89; /* Very muted gray */
+  color: #757575; /* Medium gray */
 }
 
 #tray > .needs-attention {
-  background-color: #f7768e; /* Pink-red */
+  background-color: #d32f2f; /* High contrast red */
 }
 
 #cpu {
-  color: #7dcfff; /* Bright cyan */
+  color: #0066cc; /* High contrast blue */
 }
 
 #clock {
-  color: #7aa2f7; /* Bright blue */
+  color: #0066cc; /* High contrast blue */
 }
 
 #pulseaudio {
-  color: #9ece6a; /* Bright green */
+  color: #2e7d32; /* High contrast green - distinguishable from red/blue */
 }
