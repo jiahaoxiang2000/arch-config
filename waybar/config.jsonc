@@ -9,12 +9,17 @@
   // Choose the order of the modules
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["tray", "cpu", "pulseaudio", "clock"],
+  "modules-right": ["tray", "cpu", "memory", "pulseaudio", "clock"],
   // "margin": 1, // Margin around the bar
   "reload_style_on_change": true, // Reload style on change
   "cpu": {
     "interval": 10,
-    "format": "{usage}% CPU",
+    "format": "{usage}% ",
+    "max-length": 10,
+  },
+  "memory": {
+    "interval": 30,
+    "format": "{}% ",
     "max-length": 10,
   },
   "tray": {
