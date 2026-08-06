@@ -64,8 +64,8 @@ exec_always killall -q waybar fcitx5 || true
 exec_always sh -c 'sleep 0.5 && fcitx5 -d'
 
 # XDG portal setup for proper desktop integration
-exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
 exec systemctl --user restart xdg-desktop-portal
 
 # ============================================================================

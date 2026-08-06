@@ -1,0 +1,13 @@
+[Unit]
+Description=KeePassXC password manager
+PartOf=graphical-session.target
+After=graphical-session-pre.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/keepassxc --keyfile %h/.ssh/keypassxc --minimized %h/.config/keepassxc/Passwords.kdbx
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

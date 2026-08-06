@@ -210,3 +210,5 @@ ikanban
 # upstream URL). The committed .env.example in each service dir is the template.
 compose/**/.env
 /Claude
+/systemd/user/graphical-session.target.wants
+/keepassxc/keepassxc.ini
