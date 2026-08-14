@@ -212,3 +212,6 @@ compose/**/.env
 /Claude
 /systemd/user/graphical-session.target.wants
 /keepassxc/keepassxc.ini
+/interactsh-client
+/nuclei
+/uncover
