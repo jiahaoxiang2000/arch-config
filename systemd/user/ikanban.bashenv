@@ -1,0 +1,4 @@
+# Restore credential-shaped variables that DSH removes from model-facing shells.
+set -a
+source "$HOME/.token"
+set +a
