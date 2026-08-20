@@ -2,7 +2,7 @@
 <opml version="2.0">
   <head>
     <title>iread subscriptions</title>
-    <dateCreated>Sun, 14 Jun 2026 12:35:16 GMT</dateCreated>
+    <dateCreated>Thu, 20 Aug 2026 08:31:45 GMT</dateCreated>
   </head>
   <body>
     <outline type="rss" text="Agili 的 Hacker Podcast" title="Agili 的 Hacker Podcast" xmlUrl="https://hacker-news.agi.li/rss.xml" htmlUrl="https://hacker-podcast.agi.li" />
@@ -14,7 +14,7 @@
     <outline type="rss" text="OpenAI News" title="OpenAI News" xmlUrl="http://43.128.87.171:5000/openai/news" htmlUrl="https://openai.com/news/" />
     <outline type="rss" text="OpenAI(@OpenAI)" title="OpenAI(@OpenAI)" xmlUrl="https://api.xgo.ing/rss/user/0c0856a69f9f49cf961018c32a0b0049" htmlUrl="https://x.com/OpenAI" />
     <outline type="rss" text="The GitHub Blog" title="The GitHub Blog" xmlUrl="https://github.blog/feed/" htmlUrl="https://github.blog/" />
-    <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml" htmlUrl="https://www.therundown.ai/" />
+    <outline type="rss" text="The Rundown AI" title="The Rundown AI" xmlUrl="https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml" htmlUrl="https://therundownai.beehiiv.com/" />
     <outline type="rss" text="逛逛GitHub" title="逛逛GitHub" xmlUrl="https://wechat2rss.bestblogs.dev/feed/38be32e5376d852c13d3383e4d7a757fd9a55ff6.xml" htmlUrl="https://wechat2rss.bestblogs.dev/feed/38be32e5376d852c13d3383e4d7a757fd9a55ff6.xml" />
   </body>
 </opml>

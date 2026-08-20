@@ -215,3 +215,4 @@ compose/**/.env
 /interactsh-client
 /nuclei
 /uncover
+/chromium-headless

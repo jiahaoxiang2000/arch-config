@@ -29,11 +29,13 @@ services:
     environment:
       CLAUDE_PROJECTS_DIR: /agents/claude
       CODEX_SESSIONS_DIR: /agents/codex
+      DEEPSEEK_HARNESS_SESSIONS_DIR: /agents/deepseek-harness
       OPENCODE_DIR: /agents/opencode
     volumes:
       - agentsview-data:/data
       - "${HOME}/.claude/projects:/agents/claude:ro"
       - "${HOME}/.codex/sessions:/agents/codex:ro"
+      - "${HOME}/.dsh/sessions:/agents/deepseek-harness:ro"
       - "${HOME}/.local/share/opencode:/agents/opencode:ro"
 
 volumes:
