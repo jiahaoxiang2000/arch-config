@@ -1,10 +1,10 @@
-# kookeey-bridge — local HTTP proxy that forwards to a Kookeey SOCKS5 gateway,
+# kookeey-bridge — local proxies that forward to Kookeey SOCKS5 gateways,
 # managed via Docker Compose.
 #
-# gost (GO Simple Tunnel; image entrypoint /bin/gost) listens as a plain HTTP
-# proxy on 127.0.0.1:10011 and forwards every request through the authenticated
-# upstream SOCKS5 endpoint at gate.kookeey.info. Point anything that should
-# egress via Kookeey at this proxy, e.g.
+# Two gost services listen on 127.0.0.1:10011 (HTTP) and :10012 (SOCKS5).
+# Each forwards through its own authenticated SOCKS5 endpoint at
+# gate.kookeey.info. Point anything that should egress via Kookeey at one of
+# these proxies, e.g.
 #
 #   export HTTPS_PROXY=http://127.0.0.1:10011 HTTP_PROXY=http://127.0.0.1:10011
 #
@@ -13,17 +13,17 @@
 # even though the host itself reaches the internet fine (restarting dockerd does
 # not fix it). So gost runs with network_mode: host and reaches the Kookeey
 # gateway through the working host network. Host mode ignores `ports:`, so the
-# loopback-only bind lives in -L itself (127.0.0.1:10011) — the proxy stays
-# reachable only from this host, never the LAN.
+# loopback-only binds live in -L itself — the proxies stay reachable only from
+# this host, never the LAN.
 #
-# Credentials: the upstream URL carries the Kookeey username/password, so it is
-# NOT in this file. It lives in compose/kookeey-bridge/.env (gitignored) as
-# KOOKEEY_UPSTREAM, which Compose auto-loads from the compose file's own
-# directory (it is the default project dir even when started with -f from ~/.config).
+# Credentials: the upstream URLs carry the Kookeey username/password, so they
+# are NOT in this file. They live in compose/kookeey-bridge/.env (gitignored) as
+# KOOKEEY_UPSTREAM and KOOKEEY_UPSTREAM_10012. Compose auto-loads this file from
+# the compose file's own directory.
 # Set it up once:
 #
 #   cd compose/kookeey-bridge && cp .env.example .env && $EDITOR .env
-#   docker compose -f compose/kookeey-bridge/compose.yaml up -d   # http://127.0.0.1:10011
+#   docker compose -f compose/kookeey-bridge/compose.yaml up -d
 #
 # KOOKEEY_UPSTREAM format (PORT is the gateway port Kookeey assigned you):
 #   socks5://USERNAME:PASSWORD@gate.kookeey.info:PORT
@@ -38,3 +38,12 @@ services:
       # Forward to the Kookeey SOCKS5 gateway. Creds come from .env, never git;
       # :? makes compose abort with this message if .env is missing/unset.
       - "-F=${KOOKEEY_UPSTREAM:?set KOOKEEY_UPSTREAM in compose/kookeey-bridge/.env (see .env.example)}"
+
+  kookeey-bridge-10012:
+    image: gogost/gost
+    container_name: kookeey-bridge-10012
+    restart: unless-stopped
+    network_mode: host
+    command:
+      - "-L=socks5://127.0.0.1:10012"
+      - "-F=${KOOKEEY_UPSTREAM_10012:?set KOOKEEY_UPSTREAM_10012 in compose/kookeey-bridge/.env (see .env.example)}"

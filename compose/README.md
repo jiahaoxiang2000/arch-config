@@ -16,7 +16,7 @@ docker compose -f compose/<service>/compose.yaml up -d
 | ------- | ----- | ---- | -------- |
 | [`iread/`](iread/) | `ghcr.io/isomoes/iread:latest` | `127.0.0.1:9999` | `systemd/user/iread.service` |
 | [`agentsview/`](agentsview/) | `ghcr.io/kenn-io/agentsview:latest` | `127.0.0.1:8585` | `systemd/user/agentsview.service` |
-| [`kookeey-bridge/`](kookeey-bridge/) | `gogost/gost` | `127.0.0.1:10011` | — (new) |
+| [`kookeey-bridge/`](kookeey-bridge/) | `gogost/gost` | HTTP `127.0.0.1:10011`, SOCKS5 `127.0.0.1:10012` | — (new) |
 | [`frpc/`](frpc/) | `snowdreamtech/frpc` | host netns (dials out to `frps`) | — (new) |
 
 ## Updating images
@@ -72,36 +72,38 @@ matching `*_DIR` env (see the upstream `docker-compose.prod.yaml`).
 
 ### kookeey-bridge
 
-A [gost](https://github.com/go-gost/gost) container that exposes a plain HTTP
-proxy on `127.0.0.1:10011` and forwards every request through an authenticated
-Kookeey **SOCKS5** gateway (`gate.kookeey.info`). Point any HTTP client at it to
-egress through Kookeey:
+Two [gost](https://github.com/go-gost/gost) containers expose an HTTP proxy on
+`127.0.0.1:10011` and a SOCKS5 proxy on `127.0.0.1:10012`. Each forwards requests
+through its own authenticated Kookeey **SOCKS5** gateway (`gate.kookeey.info`).
+Point a compatible client at the channel you want to use:
 
 ```sh
 export HTTPS_PROXY=http://127.0.0.1:10011 HTTP_PROXY=http://127.0.0.1:10011
 curl https://api.ipify.org    # shows the Kookeey exit IP
+
+curl --proxy socks5h://127.0.0.1:10012 https://api.ipify.org
 ```
 
 The upstream URL contains your Kookeey username/password, so it is **not** in
-`compose.yaml`. It lives in `kookeey-bridge/.env` (gitignored via
-`compose/**/.env`) as `KOOKEEY_UPSTREAM`, which Compose auto-loads from the
-compose file's own directory. Set it up once, then start the stack:
+`compose.yaml`. They live in `kookeey-bridge/.env` (gitignored via
+`compose/**/.env`) as `KOOKEEY_UPSTREAM` for port 10011 and
+`KOOKEEY_UPSTREAM_10012` for port 10012. Compose auto-loads them from the compose
+file's own directory. Set them up once, then start the stack:
 
 ```sh
-cd compose/kookeey-bridge && cp .env.example .env && $EDITOR .env   # fill in creds + gateway port
-docker compose -f compose/kookeey-bridge/compose.yaml up -d         # http://127.0.0.1:10011
+cd compose/kookeey-bridge && cp .env.example .env && $EDITOR .env   # fill in both channels
+docker compose -f compose/kookeey-bridge/compose.yaml up -d
 ```
 
-`KOOKEEY_UPSTREAM` format — `PORT` is the **gateway** port Kookeey assigned you
-(distinct from the local proxy port, which is fixed at `10011`):
+Both upstream variables use this format. `PORT` is the **gateway** port Kookeey
+assigned that channel, not local port 10011 or 10012:
 
 ```
 socks5://USERNAME:PASSWORD@gate.kookeey.info:PORT
 ```
 
-If `.env` is missing or `KOOKEEY_UPSTREAM` is unset, `up` aborts immediately with
-a message naming the file to create (the `:?` guard in `compose.yaml`) rather
-than starting a broken proxy.
+If either upstream variable is unset, `up` aborts immediately with a message
+naming the variable to configure rather than starting a broken proxy.
 
 **Networking:** unlike the other stacks, this one uses `network_mode: host`
 rather than a published `ports:` mapping. Docker's bridge network has no
@@ -109,9 +111,9 @@ outbound egress on this host — forwarded/NAT'd container traffic never leaves,
 even though the host itself reaches the internet and `systemctl restart docker`
 doesn't fix it — so gost runs in the host network namespace and reaches the
 Kookeey gateway directly. Because host mode ignores `ports:`, the loopback-only
-bind lives in `-L=http://127.0.0.1:10011`, keeping the proxy reachable only from
-this host. If bridge egress is ever repaired, revert to `ports:` +
-`-L=http://:10011` to match the other stacks.
+binds live in each service's `-L` argument, keeping both proxies reachable only
+from this host. If bridge egress is ever repaired, revert to `ports:` mappings
+and wildcard container binds to match the other stacks.
 
 ### frpc
 

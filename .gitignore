@@ -216,3 +216,4 @@ compose/**/.env
 /nuclei
 /uncover
 /chromium-headless
+/naabu
