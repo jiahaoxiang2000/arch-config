@@ -18,6 +18,7 @@ docker compose -f compose/<service>/compose.yaml up -d
 | [`agentsview/`](agentsview/) | `ghcr.io/kenn-io/agentsview:latest` | `127.0.0.1:8585` | `systemd/user/agentsview.service` |
 | [`kookeey-bridge/`](kookeey-bridge/) | `gogost/gost` | HTTP `127.0.0.1:10011`, SOCKS5 `127.0.0.1:10012` | — (new) |
 | [`frpc/`](frpc/) | `snowdreamtech/frpc` | host netns (dials out to `frps`) | — (new) |
+| [`caddy/`](caddy/) | `caddy:2-alpine` | HTTP `127.0.0.1:80` via host netns | Friendly `*.localhost` URLs |
 
 ## Updating images
 
@@ -30,6 +31,37 @@ docker compose -f compose/<service>/compose.yaml up -d
 
 The running container is left untouched if the pull fails. Run the explicit
 `pull` command above whenever you want to check for and install an update.
+
+### caddy
+
+Caddy provides memorable local names for services that otherwise require port
+numbers. It uses host networking so it can proxy to servers bound to
+`127.0.0.1`, while `default_bind 127.0.0.1` keeps Caddy itself local-only.
+Start it with:
+
+```sh
+docker compose -f ~/.config/compose/caddy/compose.yaml up -d
+```
+
+Configured routes:
+
+- `http://ikanban.localhost` → `127.0.0.1:9090`
+- `http://iread.localhost` → `127.0.0.1:9999`
+- `http://agentsview.localhost` → `127.0.0.1:8585`
+- `http://daed.localhost` → `127.0.0.1:2023`
+
+The IKanban proxy rewrites its upstream `Host` and `Origin` headers to the
+loopback origin expected by DSH's request-forgery protection; the public-facing
+browser URL remains `http://ikanban.localhost`.
+
+Add more routes to `caddy/Caddyfile`, then apply them with:
+
+```sh
+docker compose -f ~/.config/compose/caddy/compose.yaml exec caddy caddy reload --config /etc/caddy/Caddyfile
+```
+
+`*.localhost` resolves to loopback in modern browsers, so no `/etc/hosts` or DNS
+changes are required.
 
 ### iread
 

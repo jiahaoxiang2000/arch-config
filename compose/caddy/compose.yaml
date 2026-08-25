@@ -1,0 +1,19 @@
+# Caddy — local reverse proxy for memorable *.localhost URLs.
+#
+# Host networking lets Caddy reach services bound to host loopback addresses.
+# Start with:
+#   docker compose -f ~/.config/compose/caddy/compose.yaml up -d
+services:
+  caddy:
+    image: caddy:2-alpine
+    container_name: caddy-local
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  caddy-data:
+  caddy-config:
