@@ -50,9 +50,16 @@ Configured routes:
 - `http://agentsview.localhost` → `127.0.0.1:8585`
 - `http://daed.localhost` → `127.0.0.1:2023`
 
-The IKanban proxy rewrites its upstream `Host` and `Origin` headers to the
-loopback origin expected by DSH's request-forgery protection; the public-facing
-browser URL remains `http://ikanban.localhost`.
+Every route accepts only loopback clients and either its own `*.localhost`
+browser origin or an origin-less local request. Requests from another website
+origin receive HTTP 403. For accepted IKanban browser requests, Caddy rewrites
+upstream `Host` and `Origin` headers to the loopback origin expected by DSH's
+request-forgery protection.
+
+This protects access through Caddy only. Each upstream should also bind directly
+to `127.0.0.1`; otherwise its numbered port can bypass Caddy. In particular,
+daed must be started with `--listen 127.0.0.1:2023` instead of its default
+`0.0.0.0:2023` listener.
 
 Add more routes to `caddy/Caddyfile`, then apply them with:
 

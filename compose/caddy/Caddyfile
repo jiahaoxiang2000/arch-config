@@ -5,26 +5,56 @@
 	default_bind 127.0.0.1
 }
 
+# Defense in depth for every local web route:
+# - accept connections only from loopback clients;
+# - accept browser requests only from that service's own origin;
+# - permit requests without Origin for navigation and local CLI clients.
+(local_request_guard) {
+	@notLoopback {
+		not remote_ip 127.0.0.1 ::1
+	}
+	respond @notLoopback "forbidden" 403
+
+	@foreignOrigin {
+		header Origin *
+		not header Origin {args[0]}
+	}
+	respond @foreignOrigin "forbidden" 403
+}
+
 http://ikanban.localhost {
-	# DSH intentionally accepts API calls only from its loopback origin.
-	# Present that trusted upstream origin while keeping the friendly browser URL.
-	reverse_proxy 127.0.0.1:9090 {
-		header_up Host 127.0.0.1:9090
-		header_up Origin http://127.0.0.1:9090
+	route {
+		import local_request_guard http://ikanban.localhost
+
+		# DSH accepts API calls only from its own loopback origin.
+		reverse_proxy 127.0.0.1:9090 {
+			header_up Host 127.0.0.1:9090
+			header_up Origin http://127.0.0.1:9090
+		}
 	}
 }
 
 http://iread.localhost {
-	reverse_proxy 127.0.0.1:9999
+	route {
+		import local_request_guard http://iread.localhost
+		reverse_proxy 127.0.0.1:9999
+	}
 }
 
 http://daed.localhost {
-	reverse_proxy 127.0.0.1:2023
+	route {
+		import local_request_guard http://daed.localhost
+		reverse_proxy 127.0.0.1:2023
+	}
 }
 
 http://agentsview.localhost {
-	# agentsview validates the Host header against its configured public URL.
-	reverse_proxy 127.0.0.1:8585 {
-		header_up Host 127.0.0.1:8585
+	route {
+		import local_request_guard http://agentsview.localhost
+
+		# agentsview validates the Host header against its configured public URL.
+		reverse_proxy 127.0.0.1:8585 {
+			header_up Host 127.0.0.1:8585
+		}
 	}
 }
