@@ -51,6 +51,7 @@ gnome-keyring
 godot
 gst-plugin-pipewire
 gtkwave
+hashcat
 hplip
 htop
 hyprshot
@@ -62,6 +63,7 @@ jdk11-openjdk
 jdk8-openjdk
 john
 kdenlive
+keepassxc
 kitty
 lazygit
 less
