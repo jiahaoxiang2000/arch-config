@@ -212,9 +212,14 @@ compose/**/.env
 /Claude
 /systemd/user/graphical-session.target.wants
 /keepassxc/keepassxc.ini
+/keepassxc/Passwords.kdbx
 /interactsh-client
 /nuclei
 /uncover
 /chromium-headless
 /naabu
 /nature-skills
+/winapps/.env
+/winapps/oem
+/winapps/winapps.conf
+/freerdp/server
